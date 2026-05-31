@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stage — Samuel ROCHEMONT</title>
+<link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+<button class="burger-btn" id="burger" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰</button>
+<div class="layout">
+<aside class="sidebar">
+  <div class="sidebar-logo"><span class="name">Samuel Rochemont</span><span class="role">BUT Science des Données · VCOD</span></div>
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">Navigation</div>
+    <a href="../index.html" class="nav-link"><span class="nav-icon">⬡</span> Accueil</a>
+    <a href="about.html" class="nav-link"><span class="nav-icon">◎</span> Parcours</a>
+    <a href="competences.html" class="nav-link"><span class="nav-icon">◈</span> Compétences</a>
+    <a href="projets.html" class="nav-link"><span class="nav-icon">◫</span> Projets</a>
+    <a href="stage.html" class="nav-link active"><span class="nav-icon">◉</span> Stage <span class="nav-dot"></span></a>
+    <div class="nav-section-label" style="margin-top:0.5rem;">Contact</div>
+    <a href="contact.html" class="nav-link"><span class="nav-icon">◌</span> Me contacter</a>
+  </nav>
+  <div class="sidebar-footer"><a href="https://www.linkedin.com/in/samuel-rochemont/" target="_blank">↗ LinkedIn</a></div>
+</aside>
+
+<main class="main">
+<div class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb">portfolio / <span>stage</span></div>
+    <h1>Stage</h1>
+    <p>Technicien Data — La Poste · Branche Services Courrier Colis · Montreuil</p>
+  </div>
+
+  <div class="stage-split">
+    <div>
+      <!-- Banner -->
+      <div class="stage-banner">
+        <div style="font-family:var(--font-mono);font-size:0.72rem;color:var(--teal);margin-bottom:0.5rem;">// stage.BUT_SD.2026</div>
+        <h2 style="font-family:var(--font-display);font-size:1.8rem;font-weight:800;margin-bottom:0.3rem;">La Poste</h2>
+        <p style="color:var(--text-2);font-size:0.9rem;">Branche Services Courrier Colis · 3 sites en Seine-Saint-Denis</p>
+        <p style="color:var(--text-3);font-size:0.82rem;margin-top:0.3rem;font-family:var(--font-mono);">Avril → Juin 2026 · 8 semaines</p>
+      </div>
+
+      <!-- Map avec les 3 sites -->
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:1rem;">
+        <div style="padding:0.8rem 1rem;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;">
+          <h3 style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-3);">Mes 3 sites de stage</h3>
+          <span style="font-family:var(--font-mono);font-size:0.65rem;color:var(--teal);">Seine-Saint-Denis (93)</span>
+        </div>
+        <div id="stage-map" style="height:280px;"></div>
+        <div style="padding:0.8rem 1rem;display:grid;grid-template-columns:repeat(3,1fr);gap:0.5rem;">
+          <div style="background:var(--bg3);border-radius:6px;padding:0.6rem;font-size:0.72rem;">
+            <div style="color:var(--teal);font-weight:700;margin-bottom:0.2rem;">📍 Montreuil</div>
+            <div style="color:var(--text-3);">6 Rue Ariste Hémard<br>93100 Montreuil</div>
+          </div>
+          <div style="background:var(--bg3);border-radius:6px;padding:0.6rem;font-size:0.72rem;">
+            <div style="color:var(--amber);font-weight:700;margin-bottom:0.2rem;">📍 Neuilly-Plaisance</div>
+            <div style="color:var(--text-3);">6 Rue Marcel Dassault<br>93360 Neuilly-Plaisance</div>
+          </div>
+          <div style="background:var(--bg3);border-radius:6px;padding:0.6rem;font-size:0.72rem;">
+            <div style="color:var(--blue);font-weight:700;margin-bottom:0.2rem;">📍 Rosny-sous-Bois</div>
+            <div style="color:var(--text-3);">33bis Rue Estienne d'Orves<br>93110 Rosny-sous-Bois</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mission brief -->
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:1.3rem;margin-bottom:1rem;">
+        <h3 style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-3);margin-bottom:0.8rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);">Mission</h3>
+        <p style="font-size:0.86rem;color:var(--text-2);line-height:1.7;"><strong style="color:var(--text);">Technicien Data — Fiabilisation des données</strong> au sein de la Branche Services Courrier Colis. Analyse et traitement de données internes pour améliorer la qualité et la cohérence des informations dans les systèmes décisionnels de La Poste.</p>
+      </div>
+
+      <!-- To complete -->
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:1.3rem;">
+        <h3 style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-3);margin-bottom:1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);">Contenu à développer</h3>
+        <div class="wip-grid">
+          <div class="wip-card"><div class="wip-icon">🎯</div><div class="wip-title">Missions détaillées</div><div class="wip-sub">À rédiger</div></div>
+          <div class="wip-card"><div class="wip-icon">🛠️</div><div class="wip-title">Outils utilisés</div><div class="wip-sub">À rédiger</div></div>
+          <div class="wip-card"><div class="wip-icon">📊</div><div class="wip-title">Livrables</div><div class="wip-sub">À rédiger</div></div>
+          <div class="wip-card"><div class="wip-icon">💡</div><div class="wip-title">Apprentissages</div><div class="wip-sub">À rédiger</div></div>
+          <div class="wip-card"><div class="wip-icon">🔍</div><div class="wip-title">Difficultés</div><div class="wip-sub">À rédiger</div></div>
+          <div class="wip-card"><div class="wip-icon">📝</div><div class="wip-title">Bilan réflexif</div><div class="wip-sub">À rédiger</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sidebar info -->
+    <div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem;margin-bottom:0.8rem;">
+        <h4 style="font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-3);margin-bottom:0.8rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);">Entreprise</h4>
+        <p style="font-size:0.82rem;color:var(--text-2);line-height:1.6;">La Poste est un groupe public français leader dans la distribution de courrier et de colis sur l'ensemble du territoire national.</p>
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem;margin-bottom:0.8rem;">
+        <h4 style="font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-3);margin-bottom:0.8rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);">Compétences BUT ciblées</h4>
+        <span class="comp-badge-large cb-1">🗄️ Traiter</span><br>
+        <span class="comp-badge-large cb-3" style="margin-top:0.4rem;">📈 Valoriser</span>
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem;">
+        <h4 style="font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-3);margin-bottom:0.8rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);">Technologies utilisées</h4>
+        <div class="tags-cloud">
+          <span class="tag highlight">Excel / VBA</span>
+          <span class="tag">Reporting</span>
+          <span class="tag">Google Maps</span>
+          <span class="tag">Analyse de données</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</main>
+</div>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+document.addEventListener('click',function(e){const s=document.querySelector('.sidebar'),b=document.getElementById('burger');if(s&&!s.contains(e.target)&&!b.contains(e.target))s.classList.remove('open');});
+
+// Map initialization
+const map = L.map('stage-map', {zoomControl: true, scrollWheelZoom: false}).setView([48.861, 2.487], 13);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>', maxZoom: 19
+}).addTo(map);
+
+const iconTeal = L.divIcon({
+  className: '',
+  html: '<div style="width:14px;height:14px;border-radius:50%;background:#2dd4bf;border:2px solid #0d1117;box-shadow:0 0 8px #2dd4bf;"></div>',
+  iconSize: [14,14], iconAnchor:[7,7]
+});
+const iconAmber = L.divIcon({
+  className: '',
+  html: '<div style="width:14px;height:14px;border-radius:50%;background:#fbbf24;border:2px solid #0d1117;box-shadow:0 0 8px #fbbf24;"></div>',
+  iconSize: [14,14], iconAnchor:[7,7]
+});
+const iconBlue = L.divIcon({
+  className: '',
+  html: '<div style="width:14px;height:14px;border-radius:50%;background:#60a5fa;border:2px solid #0d1117;box-shadow:0 0 8px #60a5fa;"></div>',
+  iconSize: [14,14], iconAnchor:[7,7]
+});
+
+L.marker([48.8603, 2.4428], {icon: iconTeal}).addTo(map)
+  .bindPopup('<b style="color:#2dd4bf">Montreuil</b><br>6 Rue Ariste Hémard<br>93100 Montreuil');
+L.marker([48.8566, 2.5098], {icon: iconAmber}).addTo(map)
+  .bindPopup('<b style="color:#fbbf24">Neuilly-Plaisance</b><br>6 Rue Marcel Dassault<br>93360 Neuilly-Plaisance');
+L.marker([48.8715, 2.4873], {icon: iconBlue}).addTo(map)
+  .bindPopup('<b style="color:#60a5fa">Rosny-sous-Bois</b><br>33bis Rue Estienne d\'Orves<br>93110 Rosny-sous-Bois');
+</script>
+</body>
+</html>

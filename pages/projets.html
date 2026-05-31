@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projets — Samuel ROCHEMONT</title>
+<link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+<button class="burger-btn" id="burger" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰</button>
+<div class="layout">
+<aside class="sidebar">
+  <div class="sidebar-logo"><span class="name">Samuel Rochemont</span><span class="role">BUT Science des Données · VCOD</span></div>
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">Navigation</div>
+    <a href="../index.html" class="nav-link"><span class="nav-icon">⬡</span> Accueil</a>
+    <a href="about.html" class="nav-link"><span class="nav-icon">◎</span> Parcours</a>
+    <a href="competences.html" class="nav-link"><span class="nav-icon">◈</span> Compétences</a>
+    <a href="projets.html" class="nav-link active"><span class="nav-icon">◫</span> Projets <span class="nav-dot"></span></a>
+    <a href="stage.html" class="nav-link"><span class="nav-icon">◉</span> Stage</a>
+    <div class="nav-section-label" style="margin-top:0.5rem;">Contact</div>
+    <a href="contact.html" class="nav-link"><span class="nav-icon">◌</span> Me contacter</a>
+  </nav>
+  <div class="sidebar-footer"><a href="https://www.linkedin.com/in/samuel-rochemont/" target="_blank">↗ LinkedIn</a></div>
+</aside>
+
+<main class="main">
+<div class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb">portfolio / <span>projets</span></div>
+    <h1>Projets & SAÉ</h1>
+    <p>16 projets universitaires répartis sur 3 semestres — du reporting SQL aux prévisions temporelles.</p>
+  </div>
+
+  <div class="sem-nav">
+    <button class="sem-btn active" onclick="filterSem('all',this)">Tous (16)</button>
+    <button class="sem-btn" onclick="filterSem('s1',this)">Semestre 1 · S1</button>
+    <button class="sem-btn" onclick="filterSem('s2',this)">Semestre 2 · S2</button>
+    <button class="sem-btn" onclick="filterSem('s3',this)">Semestre 3 · S3</button>
+    <button class="sem-btn" onclick="filterSem('suivi',this)">Projets Suivis</button>
+  </div>
+
+  <div class="sem-section" data-sem="s1">
+    <div class="sem-label"><h2>Semestre 1</h2><span class="sem-year">2024</span><span class="sem-divider"></span></div>
+    <div class="projects-list">
+      <a href="projets/Universitaires/S1/S101.html" class="ph-card">
+        <div class="ph-img"><img src="../img/projets/S101.png" alt="SAÉ 1.01" onerror="this.style.opacity='0.2'"></div>
+        <div class="ph-body">
+          <div class="ph-tags"><span class="ph-tag ph-tag-1">Traiter</span></div>
+          <div class="ph-code">SAÉ 1.01</div>
+          <div class="ph-title">Reporting depuis un SGBD Relationnel</div>
+          <div class="ph-desc">Extraction et reporting de données depuis une base relationnelle via SQL.</div>
+          <span class="ph-link">Voir le projet →</span>
+        </div>
+      </a>
+      <a href="projets/Universitaires/S1/S102.html" class="ph-card">
+        <div class="ph-img"><img src="../img/projets/S102.png" alt="SAÉ 1.02" onerror="this.style.opacity='0.2'"></div>
+        <div class="ph-body">
+          <div class="ph-tags"><span class="ph-tag ph-tag-1">Traiter</span></div>
+          <div class="ph-code">SAÉ 1.02</div>
+          <div class="ph-title">Écriture/Lecture de Fichiers & Algorithmique ELO Football</div>
+          <div class="ph-desc">Développement d'un algorithme ELO pour le classement football avec lecture/écriture de fichiers.</div>
+          <span class="ph-link">Voir le projet →</span>
+        </div>
+      </a>
+      <a href="projets/Universitaires/S1/S103.html" class="ph-card">
+        <div class="ph-img"><img src="../img/projets/S103.png" alt="SAÉ 1.03" onerror="this.style.opacity='0.2'"></div>
+        <div class="ph-body">
+          <div class="ph-tags"><span class="ph-tag ph-tag-2">Analyser</span></div>
+          <div class="ph-code">SAÉ 1.03</div>
+          <div class="ph-title">Préparation & Analyse Exploratoire de Données</div>
+          <div class="ph-desc">Nettoyage, préparation et analyse exploratoire d'un jeu de données réel sous R.</div>
+          <span class="ph-link">Voir le projet →</span>
+        </div>
+      </a>
+      <a href="projets/Universitaires/S1/S104.html" class="ph-card">
+        <div class="ph-img"><img src="../img/projets/S104.png" alt="SAÉ 1.04" onerror="this.style.opacity='0.2'"></div>
+        <div class="ph-body">
+          <div class="ph-tags"><span class="ph-tag ph-tag-3">Valoriser</span></div>
+          <div class="ph-code">SAÉ 1.04</div>
+          <div class="ph-title">Production de Données en Entreprise</div>
+          <div class="ph-desc">Indicateurs métier Excel : Pareto, Méthode ABC, Scoring RFM clients.</div>
+          <span class="ph-link">Voir le projet →</span>
+        </div>
+      </a>
+      <a href="projets/Universitaires/S1/S105.html" class="ph-card">
+        <div class="ph-img"><img src="../img/projets/S105.png" alt="SAÉ 1.05" onerror="this.style.opacity='0.2'"></div>
+        <div class="ph-body">
+          <div class="ph-tags"><span class="ph-tag ph-tag-3">Valoriser</span></div>
+          <div class="ph-code">SAÉ 1.05</div>
+          <div class="ph-title">Présentation d'un Territoire en Anglais</div>
+          <div class="ph-desc">Analyse Open Data Moselle et restitution orale en anglais des taux de réussite au bac.</div>
+          <span class="ph-link">Voir le projet →</span>
+        </div>
+      </a>
+      <a href="projets/Universitaires/S1/S106.html" class="ph-card">
+        <div class="ph-img"><img src="../img/projets/S106.png" alt="SAÉ 1.06" onerror="this.style.opacity='0.2'"></div>
+        <div class="ph-body">
+          <div class="ph-tags"><span class="ph-tag ph-tag-3">Valoriser</span></div>
+          <div class="ph-code">SAÉ 1.06</div>
+          <div class="ph-title">Mise en Œuvre d'une Enquête Statistique</div>
+          <div class="ph-desc">Enquête sur l'utilisation de l'IA par les étudiants messins : conception, collecte, datavisualisation.</div>
+          <span class="ph-link">Voir le projet →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="sem-section" data-sem="s2">
+    <div class="sem-label"><h2>Semestre 2</h2><span class="sem-year">2025</span><span class="sem-divider"></span></div>
+    <div class="projects-list">
+      <a href="projets/Universitaires/S2/S201.html" class="ph-card">
+        <div class="ph-img"><img src="../img/projets/S201.png" alt="SAÉ 2.01" onerror="this.style.opacity='0.2'"></div>
+        <div class="ph-body">
+          <div class="ph-tags"><span class="ph-tag ph-tag-1">Traiter</span></div>
+          <div class="ph-code">SAÉ 2.01</div>
+          <div class="ph-title">Conception & Implémentation d'une BDD</div>
+          <div class="ph-desc">Modélisation et implémentation d'une base de données relationnelle complète.</div>
+          <span class="ph-link">Voir le projet →</span>
+        </div>
+      </a>
+      <a href="projets/Universitaires/S2/S202.html" class="ph-card">
+        <div class="ph-img"><img src="../img/projets/S202.png" alt="SAÉ 2.02" onerror="this.style.opacity='0.2'"></div>
+        <div class="ph-body">
+          <div class="ph-tags"><span class="ph-tag ph-tag-2">Analyser</span></div>
+          <div class="ph-code">SAÉ 2.02</div>
+          <div class="ph-title">Estimation par Échantillonnage & Inférence</div>
+          <div class="ph-desc">Statistique inférentielle : intervalles de confiance, tests d'hypothèse.</div>
+          <span class="ph-link">Voir le projet →</span>
+        </div>
+      </a>
+      <a href="projets/Universitaires/S2/S203.html" class="ph-card">
+        <div class="ph-img"><img src="../img/projets/S203.png" alt="SAÉ 2.03" onerror="this.style.opacity='0.2'"></div>
+        <div class="ph-body">
+          <div class="ph-tags"><span class="ph-tag ph-tag-2">Analyser</span></div>
+          <div class="ph-code">SAÉ 2.03</div>
+          <div class="ph-title">Régression sur Données Réelles</div>
+          <div class="ph-desc">Modélisation de la régression linéaire sur des données automobiles sous R Studio.</div>
+          <span class="ph-link">Voir le projet →</span>
+        </div>
+      </a>
+      <a href="projets/Universitaires/S2/S204.html" class="ph-card">
+        <div class="ph-img"><img src="../img/projets/S204.png" alt="SAÉ 2.04" onerror="this.style.opacity='0.2'"></div>
+        <div class="ph-body">
+          <div class="ph-tags"><span class="ph-tag ph-tag-1">Traiter</span><span class="ph-tag ph-tag-2">Analyser</span><span class="ph-tag ph-tag-3">Valoriser</span></div>
+          <div class="ph-code">SAÉ 2.04</div>
+          <div class="ph-title">Datavisualisation (Challenge National)</div>
+          <div class="ph-desc">Challenge national de datavisualisation Power BI sur données chômage par région.</div>
+          <span class="ph-link">Voir le projet →</span>
+        </div>
+      </a>
+      <a href="projets/Universitaires/S2/S205.html" class="ph-card">
+        <div class="ph-img"><img src="../img/projets/S205.png" alt="SAÉ 2.05" onerror="this.style.opacity='0.2'"></div>
+        <div class="ph-body">
+          <div class="ph-tags"><span class="ph-tag ph-tag-3">Valoriser</span></div>
+          <div class="ph-code">SAÉ 2.05</div>
+          <div class="ph-title">Construction d'Indicateurs de Performance</div>
+          <div class="ph-desc">Conception et calcul de KPIs métier pertinents à partir de données d'entreprise.</div>
+          <span class="ph-link">Voir le projet →</span>
+        </div>
+      </a>
+      <a href="projets/Universitaires/S2/S206.html" class="ph-card">
+        <div class="ph-img"><img src="../img/projets/S206.png" alt="SAÉ 2.06" onerror="this.style.opacity='0.2'"></div>
+        <div class="ph-body">
+          <div class="ph-tags"><span class="ph-tag ph-tag-1">Traiter</span><span class="ph-tag ph-tag-3">Valoriser</span></div>
+          <div class="ph-code">SAÉ 2.06</div>
+          <div class="ph-title">Analyse, Reporting & Datavisualisation</div>
+          <div class="ph-desc">Scraping massif Intermarché, nettoyage des données et dashboard décisionnel.</div>
+          <span class="ph-link">Voir le projet →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="sem-section" data-sem="s3">
+    <div class="sem-label"><h2>Semestre 3</h2><span class="sem-year">2025–2026</span><span class="sem-divider"></span></div>
+    <div class="projects-list">
+      <a href="projets/Universitaires/S3/S301.html" class="ph-card">
+        <div class="ph-img"><img src="../img/projets/S301.png" alt="SAÉ 3.01" onerror="this.style.opacity='0.2'"></div>
+        <div class="ph-body">
+          <div class="ph-tags"><span class="ph-tag ph-tag-1">Traiter</span><span class="ph-tag ph-tag-4">Développer</span></div>
+          <div class="ph-code">SAÉ 3.01</div>
+          <div class="ph-title">Collecte Automatisée de Données Web</div>
+          <div class="ph-desc">Script de scraping Playwright + Pandas pour extraire et structurer les données d'un site e-commerce.</div>
+          <span class="ph-link">Voir le projet →</span>
+        </div>
+      </a>
+      <a href="projets/Universitaires/S3/S302.html" class="ph-card">
+        <div class="ph-img"><img src="../img/projets/S302.png" alt="SAÉ 3.02" onerror="this.style.opacity='0.2'"></div>
+        <div class="ph-body">
+          <div class="ph-tags"><span class="ph-tag ph-tag-1">Traiter</span><span class="ph-tag ph-tag-3">Valoriser</span></div>
+          <div class="ph-code">SAÉ 3.02</div>
+          <div class="ph-title">Intégration de Données (Datawarehouse)</div>
+          <div class="ph-desc">Pipeline ETL et intégration de sources hétérogènes dans un entrepôt de données.</div>
+          <span class="ph-link">Voir le projet →</span>
+        </div>
+      </a>
+      <a href="projets/Universitaires/S3/S303.html" class="ph-card">
+        <div class="ph-img"><img src="../img/projets/S303.png" alt="SAÉ 3.03" onerror="this.style.opacity='0.2'"></div>
+        <div class="ph-body">
+          <div class="ph-tags"><span class="ph-tag ph-tag-2">Analyser</span><span class="ph-tag ph-tag-3">Valoriser</span></div>
+          <div class="ph-code">SAÉ 3.03</div>
+          <div class="ph-title">Prévision de Données Temporelles</div>
+          <div class="ph-desc">Modélisation et prévision de séries temporelles (ARIMA) sous R Studio.</div>
+          <span class="ph-link">Voir le projet →</span>
+        </div>
+      </a>
+      <a href="projets/Universitaires/S3/S304.html" class="ph-card">
+        <div class="ph-img"><img src="../img/projets/S304.png" alt="SAÉ 3.04" onerror="this.style.opacity='0.2'"></div>
+        <div class="ph-body">
+          <div class="ph-tags"><span class="ph-tag ph-tag-1">Traiter</span><span class="ph-tag ph-tag-3">Valoriser</span></div>
+          <div class="ph-code">SAÉ 3.04</div>
+          <div class="ph-title">Conformité Réglementaire & RGPD</div>
+          <div class="ph-desc">Analyse de conformité RGPD et bonnes pratiques sur les données personnelles.</div>
+          <span class="ph-link">Voir le projet →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="sem-section" data-sem="suivi">
+    <div class="sem-label"><h2>Projets Suivis</h2><span class="sem-year">Approfondissement</span><span class="sem-divider"></span></div>
+    <div class="projects-list">
+      <a href="projets/Universitaires/S2/projet_vba_immobilier.html" class="ph-card">
+        <div class="ph-img"><img src="../img/projets/vba_immo.png" alt="Projet Suivi" onerror="this.style.opacity='0.2'"></div>
+        <div class="ph-body">
+          <div class="ph-tags"><span class="ph-tag ph-tag-1">Traiter</span></div>
+          <div class="ph-code">Projet Suivi</div>
+          <div class="ph-title">Planning Immobilier en VBA</div>
+          <div class="ph-desc">Application Excel VBA complète pour la gestion de planning d'une agence immobilière.</div>
+          <span class="ph-link">Voir le projet →</span>
+        </div>
+      </a>
+      <a href="projets/Universitaires/S3/projet-python-quiz-llm.html" class="ph-card">
+        <div class="ph-img"><img src="../img/projets/quiz_llm.png" alt="Projet Suivi" onerror="this.style.opacity='0.2'"></div>
+        <div class="ph-body">
+          <div class="ph-tags"><span class="ph-tag ph-tag-4">Développer</span></div>
+          <div class="ph-code">Projet Suivi</div>
+          <div class="ph-title">Plateforme Quiz Corrigé par IA (Dash)</div>
+          <div class="ph-desc">Application Dash (Python) avec correction automatique par LLM et dashboard des résultats.</div>
+          <span class="ph-link">Voir le projet →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+</div>
+</main>
+</div>
+
+<script>
+function filterSem(sem, btn) {
+  document.querySelectorAll('.sem-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.sem-section').forEach(s => {
+    s.style.display = (sem === 'all' || s.dataset.sem === sem) ? '' : 'none';
+  });
+}
+document.addEventListener('click',function(e){const s=document.querySelector('.sidebar'),b=document.getElementById('burger');if(s&&!s.contains(e.target)&&!b.contains(e.target))s.classList.remove('open');});
+</script>
+</body>
+</html>

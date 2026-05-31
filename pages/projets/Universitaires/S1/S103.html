@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analyse Exploratoire de Données — Accidents Routiers 20 · Samuel ROCHEMONT</title>
+<link rel="stylesheet" href="../../../../styles/style.css">
+</head>
+<body>
+<button class="burger-btn" id="burger" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰</button>
+<div class="layout">
+<aside class="sidebar">
+  <div class="sidebar-logo"><span class="name">Samuel Rochemont</span><span class="role">BUT Science des Données · VCOD</span></div>
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">Navigation</div>
+    <a href="../../../../index.html" class="nav-link"><span class="nav-icon">⬡</span> Accueil</a>
+    <a href="../../../../pages/about.html" class="nav-link"><span class="nav-icon">◎</span> Parcours</a>
+    <a href="../../../../pages/competences.html" class="nav-link"><span class="nav-icon">◈</span> Compétences</a>
+    <a href="../../../../pages/projets.html" class="nav-link active"><span class="nav-icon">◫</span> Projets <span class="nav-dot"></span></a>
+    <a href="../../../../pages/stage.html" class="nav-link"><span class="nav-icon">◉</span> Stage</a>
+    <div class="nav-section-label" style="margin-top:0.5rem;">Contact</div>
+    <a href="../../../../pages/contact.html" class="nav-link"><span class="nav-icon">◌</span> Me contacter</a>
+  </nav>
+  <div class="sidebar-footer"><a href="https://www.linkedin.com/in/samuel-rochemont/" target="_blank">↗ LinkedIn</a></div>
+</aside>
+<main class="main">
+<div class="page-wrap">
+  <div class="sae-header">
+    <div class="sae-breadcrumb"><a href="../../../../pages/projets.html">projets</a> / s1 / <span style='color:var(--text-2);'>s103</span></div>
+    <h1>Analyse Exploratoire de Données — Accidents Routiers 2018 & 2023</h1>
+    <div class="sae-meta"><span class="meta-chip">📅 Semestre 1 — 2024</span><span class="meta-chip">🎓 SAÉ 1.03</span><span class="meta-chip">⏱️ 8h</span><span class="meta-chip" style="color:var(--teal);">Samuel ROCHEMONT</span></div>
+  </div>
+  <div class="sae-body">
+    <div class="sae-content-left">
+      <div class="sae-img-wrap" onclick="openLB('../../../../img/projets/S103.png')">
+      <img src="../../../../img/projets/S103.png" alt="Analyse Exploratoire de Données — Accide" onerror="this.style.opacity='0.2'">
+      <span class="zoom-hint">🔍 Agrandir</span>
+    </div>
+      <div class="sae-section"><h2>Cadre du projet & Objectifs</h2><p style='color:var(--text-2);'>Comparaison des <strong style='color:var(--text);'>accidents routiers 2018 vs 2023</strong> sous Excel. Population cible : piétons de 18 à 24 ans, comparés aux 26-32 ans. Objectif : identifier des tendances actionnables pour la sécurité routière.</p></div>
+      <div class="sae-section"><h2>Étapes de réalisation</h2><div class="step-block"><h3>Découverte des données</h3><p style="color:var(--text-2);">Déchiffrage des variables ONISR (catu, grav, secu1...). Filtrage de la population 18-24 ans et vérification de cohérence inter-années.</p></div><div class="step-block"><h3>Analyse comparative</h3><p style="color:var(--text-2);">Graphiques : accidents par gravité (18-24 vs 26-32 ans), accidents par catégorie d'usager en 2018 et 2023.</p></div><div class="step-block"><h3>Restitution</h3><p style="color:var(--text-2);">Synthèse des tendances identifiées avec mise en avant des évolutions marquantes entre les deux années.</p></div></div>
+      <div class="sae-section"><h2>Ce que j'en retire</h2><div class='reflect-block'><h3>Comprendre avant d'analyser</h3><p>Une variable mal interprétée produit une analyse entièrement erronée. La lecture des métadonnées ONISR avant le premier graphique était indispensable.</p></div><div class='insight-box'><h3>💡 Ce que j'ai retenu</h3><p>Choisir quelle population comparer et comment formuler des conclusions actionnables — c'est déjà de la valorisation de données.</p></div></div>
+      <div class="sae-section"><h2>Positionnement par rapport aux ACs</h2><div class="eval-legend">
+      <span><span class="eval-dot ev-A">A</span>Acquis</span>
+      <span><span class="eval-dot ev-P">P</span>Presque acquis</span>
+      <span><span class="eval-dot ev-E">E</span>En cours d'apprentissage</span>
+      <span><span class="eval-dot ev-N">N</span>Non acquis</span>
+    </div><table class="eval-grid-table">
+      <thead><tr>
+        <th style="width:40%;">Apprentissage Critique</th>
+        <th class="center">Statut</th>
+        <th>Commentaires</th>
+      </tr></thead><tbody>
+        <tr>
+          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC12.01</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Réaliser que les sources de données ont des caractéristiques propres (variation, précision, mise à jour...)</span></td>
+          <td class="center"><span class="eval-dot ev-A">A</span></td>
+          <td style="font-size:0.77rem;color:var(--text-2);">Toutes les variables du fichier ONISR identifiées et comprises avant de démarrer l'analyse.</td>
+        </tr>
+        <tr>
+          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC12.02</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Comprendre qu'une analyse correcte ne peut émaner que de données propres et préparées</span></td>
+          <td class="center"><span class="eval-dot ev-P">P</span></td>
+          <td style="font-size:0.77rem;color:var(--text-2);">Filtrage de la population ciblée correct, mais quelques valeurs manquantes n'ont pas été traitées de façon optimale.</td>
+        </tr>
+        <tr>
+          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC12.03</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Saisir l'intérêt des synthèses numériques et graphiques pour décrire une variable statistique</span></td>
+          <td class="center"><span class="eval-dot ev-A">A</span></td>
+          <td style="font-size:0.77rem;color:var(--text-2);">Graphiques adaptés (barres groupées, histogrammes) avec titres et légendes clairs pour chaque comparaison.</td>
+        </tr>
+      </tbody></table></div>
+      <div class="wip-notice">📁 Les fichiers sources seront ajoutés prochainement après anonymisation.</div>
+    </div>
+    <div class="sae-sidebar">
+      <div class="sae-sidebar-card"><h4>Compétence ciblée</h4><span class="comp-badge-large cb-2">📊 Analyser — Niveau 1</span></div>
+      <div class="sae-sidebar-card"><h4>Technologies</h4><div class="tags-cloud"><span class="tag highlight">Excel</span><span class="tag highlight">Graphiques comparatifs</span><span class="tag ">Données ONISR</span><span class="tag ">Statistique descriptive</span></div></div>
+      <div class="sae-sidebar-card">
+        <h4>Ressources Mobilisées (BUT SD)</h4>
+        <div class="tags-cloud" style="gap:0.35rem;"><span class="tag" style="font-size:0.68rem;">R1.03 — Statistiques descriptives</span><span class="tag" style="font-size:0.68rem;">R1.04 — Données et dataviz</span></div>
+      </div>
+      <div class="sae-sidebar-card"><h4>Apprentissages critiques</h4><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC12.01</span>Réaliser que les sources de données ont des caractéristiques propres (variation, précision, mise à jour...)</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC12.02</span>Comprendre qu'une analyse correcte ne peut émaner que de données propres et préparées</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC12.03</span>Saisir l'intérêt des synthèses numériques et graphiques pour décrire une variable statistique</div></div>
+      <div style="margin-top:1rem;"><a href="../../../../pages/projets.html" class="btn btn-outline" style="width:100%;justify-content:center;">← Retour aux projets</a></div>
+    </div>
+  </div>
+</div>
+</main>
+</div>
+
+<div id="lb-modal" onclick="document.getElementById('lb-modal').classList.remove('open')">
+  <span class="lb-close">&#x2715;</span>
+  <img id="lb-img" src="" alt="">
+</div>
+<script>
+function openLB(src){var m=document.getElementById('lb-modal');document.getElementById('lb-img').src=src;m.classList.add('open');}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')document.getElementById('lb-modal').classList.remove('open');});
+document.addEventListener('click',function(e){const s=document.querySelector('.sidebar'),b=document.getElementById('burger');if(s&&b&&!s.contains(e.target)&&!b.contains(e.target))s.classList.remove('open');});
+</script>
+</body>
+</html>

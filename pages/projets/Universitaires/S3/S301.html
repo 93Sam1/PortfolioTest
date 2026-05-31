@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Collecte Automatisée de Données Web — Scraping Blue Buf · Samuel ROCHEMONT</title>
+<link rel="stylesheet" href="../../../../styles/style.css">
+</head>
+<body>
+<button class="burger-btn" id="burger" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰</button>
+<div class="layout">
+<aside class="sidebar">
+  <div class="sidebar-logo"><span class="name">Samuel Rochemont</span><span class="role">BUT Science des Données · VCOD</span></div>
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">Navigation</div>
+    <a href="../../../../index.html" class="nav-link"><span class="nav-icon">⬡</span> Accueil</a>
+    <a href="../../../../pages/about.html" class="nav-link"><span class="nav-icon">◎</span> Parcours</a>
+    <a href="../../../../pages/competences.html" class="nav-link"><span class="nav-icon">◈</span> Compétences</a>
+    <a href="../../../../pages/projets.html" class="nav-link active"><span class="nav-icon">◫</span> Projets <span class="nav-dot"></span></a>
+    <a href="../../../../pages/stage.html" class="nav-link"><span class="nav-icon">◉</span> Stage</a>
+    <div class="nav-section-label" style="margin-top:0.5rem;">Contact</div>
+    <a href="../../../../pages/contact.html" class="nav-link"><span class="nav-icon">◌</span> Me contacter</a>
+  </nav>
+  <div class="sidebar-footer"><a href="https://www.linkedin.com/in/samuel-rochemont/" target="_blank">↗ LinkedIn</a></div>
+</aside>
+<main class="main">
+<div class="page-wrap">
+  <div class="sae-header">
+    <div class="sae-breadcrumb"><a href="../../../../pages/projets.html">projets</a> / s3 / <span style='color:var(--text-2);'>s301</span></div>
+    <h1>Collecte Automatisée de Données Web — Scraping Blue Buffalo</h1>
+    <div class="sae-meta"><span class="meta-chip">📅 Semestre 3 — 2025/2026</span><span class="meta-chip">🎓 SAÉ 3.01</span><span class="meta-chip">⏱️ 40h</span><span class="meta-chip" style="color:var(--teal);">Samuel ROCHEMONT</span></div>
+  </div>
+  <div class="sae-body">
+    <div class="sae-content-left">
+      <div class="sae-img-wrap" onclick="openLB('../../../../img/projets/S301.png')">
+      <img src="../../../../img/projets/S301.png" alt="Collecte Automatisée de Données Web — Sc" onerror="this.style.opacity='0.2'">
+      <span class="zoom-hint">🔍 Agrandir</span>
+    </div>
+      <div class="sae-section"><h2>Cadre du projet & Objectifs</h2><p style='color:var(--text-2);'>Développement d'un <strong style='color:var(--text);'>pipeline de scraping complet</strong> sur le site Blue Buffalo (alimentation animale) avec Python et Playwright. Extraire, structurer et exporter automatiquement les données produits.</p></div>
+      <div class="sae-section"><h2>Étapes de réalisation</h2><div class="step-block"><h3>Analyse de la structure du site</h3><p style="color:var(--text-2);">Étude des pages, rendu JavaScript dynamique et sélecteurs CSS/XPath pour adapter la stratégie d'extraction.</p></div><div class="step-block"><h3>Développement du scraper</h3><p style="color:var(--text-2);">Playwright pour naviguer et extraire les données dynamiques. Structuration en DataFrame Pandas.</p></div><div class="step-block"><h3>Export & automatisation</h3><p style="color:var(--text-2);">Export CSV automatique pour intégration dans Excel ou Power BI. Pipeline découpé en modules indépendants testables.</p></div></div>
+      <div class="sae-section"><h2>Ce que j'en retire</h2><div class='reflect-block'><h3>L'automatisation comme investissement</h3><p>Un scraper prend plus de temps à construire qu'une extraction manuelle ponctuelle. Mais une fois en place, il peut être relancé en un clic — c'est la différence entre une tâche récurrente et un processus industrialisé.</p></div><div class='insight-box'><h3>💡 Ce que j'ai retenu</h3><p>Un bon pipeline est modulaire : extraction, transformation, export séparés. Cette structure le rend testable, maintenable et réutilisable.</p></div></div>
+      <div class="sae-section"><h2>Positionnement par rapport aux ACs</h2><div class="eval-legend">
+      <span><span class="eval-dot ev-A">A</span>Acquis</span>
+      <span><span class="eval-dot ev-P">P</span>Presque acquis</span>
+      <span><span class="eval-dot ev-E">E</span>En cours d'apprentissage</span>
+      <span><span class="eval-dot ev-N">N</span>Non acquis</span>
+    </div><table class="eval-grid-table">
+      <thead><tr>
+        <th style="width:40%;">Apprentissage Critique</th>
+        <th class="center">Statut</th>
+        <th>Commentaires</th>
+      </tr></thead><tbody>
+        <tr>
+          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC24.01VCOD</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Comprendre le rôle fondamental de l'analyse des besoins et de l'existant dans un projet décisionnel</span></td>
+          <td class="center"><span class="eval-dot ev-A">A</span></td>
+          <td style="font-size:0.77rem;color:var(--text-2);">Analyse complète de la structure hétérogène du site pour adapter la méthode et les sélecteurs avant de coder.</td>
+        </tr>
+        <tr>
+          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC24.02VCOD</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Percevoir les enjeux de l'automatisation et de l'interopérabilité d'un ensemble de tâches</span></td>
+          <td class="center"><span class="eval-dot ev-A">A</span></td>
+          <td style="font-size:0.77rem;color:var(--text-2);">Pipeline entièrement automatisé avec export CSV garantissant l'intégration dans Excel ou Power BI.</td>
+        </tr>
+        <tr>
+          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC24.03VCOD</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Prendre conscience des différences entre outils (logiciels, langages) pour choisir le plus adapté</span></td>
+          <td class="center"><span class="eval-dot ev-A">A</span></td>
+          <td style="font-size:0.77rem;color:var(--text-2);">Choix de Google Colab + Playwright comme environnement optimal pour le scraping de contenu dynamique.</td>
+        </tr>
+        <tr>
+          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC24.04VCOD</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Comprendre le cycle de vie d'un projet informatique</span></td>
+          <td class="center"><span class="eval-dot ev-P">P</span></td>
+          <td style="font-size:0.77rem;color:var(--text-2);">Pipeline structuré en modules distincts, documentation des étapes — la phase de tests reste à approfondir.</td>
+        </tr>
+      </tbody></table></div>
+      <div class="wip-notice">📁 Les fichiers sources seront ajoutés prochainement après anonymisation.</div>
+    </div>
+    <div class="sae-sidebar">
+      <div class="sae-sidebar-card"><h4>Compétence ciblée</h4><span class="comp-badge-large cb-4">🗄️ Traiter · ⚙️ Développer</span></div>
+      <div class="sae-sidebar-card"><h4>Technologies</h4><div class="tags-cloud"><span class="tag highlight">Python</span><span class="tag highlight">Playwright</span><span class="tag ">Pandas</span><span class="tag ">Google Colab</span><span class="tag ">CSV</span></div></div>
+      <div class="sae-sidebar-card">
+        <h4>Ressources Mobilisées (BUT SD)</h4>
+        <div class="tags-cloud" style="gap:0.35rem;"><span class="tag" style="font-size:0.68rem;">R3.02 — Systèmes d'Info décisionnels</span><span class="tag" style="font-size:0.68rem;">R3.03 — Technologies Web</span><span class="tag" style="font-size:0.68rem;">R3.04 — Prog. Statistique Automatisée</span><span class="tag" style="font-size:0.68rem;">R3.VCOD.10 — Prog. Objet</span></div>
+      </div>
+      <div class="sae-sidebar-card"><h4>Apprentissages critiques</h4><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC24.01VCOD</span>Comprendre le rôle fondamental de l'analyse des besoins et de l'existant dans un projet décisionnel</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC24.02VCOD</span>Percevoir les enjeux de l'automatisation et de l'interopérabilité d'un ensemble de tâches</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC24.03VCOD</span>Prendre conscience des différences entre outils (logiciels, langages) pour choisir le plus adapté</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC24.04VCOD</span>Comprendre le cycle de vie d'un projet informatique</div></div>
+      <div style="margin-top:1rem;"><a href="../../../../pages/projets.html" class="btn btn-outline" style="width:100%;justify-content:center;">← Retour aux projets</a></div>
+    </div>
+  </div>
+</div>
+</main>
+</div>
+
+<div id="lb-modal" onclick="document.getElementById('lb-modal').classList.remove('open')">
+  <span class="lb-close">&#x2715;</span>
+  <img id="lb-img" src="" alt="">
+</div>
+<script>
+function openLB(src){var m=document.getElementById('lb-modal');document.getElementById('lb-img').src=src;m.classList.add('open');}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')document.getElementById('lb-modal').classList.remove('open');});
+document.addEventListener('click',function(e){const s=document.querySelector('.sidebar'),b=document.getElementById('burger');if(s&&b&&!s.contains(e.target)&&!b.contains(e.target))s.classList.remove('open');});
+</script>
+</body>
+</html>

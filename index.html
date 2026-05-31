@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samuel ROCHEMONT — Portfolio Data Science</title>
+<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<button class="burger-btn" id="burger" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰</button>
+
+<div class="layout">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <span class="name">Samuel Rochemont</span>
+      <span class="role">BUT Science des Données · VCOD</span>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">Navigation</div>
+      <a href="index.html" class="nav-link active"><span class="nav-icon">⬡</span> Accueil <span class="nav-dot"></span></a>
+      <a href="pages/about.html" class="nav-link"><span class="nav-icon">◎</span> Parcours</a>
+      <a href="pages/competences.html" class="nav-link"><span class="nav-icon">◈</span> Compétences</a>
+      <a href="pages/projets.html" class="nav-link"><span class="nav-icon">◫</span> Projets</a>
+      <a href="pages/stage.html" class="nav-link"><span class="nav-icon">◉</span> Stage</a>
+      <div class="nav-section-label" style="margin-top:0.5rem;">Contact</div>
+      <a href="pages/contact.html" class="nav-link"><span class="nav-icon">◌</span> Me contacter</a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="https://www.linkedin.com/in/samuel-rochemont/" target="_blank">↗ LinkedIn</a>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="page-wrap">
+
+      <!-- Dashboard grid -->
+      <div class="dashboard">
+
+        <!-- HERO TILE -->
+        <div class="tile tile-hero">
+          <div class="greeting">// samuel.rochemont — 2ème année BUT SD</div>
+          <h1>Donner du sens<br>aux <em>données.</em></h1>
+          <p class="desc">
+            Étudiant en BUT Science des Données (parcours VCOD) à l'IUT de Metz. Je réalise des analyses statistiques, de la datavisualisation et des outils décisionnels. Actuellement en stage chez La Poste — Technicien Data.
+          </p>
+          <div class="cta-row">
+            <a href="pages/projets.html" class="btn btn-primary">Voir mes projets →</a>
+            <a href="files/CV.pdf" target="_blank" class="btn btn-outline">CV ↓</a>
+          </div>
+        </div>
+
+        <!-- STATUS TILE -->
+        <div class="tile tile-status">
+          <div class="status-badge">
+            <span class="dot"></span>
+            <div>
+              <strong>En stage</strong><br>
+              <span>La Poste · Montreuil · Avr–Juin 2026</span>
+            </div>
+          </div>
+          <div class="stat-row">
+            <div class="stat-box"><div class="num">16</div><div class="lbl">Projets SAÉ</div></div>
+            <div class="stat-box"><div class="num">4</div><div class="lbl">Compétences</div></div>
+            <div class="stat-box"><div class="num">2</div><div class="lbl">Années BUT</div></div>
+            <div class="stat-box"><div class="num">B2</div><div class="lbl">Anglais</div></div>
+          </div>
+        </div>
+
+        <!-- STACK TILE -->
+        <div class="tile tile-stack">
+          <div class="stack-title">Stack technique</div>
+          <div class="tags-cloud">
+            <span class="tag highlight">Python</span>
+            <span class="tag highlight">SQL</span>
+            <span class="tag highlight">R Studio</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">VBA</span>
+
+            <span class="tag">Apache HOP</span>
+            <span class="tag">HTML/CSS</span>
+            <span class="tag">Excel</span>
+          </div>
+        </div>
+
+        <!-- COMPETENCES MINI TILE -->
+        <div class="tile tile-comps">
+          <div class="tile-label">Compétences BUT SD <a href="pages/competences.html">Voir le détail →</a></div>
+          <div class="comp-pills">
+            <a href="pages/competences.html#traiter" class="comp-pill comp-pill-1">
+              <div class="cp-icon">🗄️</div>
+              <div class="cp-name">Traiter</div>
+              <div class="cp-lvl">Niv. 1✓ · Niv. 2↗</div>
+            </a>
+            <a href="pages/competences.html#analyser" class="comp-pill comp-pill-2">
+              <div class="cp-icon">📊</div>
+              <div class="cp-name">Analyser</div>
+              <div class="cp-lvl">Niv. 1✓ · Niv. 2↗</div>
+            </a>
+            <a href="pages/competences.html#valoriser" class="comp-pill comp-pill-3">
+              <div class="cp-icon">📈</div>
+              <div class="cp-name">Valoriser</div>
+              <div class="cp-lvl">Niv. 1✓ · Niv. 2↗</div>
+            </a>
+            <a href="pages/competences.html#developper" class="comp-pill comp-pill-4">
+              <div class="cp-icon">⚙️</div>
+              <div class="cp-name">Développer</div>
+              <div class="cp-lvl">VCOD · Niv. 1 N/A · Niv. 2↗</div>
+            </a>
+          </div>
+        </div>
+
+        <!-- RECENT PROJECTS TILE -->
+        <div class="tile tile-projects">
+          <div class="tile-label">
+            Projets récents
+            <a href="pages/projets.html">Tous les projets →</a>
+          </div>
+          <div class="proj-row">
+            <a href="pages/projets/Universitaires/S3/S301.html" class="proj-mini">
+              <img src="img/projets/S301.png" alt="S301" onerror="this.style.display='none'">
+              <div class="pm-body">
+                <div class="pm-tags"><span class="pm-tag pm-tag-1">Traiter</span><span class="pm-tag pm-tag-4">Développer</span></div>
+                <div class="pm-title">S301 — Collecte Automatisée de Données Web</div>
+                <div class="pm-link">Voir →</div>
+              </div>
+            </a>
+            <a href="pages/projets/Universitaires/S2/S206.html" class="proj-mini">
+              <img src="img/projets/S206.png" alt="S206" onerror="this.style.display='none'">
+              <div class="pm-body">
+                <div class="pm-tags"><span class="pm-tag pm-tag-1">Traiter</span><span class="pm-tag pm-tag-3">Valoriser</span></div>
+                <div class="pm-title">S206 — Analyse, Reporting & Datavisualisation</div>
+                <div class="pm-link">Voir →</div>
+              </div>
+            </a>
+            <a href="pages/projets/Universitaires/S2/projet_vba_immobilier.html" class="proj-mini">
+              <img src="img/projets/vba_immo.png" alt="VBA" onerror="this.style.display='none'">
+              <div class="pm-body">
+                <div class="pm-tags"><span class="pm-tag pm-tag-1">Traiter</span></div>
+                <div class="pm-title">Projet Suivi — Planning Immobilier VBA</div>
+                <div class="pm-link">Voir →</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </div><!-- /dashboard -->
+    </div>
+  </main>
+</div>
+
+<script>
+document.addEventListener('click', function(e) {
+  const sidebar = document.querySelector('.sidebar');
+  const burger = document.getElementById('burger');
+  if (sidebar && !sidebar.contains(e.target) && !burger.contains(e.target)) {
+    sidebar.classList.remove('open');
+  }
+});
+</script>
+</body>
+</html>

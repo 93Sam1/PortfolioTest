@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compétences — Samuel ROCHEMONT</title>
+<link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+<button class="burger-btn" id="burger" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰</button>
+<div class="layout">
+<aside class="sidebar">
+  <div class="sidebar-logo"><span class="name">Samuel Rochemont</span><span class="role">BUT Science des Données · VCOD</span></div>
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">Navigation</div>
+    <a href="../index.html" class="nav-link"><span class="nav-icon">⬡</span> Accueil</a>
+    <a href="about.html" class="nav-link"><span class="nav-icon">◎</span> Parcours</a>
+    <a href="competences.html" class="nav-link active"><span class="nav-icon">◈</span> Compétences <span class="nav-dot"></span></a>
+    <a href="projets.html" class="nav-link"><span class="nav-icon">◫</span> Projets</a>
+    <a href="stage.html" class="nav-link"><span class="nav-icon">◉</span> Stage</a>
+    <div class="nav-section-label" style="margin-top:0.5rem;">Contact</div>
+    <a href="contact.html" class="nav-link"><span class="nav-icon">◌</span> Me contacter</a>
+  </nav>
+  <div class="sidebar-footer"><a href="https://www.linkedin.com/in/samuel-rochemont/" target="_blank">↗ LinkedIn</a></div>
+</aside>
+
+<main class="main">
+<div class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb">portfolio / <span>compétences</span></div>
+    <h1>Compétences BUT SD</h1>
+    <p>Parcours VCOD — Visualisation & Conception d'Outils Décisionnels · 4 compétences sur 2 ans.</p>
+  </div>
+
+  <!-- Tabs -->
+  <div class="comp-tabs" id="compTabs">
+    <button class="comp-tab active-1" onclick="showComp('traiter',this,1)" id="tab-traiter">🗄️ Traiter</button>
+    <button class="comp-tab" onclick="showComp('analyser',this,2)" id="tab-analyser">📊 Analyser</button>
+    <button class="comp-tab" onclick="showComp('valoriser',this,3)" id="tab-valoriser">📈 Valoriser</button>
+    <button class="comp-tab" onclick="showComp('developper',this,4)" id="tab-developper">⚙️ Développer</button>
+  </div>
+
+  <!-- ══ TRAITER ══ -->
+  <div class="comp-panel active" id="panel-traiter">
+    <div class="comp-layout">
+      <div class="comp-main-content">
+        <div class="comp-intro" style="border-left:3px solid var(--c1);">
+          <h2 style="color:var(--c1);">Traiter des données à des fins décisionnelles</h2>
+          <p>Compétence socle de la formation. Elle couvre toutes les opérations nécessaires pour préparer des données exploitables — de la collecte à l'intégration dans un système décisionnel. Une donnée mal préparée entraîne des analyses biaisées, des visualisations trompeuses et des décisions incorrectes.</p>
+        </div>
+        <div class="levels-block">
+          <div class="level-item done">
+            <div class="level-header">
+              <span class="level-title">Niveau 1 — Traiter des données structurées</span>
+              <span class="level-badge badge-done">✓ Validé</span>
+            </div>
+            <div class="ac-list">
+              <div class="ac-item"><span class="ac-code">AC1.1.01</span>Interpréter correctement le besoin du commanditaire ou du client</div>
+              <div class="ac-item"><span class="ac-code">AC1.1.02</span>Respecter les formalismes de notation</div>
+              <div class="ac-item"><span class="ac-code">AC1.1.03</span>Connaître la syntaxe des langages et savoir l'utiliser</div>
+              <div class="ac-item"><span class="ac-code">AC1.1.04</span>Mesurer l'importance de maîtriser la structure des données à exploiter</div>
+              <div class="ac-item"><span class="ac-code">AC1.1.05</span>Comprendre les structures algorithmiques de base</div>
+              <div class="ac-item"><span class="ac-code">AC1.1.06</span>Prendre conscience de l'intérêt de la programmation</div>
+            </div>
+          </div>
+          <div class="level-item current">
+            <div class="level-header">
+              <span class="level-title">Niveau 2 — Automatiser le traitement de données multidimensionnelles</span>
+              <span class="level-badge badge-current">↗ En cours</span>
+            </div>
+            <div class="ac-list">
+              <div class="ac-item"><span class="ac-code">AC2.1.01</span>Comprendre l'organisation des données de l'entreprise</div>
+              <div class="ac-item"><span class="ac-code">AC2.1.02</span>Réaliser le rôle central de l'entrepôt de données dans la chaîne décisionnelle</div>
+              <div class="ac-item"><span class="ac-code">AC2.1.03</span>Identifier et résoudre les problèmes d'intégration de sources hétérogènes</div>
+              <div class="ac-item"><span class="ac-code">AC2.1.04</span>Comprendre la nécessité de tester, corriger et documenter un programme</div>
+              <div class="ac-item"><span class="ac-code">AC2.1.05</span>Apprécier l'intérêt de briques logicielles existantes et savoir les utiliser</div>
+            </div>
+          </div>
+          <div class="level-item future">
+            <div class="level-header">
+              <span class="level-title">Niveau 3 — Traiter des données hétérogènes et en temps réel</span>
+              <span class="level-badge badge-future">🔒 Année 3</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="comp-eval">
+          <div class="comp-eval-title">Auto-évaluation</div>
+          <div class="eval-row"><div class="er-ac"><strong>AC21.01</strong> — Comprendre l'organisation des données de l'entreprise</div><div class="er-status er-acquis">Acquis</div><div class="er-just">Analyse du schéma XML des associations françaises pour comprendre la structure avant intégration.</div></div>
+          <div class="eval-row"><div class="er-ac"><strong>AC21.02</strong> — Rôle de l'entrepôt dans la chaîne décisionnelle</div><div class="er-status er-acquis">Acquis</div><div class="er-just">Réalisation d'un pipeline ETL sous Apache HOP alimentant un datawarehouse décisionnel.</div></div>
+          <div class="eval-row"><div class="er-ac"><strong>AC21.03</strong> — Identifier et résoudre les problèmes d'intégration</div><div class="er-status er-acquis">Acquis</div><div class="er-just">Intégration réussie de sources XML et CSV dans un pipeline unique ; gestion des conflits de types et des doublons.</div></div>
+          <div class="eval-row"><div class="er-ac"><strong>AC21.04</strong> — Tester, corriger et documenter un programme</div><div class="er-status er-acquis">Acquis</div><div class="er-just">Découpage du pipeline en étapes documentées et testées individuellement avant déploiement.</div></div>
+          <div class="eval-row"><div class="er-ac"><strong>AC21.05</strong> — Utiliser des briques logicielles existantes</div><div class="er-status er-acquis">Acquis</div><div class="er-just">Choix et prise en main d'Apache HOP comme outil ETL dédié, en remplacement des copier-coller manuels Excel.</div></div>
+        </div>
+      </div>
+      <div class="comp-sidebar">
+        <div class="card">
+          <h4>SAÉ Semestre 1</h4>
+          <a href="projets/Universitaires/S1/S101.html" class="sae-link-item"><span class="sae-code" style="background:rgba(248,113,113,0.1);color:var(--c1);">S1.01</span>Reporting depuis un SGBD Relationnel</a>
+          <a href="projets/Universitaires/S1/S102.html" class="sae-link-item"><span class="sae-code" style="background:rgba(248,113,113,0.1);color:var(--c1);">S1.02</span>Écriture/Lecture de Fichiers & Algorithmique ELO</a>
+        </div>
+        <div class="card">
+          <h4>SAÉ Semestre 2</h4>
+          <a href="projets/Universitaires/S2/S201.html" class="sae-link-item"><span class="sae-code" style="background:rgba(248,113,113,0.1);color:var(--c1);">S2.01</span>Conception & Implémentation d'une BDD</a>
+          <a href="projets/Universitaires/S2/S204.html" class="sae-link-item"><span class="sae-code" style="background:rgba(248,113,113,0.1);color:var(--c1);">S2.04</span>Datavisualisation (Challenge National)</a>
+          <a href="projets/Universitaires/S2/S206.html" class="sae-link-item"><span class="sae-code" style="background:rgba(248,113,113,0.1);color:var(--c1);">S2.06</span>Analyse, Reporting & Datavisualisation</a>
+          <a href="projets/Universitaires/S2/projet_vba_immobilier.html" class="sae-link-item"><span class="sae-code" style="background:rgba(248,113,113,0.1);color:var(--c1);">Suivi</span>Planning Immobilier VBA</a>
+        </div>
+        <div class="card">
+          <h4>SAÉ Semestre 3</h4>
+          <a href="projets/Universitaires/S3/S301.html" class="sae-link-item"><span class="sae-code" style="background:rgba(248,113,113,0.1);color:var(--c1);">S3.01</span>Collecte Automatisée de Données Web</a>
+          <a href="projets/Universitaires/S3/S302.html" class="sae-link-item"><span class="sae-code" style="background:rgba(248,113,113,0.1);color:var(--c1);">S3.02</span>Intégration de Données (Datawarehouse)</a>
+          <a href="projets/Universitaires/S3/S304.html" class="sae-link-item"><span class="sae-code" style="background:rgba(248,113,113,0.1);color:var(--c1);">S3.04</span>Conformité Réglementaire & RGPD</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ ANALYSER ══ -->
+  <div class="comp-panel" id="panel-analyser">
+    <div class="comp-layout">
+      <div class="comp-main-content">
+        <div class="comp-intro" style="border-left:3px solid var(--c2);">
+          <h2 style="color:var(--c2);">Analyser statistiquement les données</h2>
+          <p>Cœur scientifique du BUT SD. Du descriptif à l'inférentiel, en passant par l'exploration multivariée, cette compétence donne les outils pour comprendre, modéliser et interpréter les phénomènes cachés dans la donnée.</p>
+        </div>
+        <div class="levels-block">
+          <div class="level-item done">
+            <div class="level-header">
+              <span class="level-title">Niveau 1 — Mettre en œuvre une analyse descriptive</span>
+              <span class="level-badge badge-done">✓ Validé</span>
+            </div>
+            <div class="ac-list">
+              <div class="ac-item"><span class="ac-code">AC12.01</span>Réaliser que les sources de données ont des caractéristiques propres (variation, précision, mise à jour…)</div>
+              <div class="ac-item"><span class="ac-code">AC12.02</span>Comprendre qu'une analyse correcte ne peut émaner que de données propres et préparées</div>
+              <div class="ac-item"><span class="ac-code">AC12.03</span>Saisir l'intérêt des synthèses numériques et graphiques pour décrire une variable statistique</div>
+              <div class="ac-item"><span class="ac-code">AC12.04</span>Comprendre l'intérêt des synthèses pour mettre en évidence des liaisons entre variables</div>
+              <div class="ac-item"><span class="ac-code">AC12.05</span>Comprendre l'intérêt de l'utilisation d'un modèle probabiliste</div>
+              <div class="ac-item"><span class="ac-code">AC12.06</span>Appréhender la notion de fluctuation d'échantillonnage à l'aide de simulations probabilistes</div>
+            </div>
+          </div>
+          <div class="level-item current">
+            <div class="level-header">
+              <span class="level-title">Niveau 2 — Mettre en œuvre une analyse exploratoire</span>
+              <span class="level-badge badge-current">↗ En cours</span>
+            </div>
+            <div class="ac-list">
+              <div class="ac-item"><span class="ac-code">AC22.01</span>Prendre conscience de la différence entre modélisation statistique et analyse exploratoire</div>
+              <div class="ac-item"><span class="ac-code">AC22.02</span>Saisir la spécificité de l'analyse des données temporelles</div>
+              <div class="ac-item"><span class="ac-code">AC22.03</span>Comprendre l'intérêt des analyses multivariées pour synthétiser l'information (ACP, AFC, CAH, K-Means)</div>
+              <div class="ac-item"><span class="ac-code">AC22.04</span>Appréhender l'idée de confronter une hypothèse avec la réalité pour prendre une décision</div>
+              <div class="ac-item"><span class="ac-code">AC22.05</span>Apprécier les limites de validité et les conditions d'application d'une analyse</div>
+            </div>
+          </div>
+          <div class="level-item future">
+            <div class="level-header">
+              <span class="level-title">Niveau 3 — Analyse exploratoire de données complexes</span>
+              <span class="level-badge badge-future">🔒 Année 3</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="comp-eval">
+          <div class="comp-eval-title">Auto-évaluation</div>
+          <div class="eval-row"><div class="er-ac"><strong>AC22.01</strong> — Différence modélisation statistique / analyse exploratoire</div><div class="er-status er-acquis">Acquis</div><div class="er-just">Distinction appliquée entre exploration des tendances passées et prévision future par modèle Holt-Winters.</div></div>
+          <div class="eval-row"><div class="er-ac"><strong>AC22.02</strong> — Spécificité de l'analyse des données temporelles</div><div class="er-status er-acquis">Acquis</div><div class="er-just">Utilisation des modèles Holt-Winters pour isoler la tendance et la saisonnalité dans les données de transport aérien Eurostat.</div></div>
+          <div class="eval-row"><div class="er-ac"><strong>AC22.03</strong> — Intérêt des analyses multivariées</div><div class="er-status er-acquis">Acquis</div><div class="er-just">Analyse des données de plusieurs pays (dont Danemark) pour synthétiser les évolutions post-COVID.</div></div>
+          <div class="eval-row"><div class="er-ac"><strong>AC22.04</strong> — Confronter une hypothèse avec la réalité</div><div class="er-status er-acquis">Acquis</div><div class="er-just">Comparaison directe entre prévisions du modèle et données réelles pour valider ou invalider les résultats.</div></div>
+          <div class="eval-row"><div class="er-ac"><strong>AC22.05</strong> — Limites de validité d'une analyse</div><div class="er-status er-acquis">Acquis</div><div class="er-just">Analyse des intervalles de confiance du modèle pour quantifier l'incertitude des prévisions et identifier leurs limites.</div></div>
+        </div>
+      </div>
+      <div class="comp-sidebar">
+        <div class="card">
+          <h4>SAÉ Semestre 1</h4>
+          <a href="projets/Universitaires/S1/S103.html" class="sae-link-item"><span class="sae-code" style="background:rgba(251,146,60,0.1);color:var(--c2);">S1.03</span>Préparation & Analyse Exploratoire de Données</a>
+        </div>
+        <div class="card">
+          <h4>SAÉ Semestre 2</h4>
+          <a href="projets/Universitaires/S2/S202.html" class="sae-link-item"><span class="sae-code" style="background:rgba(251,146,60,0.1);color:var(--c2);">S2.02</span>Estimation par Échantillonnage & Inférence</a>
+          <a href="projets/Universitaires/S2/S203.html" class="sae-link-item"><span class="sae-code" style="background:rgba(251,146,60,0.1);color:var(--c2);">S2.03</span>Régression sur Données Réelles</a>
+          <a href="projets/Universitaires/S2/S204.html" class="sae-link-item"><span class="sae-code" style="background:rgba(251,146,60,0.1);color:var(--c2);">S2.04</span>Datavisualisation (Challenge National)</a>
+          <a href="projets/Universitaires/S2/S206.html" class="sae-link-item"><span class="sae-code" style="background:rgba(251,146,60,0.1);color:var(--c2);">S2.06</span>Analyse, Reporting & Datavisualisation</a>
+        </div>
+        <div class="card">
+          <h4>SAÉ Semestre 3</h4>
+          <a href="projets/Universitaires/S3/S301.html" class="sae-link-item"><span class="sae-code" style="background:rgba(251,146,60,0.1);color:var(--c2);">S3.01</span>Collecte Automatisée de Données Web</a>
+          <a href="projets/Universitaires/S3/S303.html" class="sae-link-item"><span class="sae-code" style="background:rgba(251,146,60,0.1);color:var(--c2);">S3.03</span>Prévision de Données Temporelles</a>
+          <a href="projets/Universitaires/S3/S304.html" class="sae-link-item"><span class="sae-code" style="background:rgba(251,146,60,0.1);color:var(--c2);">S3.04</span>Conformité Réglementaire & RGPD</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ VALORISER ══ -->
+  <div class="comp-panel" id="panel-valoriser">
+    <div class="comp-layout">
+      <div class="comp-main-content">
+        <div class="comp-intro" style="border-left:3px solid var(--c3);">
+          <h2 style="color:var(--c3);">Valoriser une production dans un contexte professionnel</h2>
+          <p>Analyser c'est bien — savoir communiquer les résultats de façon claire, percutante et adaptée à l'interlocuteur, c'est ce qui fait la différence en entreprise. Cette compétence couvre la datavisualisation, le reporting, la communication FR/EN et l'intégration des résultats dans l'écosystème de l'entreprise.</p>
+        </div>
+        <div class="levels-block">
+          <div class="level-item done">
+            <div class="level-header">
+              <span class="level-title">Niveau 1 — Contextualiser et présenter les données</span>
+              <span class="level-badge badge-done">✓ Validé</span>
+            </div>
+            <div class="ac-list">
+              <div class="ac-item"><span class="ac-code">AC13.01</span>Prendre connaissance des biais rencontrés dans la mise en place d'une enquête</div>
+              <div class="ac-item"><span class="ac-code">AC13.02</span>Identifier l'importance de contextualiser ses données</div>
+              <div class="ac-item"><span class="ac-code">AC13.03</span>Mesurer l'importance de mettre en évidence des résultats clés par des indicateurs pertinents</div>
+              <div class="ac-item"><span class="ac-code">AC13.04</span>Lors de la restitution, mesurer l'importance d'expliciter la démarche suivie</div>
+              <div class="ac-item"><span class="ac-code">AC13.05</span>Comprendre les intérêts de la data visualisation et de l'infographie</div>
+              <div class="ac-item"><span class="ac-code">AC13.06</span>Mesurer l'importance d'une expression précise dans la communication en français et en langue étrangère</div>
+            </div>
+          </div>
+          <div class="level-item current">
+            <div class="level-header">
+              <span class="level-title">Niveau 2 — Restituer et argumenter ses résultats</span>
+              <span class="level-badge badge-current">↗ En cours</span>
+            </div>
+            <div class="ac-list">
+              <div class="ac-item"><span class="ac-code">AC23.01</span>Saisir l'intérêt de mobiliser de manière proactive des ressources métiers (y compris international)</div>
+              <div class="ac-item"><span class="ac-code">AC23.02</span>Savoir défendre ses choix d'analyses</div>
+              <div class="ac-item"><span class="ac-code">AC23.03</span>Saisir la nécessité de choisir des indicateurs pertinents pour communiquer sur les résultats</div>
+              <div class="ac-item"><span class="ac-code">AC23.04</span>Prendre conscience de la rigueur requise dans ses productions et dans la communication</div>
+              <div class="ac-item"><span class="ac-code">AC23.05</span>Comprendre les enjeux des relations en milieu professionnel adaptées à l'interlocuteur</div>
+            </div>
+          </div>
+          <div class="level-item future">
+            <div class="level-header">
+              <span class="level-title">Niveau 3 — Intégrer et valoriser dans l'écosystème entreprise</span>
+              <span class="level-badge badge-future">🔒 Année 3</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="comp-eval">
+          <div class="comp-eval-title">Auto-évaluation</div>
+          <div class="eval-row"><div class="er-ac"><strong>AC23.01</strong> — Mobiliser des ressources métiers de manière proactive</div><div class="er-status er-acquis">Acquis</div><div class="er-just">Prise en compte du contexte opérationnel (besoins des responsables de site La Poste) avant de sélectionner les indicateurs.</div></div>
+          <div class="eval-row"><div class="er-ac"><strong>AC23.02</strong> — Savoir défendre ses choix d'analyses</div><div class="er-status er-acquis">Acquis</div><div class="er-just">Justification des KPIs retenus lors des restitutions aux tuteurs de stage et lors des soutenances.</div></div>
+          <div class="eval-row"><div class="er-ac"><strong>AC23.03</strong> — Choisir des indicateurs pertinents pour communiquer</div><div class="er-status er-acquis">Acquis</div><div class="er-just">Conception d'un tableau de bord (stage La Poste) avec KPIs opérationnels clairs permettant aux responsables de visualiser directement les anomalies sans analyse préalable.</div></div>
+          <div class="eval-row"><div class="er-ac"><strong>AC23.04</strong> — Rigueur requise dans ses productions</div><div class="er-status er-acquis">Acquis</div><div class="er-just">Vérification systématique de la cohérence des indicateurs et des valeurs avant chaque restitution ou livraison de rapport.</div></div>
+          <div class="eval-row"><div class="er-ac"><strong>AC23.05</strong> — Adapter sa communication au milieu professionnel</div><div class="er-status er-acquis">Acquis</div><div class="er-just">Adaptation du langage selon l'interlocuteur : vocabulaire technique avec les data analystes, synthèse visuelle pour les managers non techniques.</div></div>
+        </div>
+      </div>
+      <div class="comp-sidebar">
+        <div class="card">
+          <h4>SAÉ Semestre 1</h4>
+          <a href="projets/Universitaires/S1/S104.html" class="sae-link-item"><span class="sae-code" style="background:rgba(250,204,21,0.1);color:var(--c3);">S1.04</span>Production de Données en Entreprise</a>
+          <a href="projets/Universitaires/S1/S105.html" class="sae-link-item"><span class="sae-code" style="background:rgba(250,204,21,0.1);color:var(--c3);">S1.05</span>Présentation en Anglais d'un Territoire</a>
+          <a href="projets/Universitaires/S1/S106.html" class="sae-link-item"><span class="sae-code" style="background:rgba(250,204,21,0.1);color:var(--c3);">S1.06</span>Mise en Œuvre d'une Enquête Statistique</a>
+        </div>
+        <div class="card">
+          <h4>SAÉ Semestre 2</h4>
+          <a href="projets/Universitaires/S2/S204.html" class="sae-link-item"><span class="sae-code" style="background:rgba(250,204,21,0.1);color:var(--c3);">S2.04</span>Datavisualisation (Challenge National)</a>
+          <a href="projets/Universitaires/S2/S205.html" class="sae-link-item"><span class="sae-code" style="background:rgba(250,204,21,0.1);color:var(--c3);">S2.05</span>Construction d'Indicateurs de Performance</a>
+          <a href="projets/Universitaires/S2/S206.html" class="sae-link-item"><span class="sae-code" style="background:rgba(250,204,21,0.1);color:var(--c3);">S2.06</span>Analyse, Reporting & Datavisualisation</a>
+        </div>
+        <div class="card">
+          <h4>SAÉ Semestre 3</h4>
+          <a href="projets/Universitaires/S3/S301.html" class="sae-link-item"><span class="sae-code" style="background:rgba(250,204,21,0.1);color:var(--c3);">S3.01</span>Collecte Automatisée de Données Web</a>
+          <a href="projets/Universitaires/S3/S302.html" class="sae-link-item"><span class="sae-code" style="background:rgba(250,204,21,0.1);color:var(--c3);">S3.02</span>Intégration de Données (Datawarehouse)</a>
+          <a href="projets/Universitaires/S3/S303.html" class="sae-link-item"><span class="sae-code" style="background:rgba(250,204,21,0.1);color:var(--c3);">S3.03</span>Prévision de Données Temporelles</a>
+          <a href="projets/Universitaires/S3/S304.html" class="sae-link-item"><span class="sae-code" style="background:rgba(250,204,21,0.1);color:var(--c3);">S3.04</span>Conformité Réglementaire & RGPD</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ DÉVELOPPER ══ -->
+  <div class="comp-panel" id="panel-developper">
+    <div class="comp-layout">
+      <div class="comp-main-content">
+        <div class="comp-intro" style="border-left:3px solid var(--c4);">
+          <h2 style="color:var(--c4);">Développer un outil décisionnel</h2>
+          <p>Compétence propre au parcours VCOD. En 1ère année cette compétence n'existe pas — elle démarre en 2ème année avec la validation du Niveau 1, puis le Niveau 2 sera à valider en 3ème année.</p>
+        </div>
+        <div class="levels-block">
+          <div class="level-item current">
+            <div class="level-header">
+              <span class="level-title">Niveau 1 — Développer un composant d'une solution décisionnelle</span>
+              <span class="level-badge badge-current">↗ En cours — 2ème année</span>
+            </div>
+            <div class="ac-list">
+              <div class="ac-item"><span class="ac-code">AC24.01VCOD</span>Comprendre le rôle fondamental de l'analyse des besoins et de l'existant dans un projet décisionnel</div>
+              <div class="ac-item"><span class="ac-code">AC24.02VCOD</span>Percevoir les enjeux de l'automatisation et de l'interopérabilité d'un ensemble de tâches</div>
+              <div class="ac-item"><span class="ac-code">AC24.03VCOD</span>Prendre conscience des différences entre outils (logiciels, langages) pour choisir le plus adapté</div>
+              <div class="ac-item"><span class="ac-code">AC24.04VCOD</span>Comprendre le cycle de vie d'un projet informatique</div>
+            </div>
+          </div>
+          <div class="level-item future">
+            <div class="level-header">
+              <span class="level-title">Niveau 2 — Participer au déploiement d'une solution décisionnelle complète</span>
+              <span class="level-badge badge-future">🔒 Année 3</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="comp-eval">
+          <div class="comp-eval-title">Auto-évaluation</div>
+          <div class="eval-row"><div class="er-ac"><strong>AC24.01VCOD</strong> — Analyser les besoins et l'existant</div><div class="er-status er-acquis">Acquis</div><div class="er-just">Analyse de la structure hétérogène du site Blue Buffalo pour adapter la méthode et les sélecteurs d'extraction.</div></div>
+          <div class="eval-row"><div class="er-ac"><strong>AC24.02VCOD</strong> — Enjeux de l'automatisation et de l'interopérabilité</div><div class="er-status er-acquis">Acquis</div><div class="er-just">Pipeline entièrement automatisé avec export CSV garantissant une intégration directe dans Excel ou Power BI.</div></div>
+          <div class="eval-row"><div class="er-ac"><strong>AC24.03VCOD</strong> — Choisir le bon outil selon le contexte</div><div class="er-status er-acquis">Acquis</div><div class="er-just">Choix de Google Colab (Python + Playwright) comme environnement optimal pour le scraping web dynamique.</div></div>
+          <div class="eval-row"><div class="er-ac"><strong>AC24.04VCOD</strong> — Comprendre le cycle de vie d'un projet informatique</div><div class="er-status er-acquis">Acquis</div><div class="er-just">Pipeline structuré en modules distincts (extraction, transformation, export) avec documentation de chaque étape pour faciliter les tests et la maintenance.</div></div>
+        </div>
+      </div>
+      <div class="comp-sidebar">
+        <div class="card">
+          <h4>SAÉ Semestre 3</h4>
+          <a href="projets/Universitaires/S3/S301.html" class="sae-link-item"><span class="sae-code" style="background:rgba(74,222,128,0.1);color:var(--c4);">S3.01</span>Collecte Automatisée de Données Web</a>
+          <a href="projets/Universitaires/S3/projet-python-quiz-llm.html" class="sae-link-item"><span class="sae-code" style="background:rgba(74,222,128,0.1);color:var(--c4);">Suivi</span>Plateforme Quiz corrigé par IA (Dash)</a>
+        </div>
+        <div class="card" style="background:rgba(74,222,128,0.04);border-color:rgba(74,222,128,0.2);">
+          <h4 style="color:var(--c4);">Pourquoi Développer ?</h4>
+          <p style="font-size:0.8rem;color:var(--text-2);line-height:1.6;">Cette compétence est la compétence d'intégration du parcours VCOD. Elle capitalise sur le Traitement, l'Analyse et la Valorisation pour livrer un outil complet et déployable.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</main>
+</div>
+
+<script>
+function showComp(id, btn, num) {
+  document.querySelectorAll('.comp-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.comp-tab').forEach(t => { t.className = 'comp-tab'; });
+  document.getElementById('panel-' + id).classList.add('active');
+  btn.classList.add('active-' + num);
+}
+document.addEventListener('click',function(e){const s=document.querySelector('.sidebar'),b=document.getElementById('burger');if(s&&!s.contains(e.target)&&!b.contains(e.target))s.classList.remove('open');});
+
+// Handle anchor links from homepage
+const hash = window.location.hash.replace('#','');
+if (['traiter','analyser','valoriser','developper'].includes(hash)) {
+  const numMap = {traiter:1,analyser:2,valoriser:3,developper:4};
+  showComp(hash, document.getElementById('tab-'+hash), numMap[hash]);
+}
+</script>
+</body>
+</html>

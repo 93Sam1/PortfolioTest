@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projet Suivi VBA Immobilier · Samuel ROCHEMONT</title>
+<link rel="stylesheet" href="../../../../styles/style.css">
+</head>
+<body>
+<button class="burger-btn" id="burger" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰</button>
+<div class="layout">
+<aside class="sidebar">
+  <div class="sidebar-logo"><span class="name">Samuel Rochemont</span><span class="role">BUT Science des Données · VCOD</span></div>
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">Navigation</div>
+    <a href="../../../../index.html" class="nav-link"><span class="nav-icon">⬡</span> Accueil</a>
+    <a href="../../../../pages/about.html" class="nav-link"><span class="nav-icon">◎</span> Parcours</a>
+    <a href="../../../../pages/competences.html" class="nav-link"><span class="nav-icon">◈</span> Compétences</a>
+    <a href="../../../../pages/projets.html" class="nav-link active"><span class="nav-icon">◫</span> Projets <span class="nav-dot"></span></a>
+    <a href="../../../../pages/stage.html" class="nav-link"><span class="nav-icon">◉</span> Stage</a>
+    <div class="nav-section-label" style="margin-top:0.5rem;">Contact</div>
+    <a href="../../../../pages/contact.html" class="nav-link"><span class="nav-icon">◌</span> Me contacter</a>
+  </nav>
+  <div class="sidebar-footer"><a href="https://www.linkedin.com/in/samuel-rochemont/" target="_blank">↗ LinkedIn</a></div>
+</aside>
+<main class="main">
+<div class="page-wrap">
+  <div class="sae-header">
+    <div class="sae-breadcrumb"><a href="../../../../pages/projets.html">projets</a> / suivi / <span style="color:var(--text-2);">vba-immobilier</span></div>
+    <h1>Application de Planning Immobilier en VBA</h1>
+    <div class="sae-meta">
+      <span class="meta-chip">📅 Février 2025 — 3 mois</span>
+      <span class="meta-chip">💡 Projet Suivi</span>
+      <span class="meta-chip" style="color:var(--teal);">Samuel ROCHEMONT · Furkan ARSLAN · Erion BERISHA · Imrane LARHRIB</span>
+    </div>
+  </div>
+  <div class="sae-body">
+    <div class="sae-content-left">
+      <img src="../../../../img/projets/vba_immo.png" alt="VBA Immo" style="width:100%;border-radius:var(--radius);border:1px solid var(--border);margin-bottom:1rem;" onerror="this.style.display='none'">
+      <div class="sae-section">
+        <h2>Contexte & Objectif</h2>
+        <p style="color:var(--text-2);">Développer de A à Z une application de gestion de planning pour une agence immobilière, directement intégrée dans Excel. L'outil devait permettre de lister des clients, d'enregistrer des logements disponibles à la location, et de générer un agenda interactif de visites.</p>
+        <p style="color:var(--text-2);margin-top:0.6rem;"><strong style="color:var(--text);">Problématique :</strong> Démontrer la puissance sous-estimée d'Excel et VBA pour concevoir un véritable logiciel métier capable d'automatiser des tâches CRUD avec une interface utilisateur intuitive.</p>
+      </div>
+      <div class="sae-section">
+        <h2>Démarche technique</h2>
+        <div class="step-block"><h3>1 — Architecture "Base de données" Excel</h3><p>Structuration des feuilles Excel comme tables relationnelles : feuille Clients, feuille Logements, feuille Agenda/Visites — reliées par des IDs uniques gérés par les scripts VBA.</p></div>
+        <div class="step-block"><h3>2 — Modules VBA (Logique Métier)</h3><p>Dizaines de macros et fonctions pour le CRUD complet (Create, Read, Update, Delete), avec gestion des conflits de réservation et validation des données en entrée.</p></div>
+        <div class="step-block"><h3>3 — Interface Utilisateur</h3><p>Masques de saisie et boutons d'action pour que l'agent immobilier n'interagisse jamais avec les cellules brutes — uniquement via l'interface contrôlée par VBA.</p></div>
+      </div>
+      <div class="sae-section">
+        <h2>Bilan</h2>
+        <div class="reflect-block"><h3>Le défi du débogage</h3><p>Lorsque le code s'est étoffé avec de multiples modules, la moindre erreur faisait planter l'application. Identifier de quel module provenait l'erreur (effet cascade) a été la plus grande difficulté — d'où l'importance vitale de <code style="font-family:var(--font-mono);font-size:0.78rem;background:var(--bg3);padding:0.1rem 0.3rem;border-radius:4px;">On Error GoTo</code> et de commenter rigoureusement chaque fonction.</p></div>
+        <div class="insight-box"><h3>💡 Ce que j'ai retenu</h3><p>Ce projet a totalement changé ma vision d'Excel. L'apprentissage du VBA m'a doté d'une forte logique algorithmique (boucles, conditions, variables) qui m'a énormément servi par la suite lors de l'apprentissage de Python et SQL.</p></div>
+      </div>
+      <div class="wip-notice">📁 Fichiers sources disponibles prochainement après anonymisation.</div>
+    </div>
+    <div class="sae-sidebar">
+      <div class="sae-sidebar-card"><h4>Compétence ciblée</h4><span class="comp-badge-large cb-1">🗄️ Traiter</span></div>
+      <div class="sae-sidebar-card"><h4>Technologies</h4><div class="tags-cloud"><span class="tag highlight">Excel Avancé</span><span class="tag highlight">VBA</span><span class="tag">Macros</span><span class="tag">IHM</span><span class="tag">CRUD</span></div></div>
+      <div class="sae-sidebar-card"><h4>Équipe</h4><div style="font-size:0.8rem;color:var(--text-2);line-height:1.8;">Samuel ROCHEMONT<br>Furkan ARSLAN<br>Erion BERISHA<br>Imrane LARHRIB</div></div>
+      <div style="margin-top:1rem;"><a href="../../../../pages/projets.html" class="btn btn-outline" style="width:100%;justify-content:center;">← Retour aux projets</a></div>
+    </div>
+  </div>
+</div>
+</main>
+</div>
+<script>document.addEventListener('click',function(e){const s=document.querySelector('.sidebar'),b=document.getElementById('burger');if(s&&!s.contains(e.target)&&!b.contains(e.target))s.classList.remove('open');});</script>
+</body>
+</html>

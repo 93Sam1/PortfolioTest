@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parcours — Samuel ROCHEMONT</title>
+<link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+<button class="burger-btn" id="burger" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰</button>
+<div class="layout">
+<aside class="sidebar">
+  <div class="sidebar-logo"><span class="name">Samuel Rochemont</span><span class="role">BUT Science des Données · VCOD</span></div>
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">Navigation</div>
+    <a href="../index.html" class="nav-link"><span class="nav-icon">⬡</span> Accueil</a>
+    <a href="about.html" class="nav-link active"><span class="nav-icon">◎</span> Parcours <span class="nav-dot"></span></a>
+    <a href="competences.html" class="nav-link"><span class="nav-icon">◈</span> Compétences</a>
+    <a href="projets.html" class="nav-link"><span class="nav-icon">◫</span> Projets</a>
+    <a href="stage.html" class="nav-link"><span class="nav-icon">◉</span> Stage</a>
+    <div class="nav-section-label" style="margin-top:0.5rem;">Contact</div>
+    <a href="contact.html" class="nav-link"><span class="nav-icon">◌</span> Me contacter</a>
+  </nav>
+  <div class="sidebar-footer"><a href="https://www.linkedin.com/in/samuel-rochemont/" target="_blank">↗ LinkedIn</a></div>
+</aside>
+
+<main class="main">
+<div class="page-wrap">
+
+  <div class="page-header">
+    <div class="breadcrumb">portfolio / <span>parcours</span></div>
+    <h1>Mon Parcours</h1>
+    <p>Formation, expériences et ce qui m'anime dans la data.</p>
+  </div>
+
+  <!-- Intro split -->
+  <div class="about-split">
+    <div class="about-card">
+      <h3>🎯 Projet professionnel</h3>
+      <p style="color:var(--text-2);font-size:0.87rem;line-height:1.7;">
+        Je suis attiré par la datavisualisation, l'analyse de données et le développement d'outils décisionnels. Mon objectif est d'évoluer vers des métiers techniques — <strong style="color:var(--text);">Data Analyst ou Développeur BI</strong> — où je pourrai concevoir des dashboards et des solutions d'analyse qui transforment la donnée brute en aide à la décision concrète et visuelle.
+      </p>
+      <div style="margin-top:1rem;">
+        <div style="display:flex;gap:0.4rem;flex-wrap:wrap;">
+          <span class="tag highlight">Logistique & Opérationnel</span>
+          <span class="tag highlight">Datavisualisation & BI</span>
+          <span class="tag">Analyse de données</span>
+        </div>
+      </div>
+    </div>
+    <div class="about-card">
+      <h3>🗣️ Langues & Intérêts</h3>
+      <div class="lang-item"><span>🇫🇷 Français</span><span class="lang-level">Natif</span></div>
+      <div class="lang-item"><span>🇬🇧 Anglais</span><span class="lang-level">B2</span></div>
+      <div class="lang-item"><span>🇩🇪 Allemand</span><span class="lang-level">A2</span></div>
+      <div style="margin-top:1rem;">
+        <div class="tags-cloud">
+          <span class="tag">🏊 Natation</span>
+          <span class="tag">🏀 Basket</span>
+          <span class="tag">💪 Musculation</span>
+          <span class="tag">✈️ Voyages</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Formation timeline -->
+  <div style="margin-bottom:2.5rem;">
+    <h2 style="font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--text-3);text-transform:uppercase;letter-spacing:1px;margin-bottom:1.2rem;">Formation</h2>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-date">2024 → aujourd'hui</div>
+          <div class="tl-title">BUT Science des Données — Parcours VCOD</div>
+          <div class="tl-sub">IUT de Metz, Université de Lorraine</div>
+          <div class="tl-desc">Python, R, SQL, Power BI, ETL, Statistiques. Formation axée sur la visualisation et la conception d'outils décisionnels. 16 SAÉ réalisées sur 3 semestres.</div>
+          <span class="tl-badge">2ème année · En cours</span>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="border-color:var(--text-3);"></div>
+        <div class="tl-content">
+          <div class="tl-date" style="color:var(--text-3);">2021 — 2024</div>
+          <div class="tl-title">Baccalauréat Général</div>
+          <div class="tl-sub">Lycée Voillaume, Aulnay-sous-Bois</div>
+          <div class="tl-desc">Formation générale. Déclic vers les filières quantitatives et informatiques.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Expériences -->
+  <div>
+    <h2 style="font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--text-3);text-transform:uppercase;letter-spacing:1px;margin-bottom:1.2rem;">Expériences</h2>
+    <div class="xp-grid">
+      <div class="xp-card">
+        <div class="xp-title">Technicien Data — Stage</div>
+        <div class="xp-org">La Poste — Branche Services Courrier Colis · Montreuil / Neuilly-Plaisance / Rosny-sous-Bois (93)</div>
+        <div class="xp-date">Avr – Juin 2026 · 8 semaines · 3 sites</div>
+        <ul style="font-size:0.81rem;color:var(--text-2);line-height:1.7;padding-left:1rem;margin-top:0.4rem;">
+          <li>Analyse et fiabilisation des données opérationnelles dans les systèmes internes du groupe La Poste (GeoPaD, C2PO, ORGATE).</li>
+          <li>Validation géographique des points de distribution à l'aide de Google Maps / Google Earth pour vérifier la cohérence avec la réalité du terrain.</li>
+          <li>Détection, classification et correction d'anomalies dans les bases de données (erreurs de localisation, incohérences, doublons).</li>
+          <li>Création de tableaux de bord et automatisation de traitements sous Excel / VBA (nettoyage, reporting, suivi d'indicateurs).</li>
+        </ul>
+      </div>
+      <div class="xp-card amber">
+        <div class="xp-title">Employé Logistique & Manutention</div>
+        <div class="xp-org">Munhowen SA — Luxembourg</div>
+        <div class="xp-date" style="color:var(--amber);">2025</div>
+        <p>Gestion des flux logistiques et manutention en entrepôt dans un contexte international (Luxembourg).</p>
+      </div>
+      <div class="xp-card blue">
+        <div class="xp-title">Stage — Tri & Distribution du Courrier</div>
+        <div class="xp-org">La Poste</div>
+        <div class="xp-date" style="color:var(--blue);">2021</div>
+        <p>Aide au tri et à la distribution du courrier. Premier contact avec l'environnement La Poste.</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--border);">
+    <a href="../files/CV.pdf" target="_blank" class="btn btn-primary">📄 Télécharger mon CV (PDF)</a>
+  </div>
+
+</div>
+</main>
+</div>
+<script>document.addEventListener('click',function(e){const s=document.querySelector('.sidebar'),b=document.getElementById('burger');if(s&&!s.contains(e.target)&&!b.contains(e.target))s.classList.remove('open');});</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reporting à partir de données stockées dans un SGBD Rel · Samuel ROCHEMONT</title>
+<link rel="stylesheet" href="../../../../styles/style.css">
+</head>
+<body>
+<button class="burger-btn" id="burger" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰</button>
+<div class="layout">
+<aside class="sidebar">
+  <div class="sidebar-logo"><span class="name">Samuel Rochemont</span><span class="role">BUT Science des Données · VCOD</span></div>
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">Navigation</div>
+    <a href="../../../../index.html" class="nav-link"><span class="nav-icon">⬡</span> Accueil</a>
+    <a href="../../../../pages/about.html" class="nav-link"><span class="nav-icon">◎</span> Parcours</a>
+    <a href="../../../../pages/competences.html" class="nav-link"><span class="nav-icon">◈</span> Compétences</a>
+    <a href="../../../../pages/projets.html" class="nav-link active"><span class="nav-icon">◫</span> Projets <span class="nav-dot"></span></a>
+    <a href="../../../../pages/stage.html" class="nav-link"><span class="nav-icon">◉</span> Stage</a>
+    <div class="nav-section-label" style="margin-top:0.5rem;">Contact</div>
+    <a href="../../../../pages/contact.html" class="nav-link"><span class="nav-icon">◌</span> Me contacter</a>
+  </nav>
+  <div class="sidebar-footer"><a href="https://www.linkedin.com/in/samuel-rochemont/" target="_blank">↗ LinkedIn</a></div>
+</aside>
+<main class="main">
+<div class="page-wrap">
+  <div class="sae-header">
+    <div class="sae-breadcrumb"><a href="../../../../pages/projets.html">projets</a> / s1 / <span style='color:var(--text-2);'>s101</span></div>
+    <h1>Reporting à partir de données stockées dans un SGBD Relationnel</h1>
+    <div class="sae-meta"><span class="meta-chip">📅 Semestre 1 — 2024</span><span class="meta-chip">🎓 SAÉ 1.01</span><span class="meta-chip">⏱️ 40h</span><span class="meta-chip" style="color:var(--teal);">Samuel ROCHEMONT</span></div>
+  </div>
+  <div class="sae-body">
+    <div class="sae-content-left">
+      <div class="sae-img-wrap" onclick="openLB('../../../../img/projets/S101.png')">
+      <img src="../../../../img/projets/S101.png" alt="Reporting à partir de données stockées d" onerror="this.style.opacity='0.2'">
+      <span class="zoom-hint">🔍 Agrandir</span>
+    </div>
+      <div class="sae-section"><h2>Cadre du projet & Objectifs</h2><p style='color:var(--text-2);'>L'objectif était de concevoir un <strong style='color:var(--text);'>tableau de bord complet</strong> à partir d'une base de données StackExchange Martial Arts. En combinant SQL pour l'extraction et Excel pour la mise en forme, nous avons produit un centre de contrôle visuel couvrant les données du 01/02/2012 au 20/02/2021.</p></div>
+      <div class="sae-section"><h2>Étapes de réalisation</h2><div class="step-block"><h3>Préparation SQL</h3><p style="color:var(--text-2);">Interrogation de la base : jointures entre tables, agrégations, filtres pour extraire les données pertinentes. Export vers Excel pour exploitation.</p></div><div class="step-block"><h3>Top 20 contributeurs</h3><p style="color:var(--text-2);">Classement des 20 utilisateurs les plus actifs par GROUP BY + ORDER BY + LIMIT sur la jointure posts/users.</p></div><div class="step-block"><h3>Mots-clés et types de messages</h3><p style="color:var(--text-2);">Extraction des 20 mots-clés les plus fréquents et comptage séparé questions vs réponses pour visualiser la répartition de l'activité.</p></div><div class="step-block"><h3>Dashboard Excel</h3><p style="color:var(--text-2);">Mise en forme via tableaux et graphiques croisés dynamiques : courbe temporelle, barres horizontales, graphique circulaire.</p></div></div>
+      <div class="sae-section"><h2>Ce que j'en retire</h2><div class='reflect-block'><h3>SQL : d'abord préparer, ensuite visualiser</h3><p>Sans une requête bien construite, Excel n'aurait rien d'utile à afficher. La qualité d'un dashboard se joue en amont, au moment de l'extraction.</p></div><div class='insight-box'><h3>💡 Ce que j'ai retenu</h3><p>La gestion du temps est critique en SAÉ. Construire une requête, l'exporter, créer les TCD et soigner la présentation demande plus de rigueur qu'anticipé.</p></div></div>
+      <div class="sae-section"><h2>Positionnement par rapport aux ACs</h2><div class="eval-legend">
+      <span><span class="eval-dot ev-A">A</span>Acquis</span>
+      <span><span class="eval-dot ev-P">P</span>Presque acquis</span>
+      <span><span class="eval-dot ev-E">E</span>En cours d'apprentissage</span>
+      <span><span class="eval-dot ev-N">N</span>Non acquis</span>
+    </div><table class="eval-grid-table">
+      <thead><tr>
+        <th style="width:40%;">Apprentissage Critique</th>
+        <th class="center">Statut</th>
+        <th>Commentaires</th>
+      </tr></thead><tbody>
+        <tr>
+          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC1.1.01</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Interpréter correctement le besoin du commanditaire ou du client</span></td>
+          <td class="center"><span class="eval-dot ev-A">A</span></td>
+          <td style="font-size:0.77rem;color:var(--text-2);">Besoins graphiques identifiés dès le cadrage — contributeurs, mots-clés, types de messages — sans ambiguïté.</td>
+        </tr>
+        <tr>
+          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC1.1.03</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Connaître la syntaxe des langages et savoir l'utiliser</span></td>
+          <td class="center"><span class="eval-dot ev-P">P</span></td>
+          <td style="font-size:0.77rem;color:var(--text-2);">Maîtrise des requêtes SELECT/JOIN/GROUP BY. Quelques hésitations sur les sous-requêtes imbriquées complexes.</td>
+        </tr>
+        <tr>
+          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC1.1.04</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Mesurer l'importance de maîtriser la structure des données à exploiter</span></td>
+          <td class="center"><span class="eval-dot ev-A">A</span></td>
+          <td style="font-size:0.77rem;color:var(--text-2);">Lecture du schéma StackExchange pour identifier les bonnes tables et jointures sans tâtonnement.</td>
+        </tr>
+      </tbody></table></div>
+      <div class="wip-notice">📁 Les fichiers sources seront ajoutés prochainement après anonymisation.</div>
+    </div>
+    <div class="sae-sidebar">
+      <div class="sae-sidebar-card"><h4>Compétence ciblée</h4><span class="comp-badge-large cb-1">🗄️ Traiter — Niveau 1</span></div>
+      <div class="sae-sidebar-card"><h4>Technologies</h4><div class="tags-cloud"><span class="tag highlight">SQL</span><span class="tag highlight">Excel</span><span class="tag ">Tableaux croisés dynamiques</span><span class="tag ">Dashboard</span></div></div>
+      <div class="sae-sidebar-card">
+        <h4>Ressources Mobilisées (BUT SD)</h4>
+        <div class="tags-cloud" style="gap:0.35rem;"><span class="tag" style="font-size:0.68rem;">R1.02 — Bases de données relationnelles</span><span class="tag" style="font-size:0.68rem;">R1.04 — Données et dataviz</span><span class="tag" style="font-size:0.68rem;">R1.10 — PPP 1</span></div>
+      </div>
+      <div class="sae-sidebar-card"><h4>Apprentissages critiques</h4><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC1.1.01</span>Interpréter correctement le besoin du commanditaire ou du client</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC1.1.03</span>Connaître la syntaxe des langages et savoir l'utiliser</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC1.1.04</span>Mesurer l'importance de maîtriser la structure des données à exploiter</div></div>
+      <div style="margin-top:1rem;"><a href="../../../../pages/projets.html" class="btn btn-outline" style="width:100%;justify-content:center;">← Retour aux projets</a></div>
+    </div>
+  </div>
+</div>
+</main>
+</div>
+
+<div id="lb-modal" onclick="document.getElementById('lb-modal').classList.remove('open')">
+  <span class="lb-close">&#x2715;</span>
+  <img id="lb-img" src="" alt="">
+</div>
+<script>
+function openLB(src){var m=document.getElementById('lb-modal');document.getElementById('lb-img').src=src;m.classList.add('open');}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')document.getElementById('lb-modal').classList.remove('open');});
+document.addEventListener('click',function(e){const s=document.querySelector('.sidebar'),b=document.getElementById('burger');if(s&&b&&!s.contains(e.target)&&!b.contains(e.target))s.classList.remove('open');});
+</script>
+</body>
+</html>

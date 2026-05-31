@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Écriture/Lecture de Fichiers & Algorithmique ELO Footba · Samuel ROCHEMONT</title>
+<link rel="stylesheet" href="../../../../styles/style.css">
+</head>
+<body>
+<button class="burger-btn" id="burger" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰</button>
+<div class="layout">
+<aside class="sidebar">
+  <div class="sidebar-logo"><span class="name">Samuel Rochemont</span><span class="role">BUT Science des Données · VCOD</span></div>
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">Navigation</div>
+    <a href="../../../../index.html" class="nav-link"><span class="nav-icon">⬡</span> Accueil</a>
+    <a href="../../../../pages/about.html" class="nav-link"><span class="nav-icon">◎</span> Parcours</a>
+    <a href="../../../../pages/competences.html" class="nav-link"><span class="nav-icon">◈</span> Compétences</a>
+    <a href="../../../../pages/projets.html" class="nav-link active"><span class="nav-icon">◫</span> Projets <span class="nav-dot"></span></a>
+    <a href="../../../../pages/stage.html" class="nav-link"><span class="nav-icon">◉</span> Stage</a>
+    <div class="nav-section-label" style="margin-top:0.5rem;">Contact</div>
+    <a href="../../../../pages/contact.html" class="nav-link"><span class="nav-icon">◌</span> Me contacter</a>
+  </nav>
+  <div class="sidebar-footer"><a href="https://www.linkedin.com/in/samuel-rochemont/" target="_blank">↗ LinkedIn</a></div>
+</aside>
+<main class="main">
+<div class="page-wrap">
+  <div class="sae-header">
+    <div class="sae-breadcrumb"><a href="../../../../pages/projets.html">projets</a> / s1 / <span style='color:var(--text-2);'>s102</span></div>
+    <h1>Écriture/Lecture de Fichiers & Algorithmique ELO Football</h1>
+    <div class="sae-meta"><span class="meta-chip">📅 Semestre 1 — 2024</span><span class="meta-chip">🎓 SAÉ 1.02</span><span class="meta-chip">⏱️ 30h</span><span class="meta-chip" style="color:var(--teal);">Samuel ROCHEMONT</span></div>
+  </div>
+  <div class="sae-body">
+    <div class="sae-content-left">
+      <div class="sae-img-wrap" onclick="openLB('../../../../img/projets/S102.png')">
+      <img src="../../../../img/projets/S102.png" alt="Écriture/Lecture de Fichiers & Algorithm" onerror="this.style.opacity='0.2'">
+      <span class="zoom-hint">🔍 Agrandir</span>
+    </div>
+      <div class="sae-section"><h2>Cadre du projet & Objectifs</h2><p style='color:var(--text-2);'>Développement d'un programme de <strong style='color:var(--text);'>lecture de fichiers de matchs football</strong>, d'application de l'algorithme ELO pour calculer les classements, et d'écriture des résultats mis à jour. La formule ELO : R_nouveau = R_ancien + K × (S − E).</p></div>
+      <div class="sae-section"><h2>Étapes de réalisation</h2><div class="step-block"><h3>Lecture des données</h3><p style="color:var(--text-2);">Fonctions de lecture de fichiers structurés contenant les résultats de matchs (date, équipes, scores). Gestion des formats et cas d'erreur.</p></div><div class="step-block"><h3>Implémentation ELO</h3><p style="color:var(--text-2);">Codage de la formule de calcul des probabilités de victoire et mise à jour des scores après chaque match.</p></div><div class="step-block"><h3>Écriture des résultats</h3><p style="color:var(--text-2);">Export des classements mis à jour vers fichiers de sortie. Vérification de cohérence entre les données écrites et les calculs.</p></div></div>
+      <div class="sae-section"><h2>Ce que j'en retire</h2><div class='reflect-block'><h3>L'importance des tests unitaires</h3><p>Une erreur dans le calcul de la probabilité attendue fausse tous les classements suivants — l'effet cascade m'a appris à tester chaque fonction indépendamment.</p></div><div class='insight-box'><h3>💡 Ce que j'ai retenu</h3><p>La gestion des fichiers (encodage, séparateurs, lignes vides) est souvent plus piégeuse que l'algorithme lui-même.</p></div></div>
+      <div class="sae-section"><h2>Positionnement par rapport aux ACs</h2><div class="eval-legend">
+      <span><span class="eval-dot ev-A">A</span>Acquis</span>
+      <span><span class="eval-dot ev-P">P</span>Presque acquis</span>
+      <span><span class="eval-dot ev-E">E</span>En cours d'apprentissage</span>
+      <span><span class="eval-dot ev-N">N</span>Non acquis</span>
+    </div><table class="eval-grid-table">
+      <thead><tr>
+        <th style="width:40%;">Apprentissage Critique</th>
+        <th class="center">Statut</th>
+        <th>Commentaires</th>
+      </tr></thead><tbody>
+        <tr>
+          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC1.1.03</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Connaître la syntaxe des langages et savoir l'utiliser</span></td>
+          <td class="center"><span class="eval-dot ev-A">A</span></td>
+          <td style="font-size:0.77rem;color:var(--text-2);">Développement autonome de toutes les fonctions en Python sans erreur de syntaxe bloquante.</td>
+        </tr>
+        <tr>
+          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC1.1.05</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Comprendre les structures algorithmiques de base</span></td>
+          <td class="center"><span class="eval-dot ev-A">A</span></td>
+          <td style="font-size:0.77rem;color:var(--text-2);">Boucle de traitement des matchs, conditions et calculs cumulatifs correctement implémentés.</td>
+        </tr>
+        <tr>
+          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC1.1.06</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Prendre conscience de l'intérêt de la programmation</span></td>
+          <td class="center"><span class="eval-dot ev-A">A</span></td>
+          <td style="font-size:0.77rem;color:var(--text-2);">Cette SAÉ a concrétisé l'utilité du code : automatiser 500 matchs en quelques secondes vs des heures à la main.</td>
+        </tr>
+      </tbody></table></div>
+      <div class="wip-notice">📁 Les fichiers sources seront ajoutés prochainement après anonymisation.</div>
+    </div>
+    <div class="sae-sidebar">
+      <div class="sae-sidebar-card"><h4>Compétence ciblée</h4><span class="comp-badge-large cb-1">🗄️ Traiter — Niveau 1</span></div>
+      <div class="sae-sidebar-card"><h4>Technologies</h4><div class="tags-cloud"><span class="tag highlight">Python</span><span class="tag highlight">Fichiers CSV</span><span class="tag ">Algorithme ELO</span><span class="tag ">Logique métier</span></div></div>
+      <div class="sae-sidebar-card">
+        <h4>Ressources Mobilisées (BUT SD)</h4>
+        <div class="tags-cloud" style="gap:0.35rem;"><span class="tag" style="font-size:0.68rem;">R1.01 — Algorithmique et programmation</span><span class="tag" style="font-size:0.68rem;">R1.05 — Traitement et nettoyage de données</span></div>
+      </div>
+      <div class="sae-sidebar-card"><h4>Apprentissages critiques</h4><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC1.1.03</span>Connaître la syntaxe des langages et savoir l'utiliser</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC1.1.05</span>Comprendre les structures algorithmiques de base</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC1.1.06</span>Prendre conscience de l'intérêt de la programmation</div></div>
+      <div style="margin-top:1rem;"><a href="../../../../pages/projets.html" class="btn btn-outline" style="width:100%;justify-content:center;">← Retour aux projets</a></div>
+    </div>
+  </div>
+</div>
+</main>
+</div>
+
+<div id="lb-modal" onclick="document.getElementById('lb-modal').classList.remove('open')">
+  <span class="lb-close">&#x2715;</span>
+  <img id="lb-img" src="" alt="">
+</div>
+<script>
+function openLB(src){var m=document.getElementById('lb-modal');document.getElementById('lb-img').src=src;m.classList.add('open');}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')document.getElementById('lb-modal').classList.remove('open');});
+document.addEventListener('click',function(e){const s=document.querySelector('.sidebar'),b=document.getElementById('burger');if(s&&b&&!s.contains(e.target)&&!b.contains(e.target))s.classList.remove('open');});
+</script>
+</body>
+</html>

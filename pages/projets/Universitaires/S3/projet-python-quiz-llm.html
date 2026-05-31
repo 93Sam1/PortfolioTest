@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz LLM Dash · Samuel ROCHEMONT</title>
+<link rel="stylesheet" href="../../../../styles/style.css">
+</head>
+<body>
+<button class="burger-btn" id="burger" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰</button>
+<div class="layout">
+<aside class="sidebar">
+  <div class="sidebar-logo"><span class="name">Samuel Rochemont</span><span class="role">BUT Science des Données · VCOD</span></div>
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">Navigation</div>
+    <a href="../../../../index.html" class="nav-link"><span class="nav-icon">⬡</span> Accueil</a>
+    <a href="../../../../pages/about.html" class="nav-link"><span class="nav-icon">◎</span> Parcours</a>
+    <a href="../../../../pages/competences.html" class="nav-link"><span class="nav-icon">◈</span> Compétences</a>
+    <a href="../../../../pages/projets.html" class="nav-link active"><span class="nav-icon">◫</span> Projets <span class="nav-dot"></span></a>
+    <a href="../../../../pages/stage.html" class="nav-link"><span class="nav-icon">◉</span> Stage</a>
+    <div class="nav-section-label" style="margin-top:0.5rem;">Contact</div>
+    <a href="../../../../pages/contact.html" class="nav-link"><span class="nav-icon">◌</span> Me contacter</a>
+  </nav>
+  <div class="sidebar-footer"><a href="https://www.linkedin.com/in/samuel-rochemont/" target="_blank">↗ LinkedIn</a></div>
+</aside>
+<main class="main">
+<div class="page-wrap">
+  <div class="sae-header">
+    <div class="sae-breadcrumb"><a href="../../../../pages/projets.html">projets</a> / suivi / <span style="color:var(--text-2);">quiz-llm</span></div>
+    <h1>Plateforme de Quiz Corrigé par IA en Dash</h1>
+    <div class="sae-meta">
+      <span class="meta-chip">📅 Semestre 3 — 2025/2026</span>
+      <span class="meta-chip">💡 Projet Suivi</span>
+      <span class="meta-chip" style="color:var(--teal);">Samuel ROCHEMONT</span>
+    </div>
+  </div>
+  <div class="sae-body">
+    <div class="sae-content-left">
+      <img src="../../../../img/projets/quiz_llm.png" alt="Quiz LLM" style="width:100%;border-radius:var(--radius);border:1px solid var(--border);margin-bottom:1rem;" onerror="this.style.display='none'">
+      <div class="sae-section">
+        <h2>Présentation du projet</h2>
+        <p style="color:var(--text-2);">Application web développée en Dash (Python) permettant de créer, lancer et corriger automatiquement des quiz via un LLM. L'architecture suit un flux en 3 étapes : sélection et lancement du quiz, soumission et correction par IA, analyse des résultats.</p>
+      </div>
+      <div class="sae-section">
+        <h2>Architecture</h2>
+        <div class="step-block"><h3>Sélection & Lancement</h3><p>Interface Dash permettant de choisir un quiz existant ou d'en générer un nouveau à partir d'un thème donné.</p></div>
+        <div class="step-block"><h3>Correction par LLM</h3><p>Les réponses soumises sont envoyées à un modèle de langage qui évalue leur pertinence et fournit des explications détaillées.</p></div>
+        <div class="step-block"><h3>Analyse des résultats</h3><p>Dashboard de résultats avec score, taux de réussite par thème et visualisations graphiques interactives.</p></div>
+      </div>
+      <div class="wip-notice">📁 Fichiers sources disponibles prochainement.</div>
+    </div>
+    <div class="sae-sidebar">
+      <div class="sae-sidebar-card"><h4>Compétence ciblée</h4><span class="comp-badge-large cb-4">⚙️ Développer</span></div>
+      <div class="sae-sidebar-card"><h4>Technologies</h4><div class="tags-cloud"><span class="tag highlight">Python</span><span class="tag highlight">Dash</span><span class="tag">LLM / IA</span><span class="tag">Plotly</span><span class="tag">API</span></div></div>
+      <div style="margin-top:1rem;"><a href="../../../../pages/projets.html" class="btn btn-outline" style="width:100%;justify-content:center;">← Retour aux projets</a></div>
+    </div>
+  </div>
+</div>
+</main>
+</div>
+<script>document.addEventListener('click',function(e){const s=document.querySelector('.sidebar'),b=document.getElementById('burger');if(s&&!s.contains(e.target)&&!b.contains(e.target))s.classList.remove('open');});</script>
+</body>
+</html>
