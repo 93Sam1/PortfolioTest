@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Intégration de Données — Datawarehouse Tissu Associatif · Samuel ROCHEMONT</title>
+<title>Intégration de Données dans un Datawarehouse — Tissu As · Samuel ROCHEMONT</title>
 <link rel="stylesheet" href="../../../../styles/style.css">
 </head>
 <body>
@@ -24,57 +24,61 @@
 </aside>
 <main class="main">
 <div class="page-wrap">
+  <div class="sae-pagination">
+    <a href="S301.html" class="sae-page-btn"><span class="pg-arrow">←</span><span class="pg-code">SAÉ 3.01</span></a>
+    <a href="S303.html" class="sae-page-btn"><span class="pg-code">SAÉ 3.03</span><span class="pg-arrow">→</span></a>
+  </div>
   <div class="sae-header">
     <div class="sae-breadcrumb"><a href="../../../../pages/projets.html">projets</a> / s3 / <span style='color:var(--text-2);'>s302</span></div>
-    <h1>Intégration de Données — Datawarehouse Tissu Associatif</h1>
+    <h1>Intégration de Données dans un Datawarehouse — Tissu Associatif Français</h1>
     <div class="sae-meta"><span class="meta-chip">📅 Semestre 3 — 2025/2026</span><span class="meta-chip">🎓 SAÉ 3.02</span><span class="meta-chip">⏱️ 40h</span><span class="meta-chip" style="color:var(--teal);">Samuel ROCHEMONT</span></div>
   </div>
   <div class="sae-body">
     <div class="sae-content-left">
       <div class="sae-img-wrap" onclick="openLB('../../../../img/projets/S302.png')">
-      <img src="../../../../img/projets/S302.png" alt="Intégration de Données — Datawarehouse T" onerror="this.style.opacity='0.2'">
+      <img src="../../../../img/projets/S302.png" alt="Intégration de Données dans un Datawareh" onerror="this.style.opacity='0.2'">
       <span class="zoom-hint">🔍 Agrandir</span>
     </div>
-      <div class="sae-section"><h2>Cadre du projet & Objectifs</h2><p style='color:var(--text-2);'>Alimentation d'un <strong style='color:var(--text);'>entrepôt de données</strong> pour suivre l'évolution du tissu associatif français, à partir de sources hétérogènes (XML du JOAFE, CSV). Outil ETL : Apache HOP.</p></div>
-      <div class="sae-section"><h2>Étapes de réalisation</h2><div class="step-block"><h3>Analyse des sources & modélisation</h3><p style="color:var(--text-2);">Étude du format XML JOAFE et des CSV complémentaires. Conception du schéma de l'entrepôt cible.</p></div><div class="step-block"><h3>Pipeline Apache HOP</h3><p style="color:var(--text-2);">Lecture XML via XPath, transformation et filtrage, résolution des conflits de types, chargement dans la base cible.</p></div><div class="step-block"><h3>Tests & validation</h3><p style="color:var(--text-2);">Vérification de l'intégrité des données chargées : comptages, valeurs manquantes, cohérence avec les sources.</p></div></div>
-      <div class="sae-section"><h2>Ce que j'en retire</h2><div class='reflect-block'><h3>XPath : une compétence clé pour le XML</h3><p>Décrypter un fichier XML du JOAFE sans maîtriser XPath aurait été quasi impossible. Une compétence sur les données semi-structurées très répandue en entreprise.</p></div><div class='insight-box'><h3>💡 Ce que j'ai retenu</h3><p>L'optimisation d'un pipeline ETL est un travail continu. Notre première version fonctionnait mais était lente. Des opérations de filtrage en amont auraient réduit considérablement le temps d'exécution.</p></div></div>
+      <div class="sae-section"><h2>Cadre du projet & Objectifs</h2><p style='color:var(--text-2);'>L'approche décisionnelle moderne repose sur la centralisation de sources hétérogènes dans un <strong style='color:var(--text);'>Datawarehouse</strong>. Notre mission : automatiser la chaîne ETL (Extraction, Transformation, Chargement) à partir des données publiques du <strong style='color:var(--text);'>JOAFE</strong> (Journal Officiel des Associations et Fondations d'Entreprise) pour suivre les créations et dissolutions d'associations en France.</p></div>
+      <div class="sae-section"><h2>Étapes de réalisation</h2><div class="step-block"><h3>Extraction & parsing XML avec XPath</h3><p>Les données JOAFE sont fournies au format XML — un format hiérarchique complexe avec des nœuds imbriqués. Maîtrise du langage XPath pour cibler précisément les données utiles : titre de l'association, date de création, objet, département. Cette étape a demandé un vrai travail d'exploration du schéma XML avant de pouvoir écrire les expressions de sélection correctes.</p></div>
+<div class="step-block"><h3>Pipeline de transformation sous Apache HOP</h3><p>Construction du flux ETL dans Apache HOP : lecture des fichiers XML via l'expression XPath, filtrage des associations actives/dissoutes, nettoyage (gestion des dates manquantes, normalisation des textes, suppression des doublons), application des règles de gestion métier. Le pipeline est visualisé sous forme de workflow graphique, ce qui facilite la compréhension et la maintenance.</p></div>
+<div class="step-block"><h3>Modélisation & chargement dans la base cible</h3><p>Conception du schéma de base de données relationnelle pour accueillir les données transformées. Dernière étape du pipeline HOP : mapping entre les flux de données et les tables SQL cibles, avec gestion des clés primaires et étrangères pour garantir l'intégrité référentielle.</p></div></div>
+      <div class="sae-section"><h2>Ce que j'en retire</h2><div class="reflect-block"><h3>XPath : une compétence méconnue mais précieuse</h3><p>Avant cette SAÉ, je ne savais pas qu'il existait un langage spécifiquement conçu pour interroger du XML. Apprendre XPath dans le contexte d'un vrai dataset gouvernemental (JOAFE) a rendu l'apprentissage concret et immédiatement utile.</p></div>
+<div class="insight-box"><h3>💡 Ce que j'ai retenu</h3><p>Un pipeline ETL fonctionnel ne suffit pas — il faut aussi qu'il soit optimal. Notre première version traitait les données correctement mais trop lentement. Des opérations de filtrage en amont auraient réduit considérablement le volume traité et donc le temps d'exécution. L'optimisation est une étape à part entière du développement.</p></div></div>
+      <div class="sae-section">
+        <h2>Ce que ça m'apporte en entreprise</h2>
+        <div style="background:linear-gradient(135deg,rgba(45,212,191,0.05),rgba(96,165,250,0.05));border:1px solid rgba(45,212,191,0.2);border-radius:var(--radius);padding:1.2rem;">
+          <p style="color:var(--text-2);line-height:1.75;font-size:0.85rem;">Les pipelines ETL sont au cœur de tout système décisionnel en entreprise. Savoir construire, tester et documenter un pipeline Apache HOP — notamment pour intégrer des sources hétérogènes (XML, CSV) dans un datawarehouse — est une compétence clé pour les postes de Data Engineer ou Data Analyst Senior.</p>
+        </div>
+      </div>
       <div class="sae-section"><h2>Positionnement par rapport aux ACs</h2><div class="eval-legend">
       <span><span class="eval-dot ev-A">A</span>Acquis</span>
       <span><span class="eval-dot ev-P">P</span>Presque acquis</span>
       <span><span class="eval-dot ev-E">E</span>En cours d'apprentissage</span>
       <span><span class="eval-dot ev-N">N</span>Non acquis</span>
-    </div><table class="eval-grid-table">
-      <thead><tr>
+    </div><table class="eval-grid-table"><thead><tr>
         <th style="width:40%;">Apprentissage Critique</th>
         <th class="center">Statut</th>
         <th>Commentaires</th>
-      </tr></thead><tbody>
-        <tr>
-          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC21.03</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Identifier et résoudre les problèmes d'intégration de sources hétérogènes</span></td>
+      </tr></thead><tbody><tr>
+          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC2.1.02</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Réaliser le rôle central de l'entrepôt de données dans la chaîne décisionnelle</span></td>
+          <td class="center"><span class="eval-dot ev-A">A</span></td>
+          <td style="font-size:0.77rem;color:var(--text-2);">Conception et alimentation d'un datawarehouse opérationnel à partir de sources publiques brutes, prêt pour l'analyse décisionnelle.</td>
+        </tr><tr>
+          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC2.1.03</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Identifier et résoudre les problèmes d'intégration de sources hétérogènes</span></td>
           <td class="center"><span class="eval-dot ev-P">P</span></td>
-          <td style="font-size:0.77rem;color:var(--text-2);">Intégration XML + CSV réussie avec gestion des conflits de types. Automatisation complète du rafraîchissement non finalisée par manque de temps.</td>
-        </tr>
-        <tr>
-          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC21.04</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Comprendre la nécessité de tester, corriger et documenter un programme</span></td>
+          <td style="font-size:0.77rem;color:var(--text-2);">Intégration XML + CSV réussie avec gestion des conflits de types et des données manquantes. Automatisation du rafraîchissement non finalisée par manque de temps.</td>
+        </tr><tr>
+          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC2.1.04</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Comprendre la nécessité de tester, corriger et documenter un programme</span></td>
           <td class="center"><span class="eval-dot ev-E">E</span></td>
-          <td style="font-size:0.77rem;color:var(--text-2);">Pipeline fonctionnel mais manquant d'optimisation (temps d'exécution long). Tests et documentation non finalisés.</td>
-        </tr>
-        <tr>
-          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC23.04</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Prendre conscience de la rigueur requise dans ses productions et dans la communication</span></td>
-          <td class="center"><span class="eval-dot ev-E">E</span></td>
-          <td style="font-size:0.77rem;color:var(--text-2);">Workflow de mise à jour incrémentale non configuré, rendant l'entrepôt non autonome en cas de nouveaux fichiers.</td>
-        </tr>
-      </tbody></table></div>
-      <div class="wip-notice">📁 Les fichiers sources seront ajoutés prochainement après anonymisation.</div>
+          <td style="font-size:0.77rem;color:var(--text-2);">Pipeline fonctionnel mais manquant d'optimisation (temps d'exécution long). La phase de tests et documentation systématique n'a pas été finalisée.</td>
+        </tr></tbody></table></div>
     </div>
     <div class="sae-sidebar">
       <div class="sae-sidebar-card"><h4>Compétence ciblée</h4><span class="comp-badge-large cb-1">🗄️ Traiter — Niveau 2</span></div>
-      <div class="sae-sidebar-card"><h4>Technologies</h4><div class="tags-cloud"><span class="tag highlight">Apache HOP</span><span class="tag highlight">ETL</span><span class="tag ">XML/XPath</span><span class="tag ">CSV</span><span class="tag ">Datawarehouse</span></div></div>
-      <div class="sae-sidebar-card">
-        <h4>Ressources Mobilisées (BUT SD)</h4>
-        <div class="tags-cloud" style="gap:0.35rem;"><span class="tag" style="font-size:0.68rem;">R3.01 — Big Data / Data Engineering</span><span class="tag" style="font-size:0.68rem;">R3.02 — Systèmes d'Info décisionnels</span><span class="tag" style="font-size:0.68rem;">R3.04 — Prog. Statistique Automatisée</span></div>
-      </div>
-      <div class="sae-sidebar-card"><h4>Apprentissages critiques</h4><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC21.03</span>Identifier et résoudre les problèmes d'intégration de sources hétérogènes</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC21.04</span>Comprendre la nécessité de tester, corriger et documenter un programme</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC23.04</span>Prendre conscience de la rigueur requise dans ses productions et dans la communication</div></div>
+      <div class="sae-sidebar-card"><h4>Technologies</h4><div class="tags-cloud"><span class="tag highlight">Apache HOP</span><span class="tag highlight">XML / XPath</span><span class="tag ">ETL</span><span class="tag ">SQL</span><span class="tag ">Datawarehouse</span></div></div>
+      <div class="sae-sidebar-card"><h4>Ressources Mobilisées (BUT SD)</h4><div class="tags-cloud" style="gap:0.35rem;"><span class="tag" style="font-size:0.68rem;">R3.01 — Big Data / Data Engineering</span><span class="tag" style="font-size:0.68rem;">R3.02 — Systèmes d'Info décisionnels</span><span class="tag" style="font-size:0.68rem;">R3.04 — Prog. Statistique Automatisée</span></div></div>
+      <div class="sae-sidebar-card"><h4>Apprentissages critiques</h4><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC2.1.02</span>Réaliser le rôle central de l'entrepôt de données dans la chaîne décisionnelle</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC2.1.03</span>Identifier et résoudre les problèmes d'intégration de sources hétérogènes</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC2.1.04</span>Comprendre la nécessité de tester, corriger et documenter un programme</div></div>
       <div style="margin-top:1rem;"><a href="../../../../pages/projets.html" class="btn btn-outline" style="width:100%;justify-content:center;">← Retour aux projets</a></div>
     </div>
   </div>

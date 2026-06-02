@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stage — Samuel ROCHEMONT</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stage La Poste — Samuel ROCHEMONT</title>
 <link rel="stylesheet" href="../styles/style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 </head>
 <body>
 <button class="burger-btn" id="burger" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰</button>
@@ -28,21 +28,22 @@
 <div class="page-wrap">
   <div class="page-header">
     <div class="breadcrumb">portfolio / <span>stage</span></div>
-    <h1>Stage</h1>
-    <p>Technicien Data — La Poste · Branche Services Courrier Colis · Montreuil</p>
+    <h1>Stage — La Poste</h1>
+    <p>Technicien Data · Branche Services Courrier Colis · 3 sites en Seine-Saint-Denis · Avr–Juin 2026</p>
   </div>
 
   <div class="stage-split">
     <div>
+
       <!-- Banner -->
       <div class="stage-banner">
-        <div style="font-family:var(--font-mono);font-size:0.72rem;color:var(--teal);margin-bottom:0.5rem;">// stage.BUT_SD.2026</div>
+        <div style="font-family:var(--font-mono);font-size:0.72rem;color:var(--teal);margin-bottom:0.5rem;">// stage.BUT_SD.S4.2026</div>
         <h2 style="font-family:var(--font-display);font-size:1.8rem;font-weight:800;margin-bottom:0.3rem;">La Poste</h2>
-        <p style="color:var(--text-2);font-size:0.9rem;">Branche Services Courrier Colis · 3 sites en Seine-Saint-Denis</p>
-        <p style="color:var(--text-3);font-size:0.82rem;margin-top:0.3rem;font-family:var(--font-mono);">Avril → Juin 2026 · 8 semaines</p>
+        <p style="color:var(--text-2);font-size:0.9rem;">Branche Services Courrier Colis · Fiabilisation des données opérationnelles</p>
+        <p style="color:var(--text-3);font-size:0.82rem;margin-top:0.3rem;font-family:var(--font-mono);">Avril → Juin 2026 · 8 semaines · 3 sites</p>
       </div>
 
-      <!-- Map avec les 3 sites -->
+      <!-- Carte -->
       <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:1rem;">
         <div style="padding:0.8rem 1rem;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;">
           <h3 style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-3);">Mes 3 sites de stage</h3>
@@ -65,86 +66,346 @@
         </div>
       </div>
 
-      <!-- Mission brief -->
+      <!-- Systèmes d'information -->
       <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:1.3rem;margin-bottom:1rem;">
-        <h3 style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-3);margin-bottom:0.8rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);">Mission</h3>
-        <p style="font-size:0.86rem;color:var(--text-2);line-height:1.7;"><strong style="color:var(--text);">Technicien Data — Fiabilisation des données</strong> au sein de la Branche Services Courrier Colis. Analyse et traitement de données internes pour améliorer la qualité et la cohérence des informations dans les systèmes décisionnels de La Poste.</p>
-      </div>
-
-      <!-- To complete -->
-      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:1.3rem;">
-        <h3 style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-3);margin-bottom:1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);">Contenu à développer</h3>
-        <div class="wip-grid">
-          <div class="wip-card"><div class="wip-icon">🎯</div><div class="wip-title">Missions détaillées</div><div class="wip-sub">À rédiger</div></div>
-          <div class="wip-card"><div class="wip-icon">🛠️</div><div class="wip-title">Outils utilisés</div><div class="wip-sub">À rédiger</div></div>
-          <div class="wip-card"><div class="wip-icon">📊</div><div class="wip-title">Livrables</div><div class="wip-sub">À rédiger</div></div>
-          <div class="wip-card"><div class="wip-icon">💡</div><div class="wip-title">Apprentissages</div><div class="wip-sub">À rédiger</div></div>
-          <div class="wip-card"><div class="wip-icon">🔍</div><div class="wip-title">Difficultés</div><div class="wip-sub">À rédiger</div></div>
-          <div class="wip-card"><div class="wip-icon">📝</div><div class="wip-title">Bilan réflexif</div><div class="wip-sub">À rédiger</div></div>
+        <h3 style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-3);margin-bottom:0.8rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);">Systèmes d'Information (SI) utilisés</h3>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.7rem;">
+          <div style="background:var(--bg3);border-radius:8px;padding:0.8rem;">
+            <div style="font-family:var(--font-mono);font-size:0.72rem;color:var(--teal);font-weight:700;margin-bottom:0.3rem;">GeoPaD</div>
+            <p style="font-size:0.78rem;color:var(--text-2);line-height:1.5;">Application interne de cartographie des Points de Distribution (PDI) et Points de Remise (PRE). Outil de référence pour décrire, organiser et fiabiliser toutes les adresses desservies par La Poste et leurs particularités.</p>
+          </div>
+          <div style="background:var(--bg3);border-radius:8px;padding:0.8rem;">
+            <div style="font-family:var(--font-mono);font-size:0.72rem;color:var(--amber);font-weight:700;margin-bottom:0.3rem;">C2PO</div>
+            <p style="font-size:0.78rem;color:var(--text-2);line-height:1.5;">Référentiel clients de La Poste regroupant tous les clients avec des prestations particulières. Utilisé pour extraire des données de production et alimenter les dashboards Excel pour le suivi du trafic et la détection d'anomalies.</p>
+          </div>
+          <div style="background:var(--bg3);border-radius:8px;padding:0.8rem;">
+            <div style="font-family:var(--font-mono);font-size:0.72rem;color:var(--blue);font-weight:700;margin-bottom:0.3rem;">ORGATE</div>
+            <p style="font-size:0.78rem;color:var(--text-2);line-height:1.5;">SI qui répertorie l'organisation des tournées des facteurs générées depuis Georoute. Utilisé pour exporter les données de tournées et alimenter d'autres systèmes d'information internes.</p>
+          </div>
+          <div style="background:var(--bg3);border-radius:8px;padding:0.8rem;">
+            <div style="font-family:var(--font-mono);font-size:0.72rem;color:var(--c4);font-weight:700;margin-bottom:0.3rem;">Google Maps / Earth</div>
+            <p style="font-size:0.78rem;color:var(--text-2);line-height:1.5;">Outils externes de cartographie pour vérifier visuellement la réalité du terrain quand GeoPaD ne suffit pas. Street View pour confirmer la présence et la localisation des boîtes aux lettres.</p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Sidebar info -->
+      <!-- Mission 1 -->
+      <div class="mission-card" style="border-left-color:var(--teal);">
+        <div class="mc-header">
+          <h3 style="color:var(--teal);">Mission 1 — Contrôle géographique &amp; correction d'anomalies</h3>
+          <button class="voir-plus" onclick="toggleMission(this)">Voir plus <span class="vp-arrow">∨</span></button>
+        </div>
+        <p class="mc-summary">Identification et correction des anomalies de distribution via GeoPaD et Google Earth : vérification des BAL hors-norme, incohérences PDI/BAL, accès privés mal référencés, mise à jour des SI.</p>
+        <div class="mc-detail">
+          <!-- Contenu détaillé -->
+          <div style="display:flex;flex-direction:column;gap:0.9rem;margin-bottom:1.2rem;">
+            <div style="font-size:0.83rem;color:var(--text-2);line-height:1.75;"><strong style="color:var(--text);">Vérification des BAL &gt; 100m :</strong> identification via GeoPaD des boîtes aux lettres situées à plus de 100 mètres de la chaussée, puis vérification visuelle sur Google Earth pour confirmer ou corriger la distance réelle déclarée par le facteur. Certains cas sont évidents (BAL visible depuis la route → 0 mètre, "accessible voirie"), d'autres nécessitent une mesure précise avec l'outil Google Earth.</div>
+            <div style="font-size:0.83rem;color:var(--text-2);line-height:1.75;"><strong style="color:var(--text);">Détection d'incohérences PDI/BAL :</strong> vérification de la cohérence entre le point d'arrêt du facteur et le nombre de boîtes aux lettres associées — PDI devant un immeuble ne correspondant pas au nombre de BAL déclarées, PDI regroupant plusieurs PRE mal localisés, BAL non visibles dans GeoPaD. On peut également repositionner un PDI mal placé directement dans l'interface cartographique.</div>
+            <div style="font-size:0.83rem;color:var(--text-2);line-height:1.75;"><strong style="color:var(--text);">Accès privés complexes :</strong> analyse de terrain via Google Earth pour chemins privés, allées, portails ou résidences fermées dont l'accès est mal référencé. Quand Street View n'est pas disponible : contact direct avec les facteurs, les mieux placés pour confirmer la réalité terrain.</div>
+            <div style="font-size:0.83rem;color:var(--text-2);line-height:1.75;"><strong style="color:var(--text);">Mise à jour des SI :</strong> correction des données dans GeoPaD, ORGATE ou C2PO selon les cas, pour améliorer la qualité de distribution, éviter les erreurs d'adressage et optimiser les tournées.</div>
+          </div>
+
+          <!-- Screenshots GeoPaD -->
+          <div class="mc-screens-title">📸 GeoPaD — Comment ça marche</div>
+          <!-- Recherche : 3 étapes -->
+          <div class="mc-screen-group">
+            <div class="mcs-label">Étape 1 — Rechercher un PDI</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.6rem;">
+              <div class="stage-thumb" onclick="openStageLB('../img/stage/geopad_choix_com.png','GeoPaD — Sélection de la commune PDC (la &quot;Plaque&quot;)')">
+                <img src="../img/stage/geopad_choix_com.png" alt="Choix commune PDC">
+                <span>1. Choix de la Plaque (commune PDC)</span>
+              </div>
+              <div class="stage-thumb" onclick="openStageLB('../img/stage/geopad_recherche.png','GeoPaD — Saisie du mot directeur de la voie (rue, avenue…)')">
+                <img src="../img/stage/geopad_recherche.png" alt="Recherche voie">
+                <span>2. Saisie du mot directeur de voie</span>
+              </div>
+              <div class="stage-thumb" onclick="openStageLB('../img/stage/geopad_detail.png','GeoPaD — Fiche détail du PDI : distance déclarée, type d\'accès, informations facteur')">
+                <img src="../img/stage/geopad_detail.png" alt="Détail PDI">
+                <span>3. Fiche détail du PDI</span>
+              </div>
+            </div>
+            <p style="font-size:0.76rem;color:var(--text-3);margin-top:0.5rem;line-height:1.6;">On commence par sélectionner la commune PDC (appelée "Plaque" — plusieurs communes peuvent y être rattachées), puis on saisit le mot directeur de la rue ou avenue pour filtrer les adresses. On descend jusqu'au numéro recherché et on ouvre la fiche détail pour consulter toutes les informations : distance déclarée, type d'accès, commentaires facteur, etc.</p>
+          </div>
+
+          <div class="mc-screen-group">
+            <div class="mcs-label">Étape 2 — Identifier et corriger les anomalies</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.6rem;">
+              <div class="stage-thumb" onclick="openStageLB('../img/stage/geopad_pdi_sans_trace.png','PDI sans tracé de tournée — BAL visible en bord de route, donc &quot;accessible voirie&quot; → 0 mètre. Inutile de mesurer.')">
+                <img src="../img/stage/geopad_pdi_sans_trace.png" alt="PDI sans tracé">
+                <span>PDI sans tracé — BAL accessible voirie</span>
+              </div>
+              <div class="stage-thumb" onclick="openStageLB('../img/stage/geopad_pdi_trace.jpg','PDI avec tracé de tournée — la distance entre la chaussée et la BAL doit être mesurée sur Google Earth pour vérifier si la valeur renseignée est correcte.')">
+                <img src="../img/stage/geopad_pdi_trace.jpg" alt="PDI avec tracé">
+                <span>PDI avec tracé — mesure obligatoire</span>
+              </div>
+              <div class="stage-thumb" onclick="openStageLB('../img/stage/geopad_carto.png','Vue cartographique — le point orange indique la position déclarée du PDI. On peut le repositionner directement si sa localisation est incorrecte.')">
+                <img src="../img/stage/geopad_carto.png" alt="Cartographie PDI">
+                <span>Vue carto — repositionner le PDI</span>
+              </div>
+            </div>
+            <p style="font-size:0.76rem;color:var(--text-3);margin-top:0.5rem;line-height:1.6;">Quand la BAL est clairement visible en bord de route (pas de chemin à parcourir), on déclare l'accès "accessible voirie" à 0 mètre sans mesurer — l'erreur est évidente. Pour les cas avec tracé ou accès privé, la distance doit être mesurée sur Google Earth et comparée à la valeur renseignée. La vue cartographique permet également de repositionner le point orange (PDI) s'il est mal placé, ce qui est plus précis que Google Maps pour les adresses complexes.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mission 2 -->
+      <div class="mission-card" style="border-left-color:var(--amber);">
+        <div class="mc-header">
+          <h3 style="color:var(--amber);">Mission 2 — Analyse de données &amp; Reporting Excel</h3>
+          <button class="voir-plus" onclick="toggleMission(this)">Voir plus <span class="vp-arrow">∨</span></button>
+        </div>
+        <p class="mc-summary">Production de fiches d'identité site, dashboards de trafic comparatifs 2025/2026, plans de production quadri-mensuels et bulletins d'itinéraires — tout en Excel avec macros et mises en forme conditionnelles.</p>
+        <div class="mc-detail">
+          <div style="display:flex;flex-direction:column;gap:0.9rem;margin-bottom:1.2rem;">
+            <div style="font-size:0.83rem;color:var(--text-2);line-height:1.75;"><strong style="color:var(--text);">Fiches d'identité site :</strong> pour chaque site, import de 3 fichiers (ORGATE → CSV, GeoPaD → CSV, C2PO → CSV) dans un classeur Excel préparé avec macros. Les graphiques, tableaux et pourcentages de fiabilisation se génèrent automatiquement. La fiche identifie les anomalies à corriger par indicateur (ex : accès privés &gt; 100m, BAL sans PDI…). On peut ensuite filtrer directement dans Excel sur la colonne d'anomalie pour n'avoir que les adresses à aller vérifier sur GeoPaD.</div>
+            <div style="font-size:0.83rem;color:var(--text-2);line-height:1.75;"><strong style="color:var(--text);">Dashboards de suivi du trafic :</strong> tableaux de bord comparatifs 2025 vs 2026 semaine par semaine pour analyser les baisses de trafic courrier et aider à la réorganisation des tournées. Deux graphiques par trimestre : barres bleues pour la semaine en cours, courbe verte pour la même semaine l'année précédente, et une ligne pointillée de référence à 100%.</div>
+            <div style="font-size:0.83rem;color:var(--text-2);line-height:1.75;"><strong style="color:var(--text);">Plans de production quadri-mensuels :</strong> dashboards avec 4 tableaux (un par mois), chaque case représentant un jour du quadrimestre avec son taux de trafic courrier prévu (%TMO). Mise en forme conditionnelle automatique : <span style="color:#22c55e;font-weight:600;">vert (0–85%)</span>, <span style="color:#60a5fa;font-weight:600;">bleu (86–109% — zone idéale)</span>, <span style="color:#ef4444;font-weight:600;">rouge (110–300%)</span>. En dessous, un histogramme "Prévision Trafic" avec le %TMO hebdomadaire en barres et la ligne TMO 100 en continu. Les bornes de couleur sont paramétrables via une feuille dédiée.</div>
+            <div style="font-size:0.83rem;color:var(--text-2);line-height:1.75;"><strong style="color:var(--text);">Bulletins d'itinéraires (BI) :</strong> reporting de l'organisation des tournées facteur par facteur — nom de rue, numéro, sens de desserte, précisions particulières (accès, code, étage…), dans l'ordre exact de la tournée. Chaque bulletin suit une mise en forme précise et standardisée imposée par La Poste.</div>
+          </div>
+
+          <!-- Screenshots Mission 2 -->
+          <div class="mc-screens-title">📸 Captures — Reporting & Dashboards</div>
+
+          <div class="mc-screen-group">
+            <div class="mcs-label">Fiche d'identité site</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.6rem;">
+              <div class="stage-thumb" onclick="openStageLB('../img/stage/fiche_synthese.png','Fiche identité — Synthèse one page : taux de fiabilisation global, répartition des anomalies par indicateur')">
+                <img src="../img/stage/fiche_synthese.png" alt="Synthèse one page">
+                <span>Synthèse one page</span>
+              </div>
+              <div class="stage-thumb" onclick="openStageLB('../img/stage/fiche_geopad.png','Fiche identité — Données GeoPaD brutes : indicateurs de qualité par type d\'accès et d\'anomalie')">
+                <img src="../img/stage/fiche_geopad.png" alt="Données GeoPaD">
+                <span>Indicateurs GeoPaD par anomalie</span>
+              </div>
+              <div class="stage-thumb" onclick="openStageLB('../img/stage/fiche_geopad_filtre.png','Fiche identité — Vue filtrée sur un indicateur : seules les adresses en anomalie pour cet indicateur sont affichées, prêtes à être vérifiées sur GeoPaD')">
+                <img src="../img/stage/fiche_geopad_filtre.png" alt="GeoPaD filtré">
+                <span>Filtre sur un indicateur d'anomalie</span>
+              </div>
+            </div>
+            <p style="font-size:0.76rem;color:var(--text-3);margin-top:0.5rem;line-height:1.6;">Le classeur s'alimente automatiquement depuis les 3 fichiers CSV importés. La synthèse one page donne une vue d'ensemble du taux de fiabilisation. On peut ensuite filtrer la colonne d'un indicateur précis (par exemple "Accès privés &gt; 100m") pour n'afficher que les adresses concernées et les traiter directement dans GeoPaD.</p>
+          </div>
+
+          <div class="mc-screen-group">
+            <div class="mcs-label">Plan de production quadri-mensuel</div>
+            <div style="display:grid;grid-template-columns:1fr;gap:0.6rem;">
+              <div class="stage-thumb" onclick="openStageLB('../img/stage/plan_prod.png','Plan de production — 4 mois (mai–août 2026), code couleur vert/bleu/rouge selon le %TMO, graphique hebdomadaire en dessous')">
+                <img src="../img/stage/plan_prod.png" alt="Plan de production" style="height:200px;object-fit:contain;">
+                <span>Plan de production Q2 2026 — site Rosny-sous-Bois</span>
+              </div>
+            </div>
+            <p style="font-size:0.76rem;color:var(--text-3);margin-top:0.5rem;line-height:1.6;">Chaque cellule représente un jour du quadrimestre avec son %TMO (taux de trafic moyen opérationnel prévu). Le vert indique un trafic faible, le bleu la zone idéale de charge, le rouge un trafic élevé nécessitant des ressources supplémentaires. L'histogramme en dessous donne la vision hebdomadaire avec la ligne TMO 100 en référence.</p>
+          </div>
+
+          <div class="mc-screen-group">
+            <div class="mcs-label">Dashboard trafic comparatif 2024 / 2025</div>
+            <div style="display:grid;grid-template-columns:1fr;gap:0.6rem;">
+              <div class="stage-thumb" onclick="openStageLB('../img/stage/trafic_tout_flux.png','Dashboard trafic — comparaison semaine par semaine 2024 vs 2025, par trimestre, avec ligne de référence')">
+                <img src="../img/stage/trafic_tout_flux.png" alt="Trafic tout flux" style="height:200px;object-fit:contain;">
+                <span>Trafic hebdo — comparaison 2024 vs 2025 par trimestre</span>
+              </div>
+            </div>
+            <p style="font-size:0.76rem;color:var(--text-3);margin-top:0.5rem;line-height:1.6;">Pour chaque trimestre, un graphique compare le volume de courrier traité semaine par semaine entre 2024 (courbe verte) et 2025 (barres bleues). La ligne pointillée indique le niveau de référence. Ce dashboard aide les responsables à visualiser les baisses de trafic et à ajuster l'organisation des tournées en conséquence.</p>
+          </div>
+
+          <div class="mc-screen-group">
+            <div class="mcs-label">Bulletin d'itinéraire</div>
+            <div style="display:grid;grid-template-columns:1fr;gap:0.6rem;">
+              <div class="stage-thumb" onclick="openStageLB('../img/stage/capture_bi.png','Bulletin d\'itinéraire — document officiel La Poste décrivant l\'ordre exact de la tournée facteur : voie, numéro, sens, précisions')">
+                <img src="../img/stage/capture_bi.png" alt="Bulletin d'itinéraire" style="height:180px;object-fit:contain;">
+                <span>Exemple de bulletin d'itinéraire facteur</span>
+              </div>
+            </div>
+            <p style="font-size:0.76rem;color:var(--text-3);margin-top:0.5rem;line-height:1.6;">Le bulletin d'itinéraire est le document de référence du facteur pour sa tournée. Il liste dans l'ordre exact chaque point de remise : nom de la voie, numéro, sens de desserte, et toute précision utile (code d'accès, étage, instructions particulières). Sa mise en forme suit un standard La Poste strict et doit être parfaitement lisible sur le terrain.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mission 3 VBA -->
+      <div class="mission-card" style="border-left-color:var(--c4);">
+        <div class="mc-header">
+          <h3 style="color:var(--c4);">Mission 3 — Automatisation VBA : de 1 journée à 1 heure</h3>
+          <button class="voir-plus" onclick="toggleMission(this)">Voir plus <span class="vp-arrow">∨</span></button>
+        </div>
+        <p class="mc-summary">Développement d'une macro VBA pour automatiser la mise en forme d'un classeur Excel à ~20 feuilles généré par un SI interne — gain de temps : d'une journée entière à environ 1 heure.</p>
+        <div class="mc-detail">
+          <p style="font-size:0.83rem;color:var(--text-2);line-height:1.75;margin-bottom:0.7rem;">Une partie du reporting consistait à générer un classeur Excel via un SI interne (PDV IP), à partir de fichiers importés manuellement. Le classeur produit contient une <strong style="color:var(--text);">vingtaine de feuilles</strong>, chacune nécessitant une mise en forme précise : couleurs de cellules, bordures, masquage de colonnes et lignes, ajustements de visibilité. Ce travail feuille par feuille prenait <strong style="color:var(--text);">environ une journée entière</strong> à chaque génération.</p>
+          <p style="font-size:0.83rem;color:var(--text-2);line-height:1.75;margin-bottom:0.9rem;">En cherchant comment optimiser ce processus, j'ai développé une <strong style="color:var(--text);">macro VBA</strong> qui applique automatiquement toutes les règles de formatage sur l'ensemble des feuilles en quelques secondes. Résultat : on passe d'<strong style="color:var(--c1);">une journée entière</strong> à <strong style="color:var(--c4);">environ 1 heure</strong> — un vrai gain opérationnel pour l'équipe.</p>
+          <div style="display:flex;gap:0.7rem;margin-bottom:1rem;">
+            <div style="background:var(--bg3);border-radius:8px;padding:0.8rem 1rem;flex:1;text-align:center;"><div style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--c1);">~1 jour</div><div style="font-size:0.7rem;color:var(--text-3);">Sans automatisation</div></div>
+            <div style="display:flex;align-items:center;color:var(--text-3);font-size:1.4rem;">→</div>
+            <div style="background:var(--bg3);border-radius:8px;padding:0.8rem 1rem;flex:1;text-align:center;"><div style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--c4);">~1 heure</div><div style="font-size:0.7rem;color:var(--text-3);">Avec la macro VBA</div></div>
+          </div>
+          <div style="background:var(--bg3);border-radius:8px;padding:0.8rem 1rem;font-size:0.79rem;color:var(--text-2);line-height:1.6;border-left:2px solid var(--c4);margin-bottom:1.2rem;">
+            <strong style="color:var(--text);">Ce que fait la macro :</strong> parcourir chaque feuille, appliquer couleurs et polices selon les règles définies, poser les bordures, masquer colonnes et lignes inutiles, ajuster les largeurs. Tout ce qui prenait des dizaines de clics répétés par feuille s'exécute en un seul clic.
+          </div>
+
+          <!-- Screenshots VBA -->
+          <div class="mc-screens-title">📸 Classeur PDV IP — Avant / Après macro</div>
+          <div class="mc-screen-group">
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.6rem;">
+              <div class="stage-thumb" onclick="openStageLB('../img/stage/pdv_brut.png','PDV IP brut — export du SI tel quel, sans mise en forme : données brutes illisibles, colonnes inutiles visibles, aucun formatage')">
+                <img src="../img/stage/pdv_brut.png" alt="PDV brut">
+                <span>Export brut — données non formatées</span>
+              </div>
+              <div class="stage-thumb" onclick="openStageLB('../img/stage/pdv_nettoye.png','PDV IP après macro VBA — mise en forme appliquée automatiquement : couleurs, bordures, colonnes masquées, lisibilité opérationnelle')">
+                <img src="../img/stage/pdv_nettoye.png" alt="PDV après macro">
+                <span>Après macro — mise en forme automatique</span>
+              </div>
+              <div class="stage-thumb" onclick="openStageLB('../img/stage/pdv_code.png','Code VBA — la macro parcourt chaque feuille et applique les règles de formatage définies')">
+                <img src="../img/stage/pdv_code.png" alt="Code VBA">
+                <span>Code de la macro VBA</span>
+              </div>
+            </div>
+            <p style="font-size:0.76rem;color:var(--text-3);margin-top:0.5rem;line-height:1.6;">Le classeur brut sorti du SI est illisible : données entassées, colonnes inutiles ouvertes, aucun code couleur. La macro applique en quelques secondes la mise en forme complète sur toutes les feuilles simultanément, rendant le classeur directement exploitable par l'équipe opérationnelle.</p>
+          </div>
+
+          <!-- C2PO inside Mission 3 -->
+          <div class="mc-screens-title" style="margin-top:1rem;">📸 C2PO — Référentiel clients</div>
+          <div class="mc-screen-group">
+            <p style="font-size:0.78rem;color:var(--text-3);margin-bottom:0.6rem;">C2PO est utilisé en parallèle de la génération du classeur PDV IP : il sert à extraire les données clients d'une commune pour les importer dans d'autres SI ou dashboards.</p>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.6rem;">
+              <div class="stage-thumb" onclick="openStageLB('../img/stage/c2po_recherche.png','C2PO — Recherche client : on saisit le nom du client et sa commune (ou son identifiant). Le système propose les correspondances en bas de page en bleu avec l\'adresse. On clique sur le nom pour accéder à la fiche.')">
+                <img src="../img/stage/c2po_recherche.png" alt="Recherche client">
+                <span>Recherche d'un client par nom / commune</span>
+              </div>
+              <div class="stage-thumb" onclick="openStageLB('../img/stage/c2po_presentation.png','C2PO — Fiche client : page affichée après avoir cliqué sur un client dans les résultats. On consulte ou modifie toutes ses informations : contrats, prestations, coordonnées, historique.')">
+                <img src="../img/stage/c2po_presentation.png" alt="Fiche client">
+                <span>Fiche détail client — consultation &amp; modification</span>
+              </div>
+              <div class="stage-thumb" onclick="openStageLB('../img/stage/c2po_export.png','C2PO — Export communal : sélection d\'une commune pour exporter l\'ensemble des clients en CSV. Ce fichier est ensuite intégré dans d\'autres SI ou utilisé pour alimenter les dashboards Excel.')">
+                <img src="../img/stage/c2po_export.png" alt="Export commune">
+                <span>Export CSV de tous les clients d'une commune</span>
+              </div>
+            </div>
+            <p style="font-size:0.76rem;color:var(--text-3);margin-top:0.5rem;line-height:1.6;">On peut chercher un client par son nom et sa commune, ou directement par identifiant. Le résultat s'affiche en bleu en bas de page avec l'adresse. La fiche détail permet de consulter et modifier toutes les informations. L'export communal génère un CSV complet de tous les clients d'une commune, utilisable dans d'autres SI ou classeurs Excel.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Montée en autonomie -->
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:1.3rem;margin-bottom:1rem;">
+        <h3 style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-3);margin-bottom:0.8rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);">Progression & Autonomie</h3>
+        <p style="font-size:0.83rem;color:var(--text-2);line-height:1.7;">Les premiers jours étaient centrés sur l'observation et la formation aux applications internes. Ma tutrice me formait aux SI, je reproduisais et comprenais progressivement. Petit à petit, j'ai gagné en autonomie jusqu'à être capable d'exécuter certaines tâches sans aucune question — ma tutrice n'avait plus qu'à m'indiquer le travail à faire.</p>
+      </div>
+
+    </div><!-- end left col -->
+
+    <!-- Sidebar -->
     <div>
       <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem;margin-bottom:0.8rem;">
         <h4 style="font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-3);margin-bottom:0.8rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);">Entreprise</h4>
-        <p style="font-size:0.82rem;color:var(--text-2);line-height:1.6;">La Poste est un groupe public français leader dans la distribution de courrier et de colis sur l'ensemble du territoire national.</p>
+        <p style="font-size:0.82rem;color:var(--text-2);line-height:1.6;">Groupe public français, leader dans la distribution de courrier et de colis. La Branche Services Courrier Colis gère l'acheminement et la distribution sur l'ensemble du territoire national.</p>
       </div>
       <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem;margin-bottom:0.8rem;">
         <h4 style="font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-3);margin-bottom:0.8rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);">Compétences BUT ciblées</h4>
         <span class="comp-badge-large cb-1">🗄️ Traiter</span><br>
-        <span class="comp-badge-large cb-3" style="margin-top:0.4rem;">📈 Valoriser</span>
+        <span class="comp-badge-large cb-3" style="margin-top:0.4rem;">📈 Valoriser</span><br>
+        <span class="comp-badge-large cb-4" style="margin-top:0.4rem;">⚙️ Développer</span>
       </div>
-      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem;">
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem;margin-bottom:0.8rem;">
         <h4 style="font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-3);margin-bottom:0.8rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);">Technologies utilisées</h4>
         <div class="tags-cloud">
           <span class="tag highlight">Excel / VBA</span>
-          <span class="tag">Reporting</span>
+          <span class="tag highlight">GeoPaD</span>
+          <span class="tag">C2PO</span>
+          <span class="tag">ORGATE</span>
           <span class="tag">Google Maps</span>
-          <span class="tag">Analyse de données</span>
+          <span class="tag">Google Earth</span>
+          <span class="tag">Macro VBA</span>
+          <span class="tag">Dashboard</span>
+        </div>
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem;">
+        <h4 style="font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-3);margin-bottom:0.8rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);">Missions en chiffres</h4>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;">
+          <div style="background:var(--bg3);border-radius:8px;padding:0.7rem;text-align:center;">
+            <div style="font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--teal);">3</div>
+            <div style="font-size:0.68rem;color:var(--text-3);">Sites couverts</div>
+          </div>
+          <div style="background:var(--bg3);border-radius:8px;padding:0.7rem;text-align:center;">
+            <div style="font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--amber);">3</div>
+            <div style="font-size:0.68rem;color:var(--text-3);">SI maîtrisés</div>
+          </div>
+          <div style="background:var(--bg3);border-radius:8px;padding:0.7rem;text-align:center;">
+            <div style="font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--c4);">×16</div>
+            <div style="font-size:0.68rem;color:var(--text-3);">Gain temps VBA</div>
+          </div>
+          <div style="background:var(--bg3);border-radius:8px;padding:0.7rem;text-align:center;">
+            <div style="font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--blue);">8</div>
+            <div style="font-size:0.68rem;color:var(--text-3);">Semaines</div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </div><!-- end stage-split -->
 
 </div>
 </main>
 </div>
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<div id="stage-lb"><button id="stage-lb-close" onclick="closeStageLB()">✕</button><img id="stage-lb-img" src="" alt=""><div id="stage-lb-cap"></div></div>
+<div id="lb-modal" onclick="document.getElementById('lb-modal').classList.remove('open')">
+  <span class="lb-close">&#x2715;</span>
+  <img id="lb-img" src="" alt="">
+</div>
+
+<style>
+.stage-thumb{cursor:pointer;background:var(--bg3);border:1px solid var(--border);border-radius:8px;overflow:hidden;transition:border-color .2s,transform .2s;display:flex;flex-direction:column;}
+.stage-thumb:hover{border-color:var(--teal);transform:translateY(-2px);}
+.stage-thumb img{width:100%;height:110px;object-fit:cover;display:block;}
+.stage-thumb span{padding:0.4rem 0.6rem;font-size:0.72rem;color:var(--text-3);text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+/* Mission cards */
+.mission-card{background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--teal);border-radius:var(--radius);padding:1.3rem;margin-bottom:1rem;}
+.mc-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:0.6rem;}
+.mc-header h3{font-size:0.82rem;font-weight:700;margin:0;}
+.mc-summary{font-size:0.82rem;color:var(--text-3);line-height:1.65;margin:0;}
+.mc-detail{display:none;margin-top:1.1rem;padding-top:1.1rem;border-top:1px solid var(--border);}
+.mc-detail.open{display:block;}
+.voir-plus{display:flex;align-items:center;gap:0.35rem;padding:0.35rem 0.85rem;font-size:0.75rem;font-weight:700;color:var(--teal);background:rgba(45,212,191,0.08);border:1px solid rgba(45,212,191,0.25);border-radius:20px;cursor:pointer;white-space:nowrap;transition:background .2s,border-color .2s;flex-shrink:0;}
+.voir-plus:hover{background:rgba(45,212,191,0.16);}
+.vp-arrow{display:inline-block;transition:transform .25s;}
+.voir-plus.open .vp-arrow{transform:rotate(180deg);}
+.voir-plus.open{color:var(--text-2);background:rgba(255,255,255,0.04);border-color:var(--border);}
+.mc-screens-title{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-3);margin:1.2rem 0 0.7rem;}
+.mc-screen-group{margin-bottom:1rem;}
+.mcs-label{font-size:0.7rem;font-weight:600;color:var(--teal);margin-bottom:0.5rem;font-family:var(--font-mono);}
+#stage-lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:9999;flex-direction:column;align-items:center;justify-content:center;}
+#stage-lb.open{display:flex;}
+#stage-lb img{max-width:90vw;max-height:80vh;border-radius:8px;border:1px solid var(--border);}
+#stage-lb-cap{color:var(--text-2);font-size:0.8rem;margin-top:0.8rem;}
+#stage-lb-close{position:absolute;top:1.2rem;right:1.5rem;font-size:1.5rem;color:var(--text-2);cursor:pointer;background:none;border:none;}
+</style>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-document.addEventListener('click',function(e){const s=document.querySelector('.sidebar'),b=document.getElementById('burger');if(s&&!s.contains(e.target)&&!b.contains(e.target))s.classList.remove('open');});
+function openStageLB(src,cap){document.getElementById('stage-lb-img').src=src;document.getElementById('stage-lb-cap').textContent=cap||'';document.getElementById('stage-lb').classList.add('open');}
+function closeStageLB(){document.getElementById('stage-lb').classList.remove('open');}
+document.getElementById('stage-lb').addEventListener('click',function(e){if(e.target===this)closeStageLB();});
+function toggleMission(btn){
+  const card=btn.closest('.mission-card');
+  const detail=card.querySelector('.mc-detail');
+  const isOpen=detail.classList.contains('open');
+  detail.classList.toggle('open',!isOpen);
+  btn.classList.toggle('open',!isOpen);
+  btn.childNodes[0].textContent=isOpen?'Voir plus ':'Voir moins ';
+}
+function openLB(src){var m=document.getElementById('lb-modal');document.getElementById('lb-img').src=src;m.classList.add('open');}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){document.getElementById('lb-modal').classList.remove('open');closeStageLB();}});
+document.addEventListener('click',function(e){const s=document.querySelector('.sidebar'),b=document.getElementById('burger');if(s&&b&&!s.contains(e.target)&&!b.contains(e.target))s.classList.remove('open');});
 
-// Map initialization
-const map = L.map('stage-map', {zoomControl: true, scrollWheelZoom: false}).setView([48.861, 2.487], 13);
+// Map
+document.addEventListener('DOMContentLoaded', function() {
+const map = L.map('stage-map', {zoomControl: true, scrollWheelZoom: false}).setView([48.865, 2.479], 13);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>', maxZoom: 19
+  attribution: '&copy; OpenStreetMap contributors', maxZoom: 19
 }).addTo(map);
-
-const iconTeal = L.divIcon({
-  className: '',
-  html: '<div style="width:14px;height:14px;border-radius:50%;background:#2dd4bf;border:2px solid #0d1117;box-shadow:0 0 8px #2dd4bf;"></div>',
-  iconSize: [14,14], iconAnchor:[7,7]
-});
-const iconAmber = L.divIcon({
-  className: '',
-  html: '<div style="width:14px;height:14px;border-radius:50%;background:#fbbf24;border:2px solid #0d1117;box-shadow:0 0 8px #fbbf24;"></div>',
-  iconSize: [14,14], iconAnchor:[7,7]
-});
-const iconBlue = L.divIcon({
-  className: '',
-  html: '<div style="width:14px;height:14px;border-radius:50%;background:#60a5fa;border:2px solid #0d1117;box-shadow:0 0 8px #60a5fa;"></div>',
-  iconSize: [14,14], iconAnchor:[7,7]
-});
-
-L.marker([48.8603, 2.4428], {icon: iconTeal}).addTo(map)
-  .bindPopup('<b style="color:#2dd4bf">Montreuil</b><br>6 Rue Ariste Hémard<br>93100 Montreuil');
-L.marker([48.8566, 2.5098], {icon: iconAmber}).addTo(map)
-  .bindPopup('<b style="color:#fbbf24">Neuilly-Plaisance</b><br>6 Rue Marcel Dassault<br>93360 Neuilly-Plaisance');
-L.marker([48.8715, 2.4873], {icon: iconBlue}).addTo(map)
-  .bindPopup('<b style="color:#60a5fa">Rosny-sous-Bois</b><br>33bis Rue Estienne d\'Orves<br>93110 Rosny-sous-Bois');
+const mkTeal = L.divIcon({className:'',html:'<div style="width:14px;height:14px;border-radius:50%;background:#2dd4bf;border:2px solid #0d1117;box-shadow:0 0 8px #2dd4bf;"></div>',iconSize:[14,14],iconAnchor:[7,7]});
+const mkAmber = L.divIcon({className:'',html:'<div style="width:14px;height:14px;border-radius:50%;background:#fbbf24;border:2px solid #0d1117;box-shadow:0 0 8px #fbbf24;"></div>',iconSize:[14,14],iconAnchor:[7,7]});
+const mkBlue = L.divIcon({className:'',html:'<div style="width:14px;height:14px;border-radius:50%;background:#60a5fa;border:2px solid #0d1117;box-shadow:0 0 8px #60a5fa;"></div>',iconSize:[14,14],iconAnchor:[7,7]});
+L.marker([48.85966, 2.43777], {icon: mkTeal}).addTo(map).bindPopup('<b style="color:#2dd4bf">Montreuil</b><br>6 Rue Ariste Hémard<br>93100 Montreuil');
+L.marker([48.86484, 2.51677], {icon: mkAmber}).addTo(map).bindPopup('<b style="color:#fbbf24">Neuilly-Plaisance</b><br>6 Rue Marcel Dassault<br>93360 Neuilly-Plaisance');
+L.marker([48.87029, 2.48353], {icon: mkBlue}).addTo(map).bindPopup("<b style='color:#60a5fa'>Rosny-sous-Bois</b><br>33bis Rue Estienne d'Orves<br>93110 Rosny-sous-Bois");
+setTimeout(function(){ map.invalidateSize(); }, 300);
+}); // end DOMContentLoaded
 </script>
 </body>
 </html>

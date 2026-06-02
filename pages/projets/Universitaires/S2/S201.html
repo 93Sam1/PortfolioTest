@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Conception & Implémentation d'une Base de Données · Samuel ROCHEMONT</title>
+<title>Conception & Implémentation d'une Base de Données — Bou · Samuel ROCHEMONT</title>
 <link rel="stylesheet" href="../../../../styles/style.css">
 </head>
 <body>
@@ -24,9 +24,13 @@
 </aside>
 <main class="main">
 <div class="page-wrap">
+  <div class="sae-pagination">
+    <a href="../S1/S106.html" class="sae-page-btn"><span class="pg-arrow">←</span><span class="pg-code">SAÉ 1.06</span></a>
+    <a href="S202.html" class="sae-page-btn"><span class="pg-code">SAÉ 2.02</span><span class="pg-arrow">→</span></a>
+  </div>
   <div class="sae-header">
     <div class="sae-breadcrumb"><a href="../../../../pages/projets.html">projets</a> / s2 / <span style='color:var(--text-2);'>s201</span></div>
-    <h1>Conception & Implémentation d'une Base de Données</h1>
+    <h1>Conception & Implémentation d'une Base de Données — Boutique Jeux Vidéo</h1>
     <div class="sae-meta"><span class="meta-chip">📅 Semestre 2 — 2025</span><span class="meta-chip">🎓 SAÉ 2.01</span><span class="meta-chip">⏱️ 40h</span><span class="meta-chip" style="color:var(--teal);">Samuel ROCHEMONT</span></div>
   </div>
   <div class="sae-body">
@@ -35,46 +39,55 @@
       <img src="../../../../img/projets/S201.png" alt="Conception & Implémentation d'une Base d" onerror="this.style.opacity='0.2'">
       <span class="zoom-hint">🔍 Agrandir</span>
     </div>
-      <div class="sae-section"><h2>Cadre du projet & Objectifs</h2><p style='color:var(--text-2);'>Conception complète d'une base de données relationnelle : de la <strong style='color:var(--text);'>modélisation conceptuelle (MCD)</strong> jusqu'à l'implémentation SQL et le peuplement avec des données réalistes répondant à un besoin métier précis.</p></div>
-      <div class="sae-section"><h2>Étapes de réalisation</h2><div class="step-block"><h3>Analyse & MCD</h3><p style="color:var(--text-2);">Identification des entités, relations et cardinalités depuis le cahier des charges. Conception du MCD respectant les formes normales.</p></div><div class="step-block"><h3>MLD & implémentation SQL</h3><p style="color:var(--text-2);">Transformation en Modèle Logique, écriture des scripts DDL (CREATE TABLE, contraintes d'intégrité, clés primaires et étrangères).</p></div><div class="step-block"><h3>Peuplement & tests</h3><p style="color:var(--text-2);">Insertion de données représentatives et requêtes SQL pour valider la cohérence et répondre aux besoins identifiés.</p></div></div>
-      <div class="sae-section"><h2>Ce que j'en retire</h2><div class='reflect-block'><h3>La normalisation : un investissement rentable</h3><p>Bien normaliser la BDD dès le départ évite des heures de corrections lors de l'insertion. Une table mal structurée génère redondances et incohérences en cascade.</p></div><div class='insight-box'><h3>💡 Ce que j'ai retenu</h3><p>Un modèle techniquement parfait mais qui ne correspond pas aux vraies contraintes métier est inutilisable en production. Comprendre le besoin prime sur la technique.</p></div></div>
+      <div class="sae-section"><h2>Cadre du projet & Objectifs</h2><p style='color:var(--text-2);'>La base de données est au cœur de tout système d'information. Pour cette SAÉ, nous avons conçu de A à Z le système de gestion d'une <strong style='color:var(--text);'>boutique de jeux vidéo</strong> : architecture de la base, implémentation, et application complète permettant à un gérant d'administrer stocks, ventes et clients. Une partie de la SAÉ consistait également à <strong style='color:var(--text);'>extraire et structurer des données issues d'une base de données de joueurs de football</strong> (comme le montre la capture ci-dessus : Rk, Player, Nation, Pos, Squad, Comp, Age) pour travailler sur l'import de données réelles.</p></div>
+      <div class="sae-section"><h2>Étapes de réalisation</h2><div class="step-block"><h3>Analyse des besoins & Modélisation (Looping)</h3><p>Cartographie des règles de gestion de la boutique : un client peut acheter plusieurs jeux, un jeu appartient à un ou plusieurs genres, un fournisseur approvisionne le stock. Modélisation via un MCD sous Looping en respectant les cardinalités de la méthode Merise, avant de générer le Modèle Logique des Données (MLD).</p></div>
+<div class="step-block"><h3>Implémentation & import de données réelles</h3><p>Création des tables sous Microsoft Access avec intégrité référentielle (clés primaires et étrangères). Import de données issues d'une base de données de joueurs de football (Player, Nation, Position, Squad, Comp, Age) pour simuler des jeux de données réels et tester les requêtes SQL : calcul du CA, articles en rupture de stock, classements clients.</p></div>
+<div class="step-block"><h3>Développement de l'application IHM</h3><p>Interface Homme-Machine développée directement dans Access : formulaires de saisie assistés, boutons de navigation (macros), états imprimables (factures, rapports de stock). L'application masque totalement la complexité des tables pour offrir une ergonomie métier intuitive au gérant.</p></div></div>
+      <div class="sae-section"><h2>Ce que j'en retire</h2><div class="reflect-block"><h3>De la modélisation à l'application : une chaîne complète</h3><p>Cette SAÉ m'a appris que concevoir une BDD, c'est d'abord comprendre un métier et ses processus. Le MCD n'est pas un exercice théorique : une cardinalité mal posée se traduit par des données incohérentes en production. La phase de modélisation conditionne tout ce qui vient après.</p></div>
+<div class="insight-box"><h3>💡 Ce que j'ai retenu</h3><p>Access est souvent sous-estimé. Couplé à VBA pour les formulaires et macros, il permet de livrer une application fonctionnelle sans déploiement complexe — idéal pour des structures qui n'ont pas de DSI et ont besoin d'un outil métier opérationnel rapidement.</p></div></div>
+      <div class="sae-section">
+        <h2>Ce que ça m'apporte en entreprise</h2>
+        <div style="background:linear-gradient(135deg,rgba(45,212,191,0.05),rgba(96,165,250,0.05));border:1px solid rgba(45,212,191,0.2);border-radius:var(--radius);padding:1.2rem;">
+          <p style="color:var(--text-2);line-height:1.75;font-size:0.85rem;">La conception de bases de données relationnelles est au cœur de tout système d'information. En entreprise, un data analyst qui comprend la structure d'une BDD peut écrire des requêtes optimisées, dialoguer avec les équipes IT et comprendre les contraintes d'architecture. Le développement d'une IHM Access est également très présent dans les PME qui ont besoin d'outils de gestion sur mesure sans DSI dédiée.</p>
+        </div>
+      </div>
       <div class="sae-section"><h2>Positionnement par rapport aux ACs</h2><div class="eval-legend">
       <span><span class="eval-dot ev-A">A</span>Acquis</span>
       <span><span class="eval-dot ev-P">P</span>Presque acquis</span>
       <span><span class="eval-dot ev-E">E</span>En cours d'apprentissage</span>
       <span><span class="eval-dot ev-N">N</span>Non acquis</span>
-    </div><table class="eval-grid-table">
-      <thead><tr>
+    </div><table class="eval-grid-table"><thead><tr>
         <th style="width:40%;">Apprentissage Critique</th>
         <th class="center">Statut</th>
         <th>Commentaires</th>
-      </tr></thead><tbody>
-        <tr>
+      </tr></thead><tbody><tr>
           <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC1.1.01</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Interpréter correctement le besoin du commanditaire ou du client</span></td>
           <td class="center"><span class="eval-dot ev-A">A</span></td>
-          <td style="font-size:0.77rem;color:var(--text-2);">MCD produit en adéquation avec le cahier des charges, validé avant de passer à l'implémentation.</td>
-        </tr>
-        <tr>
+          <td style="font-size:0.77rem;color:var(--text-2);">MCD construit en adéquation avec les règles métier de la boutique identifiées lors de l'analyse des besoins.</td>
+        </tr><tr>
+          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC1.1.02</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Respecter les formalismes de notation</span></td>
+          <td class="center"><span class="eval-dot ev-A">A</span></td>
+          <td style="font-size:0.77rem;color:var(--text-2);">Respect des conventions Merise pour le MCD/MLD (cardinalités, entités, associations) sans erreur de formalisme.</td>
+        </tr><tr>
           <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC1.1.03</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Connaître la syntaxe des langages et savoir l'utiliser</span></td>
           <td class="center"><span class="eval-dot ev-P">P</span></td>
-          <td style="font-size:0.77rem;color:var(--text-2);">DDL complet et fonctionnel, quelques optimisations sur les index auraient amélioré les performances.</td>
-        </tr>
-        <tr>
+          <td style="font-size:0.77rem;color:var(--text-2);">Requêtes SQL DDL et DML fonctionnelles ; quelques optimisations (index, requêtes imbriquées) auraient pu améliorer les performances.</td>
+        </tr><tr>
           <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC1.1.04</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Mesurer l'importance de maîtriser la structure des données à exploiter</span></td>
           <td class="center"><span class="eval-dot ev-A">A</span></td>
-          <td style="font-size:0.77rem;color:var(--text-2);">Normalisation jusqu'à la 3NF appliquée correctement, aucune redondance dans le modèle final.</td>
-        </tr>
-      </tbody></table></div>
-      <div class="wip-notice">📁 Les fichiers sources seront ajoutés prochainement après anonymisation.</div>
+          <td style="font-size:0.77rem;color:var(--text-2);">Normalisation 3NF appliquée, aucune redondance dans le modèle final. Import des données football pour valider les jointures.</td>
+        </tr><tr>
+          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC1.1.06</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Prendre conscience de l'intérêt de la programmation</span></td>
+          <td class="center"><span class="eval-dot ev-A">A</span></td>
+          <td style="font-size:0.77rem;color:var(--text-2);">L'IHM développée sous Access (macros, formulaires) a concrétisé l'intérêt de la programmation pour rendre une BDD utilisable par un non-technicien.</td>
+        </tr></tbody></table></div>
+      
     </div>
     <div class="sae-sidebar">
       <div class="sae-sidebar-card"><h4>Compétence ciblée</h4><span class="comp-badge-large cb-1">🗄️ Traiter — Niveau 1</span></div>
-      <div class="sae-sidebar-card"><h4>Technologies</h4><div class="tags-cloud"><span class="tag highlight">SQL DDL/DML</span><span class="tag highlight">MCD/MLD</span><span class="tag ">Merise</span><span class="tag ">Normalisation</span></div></div>
-      <div class="sae-sidebar-card">
-        <h4>Ressources Mobilisées (BUT SD)</h4>
-        <div class="tags-cloud" style="gap:0.35rem;"><span class="tag" style="font-size:0.68rem;">R2.01 — BDD avancée et SQL</span><span class="tag" style="font-size:0.68rem;">R2.07 — Systèmes d'info décisionnels</span></div>
-      </div>
-      <div class="sae-sidebar-card"><h4>Apprentissages critiques</h4><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC1.1.01</span>Interpréter correctement le besoin du commanditaire ou du client</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC1.1.03</span>Connaître la syntaxe des langages et savoir l'utiliser</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC1.1.04</span>Mesurer l'importance de maîtriser la structure des données à exploiter</div></div>
+      <div class="sae-sidebar-card"><h4>Technologies</h4><div class="tags-cloud"><span class="tag highlight">MS Access</span><span class="tag highlight">SQL DDL/DML</span><span class="tag ">Looping / Merise</span><span class="tag ">IHM / Formulaires</span></div></div>
+      <div class="sae-sidebar-card"><h4>Ressources Mobilisées (BUT SD)</h4><div class="tags-cloud" style="gap:0.35rem;"><span class="tag" style="font-size:0.68rem;">R2.01 — Reporting et Datavisualisation</span><span class="tag" style="font-size:0.68rem;">R2.02 — BDD relationnelles 2</span><span class="tag" style="font-size:0.68rem;">R2.03 — Bases de la programmation 2</span></div></div>
+      <div class="sae-sidebar-card"><h4>Apprentissages critiques</h4><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC1.1.01</span>Interpréter correctement le besoin du commanditaire ou du client</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC1.1.02</span>Respecter les formalismes de notation</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC1.1.03</span>Connaître la syntaxe des langages et savoir l'utiliser</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC1.1.04</span>Mesurer l'importance de maîtriser la structure des données à exploiter</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC1.1.06</span>Prendre conscience de l'intérêt de la programmation</div></div>
       <div style="margin-top:1rem;"><a href="../../../../pages/projets.html" class="btn btn-outline" style="width:100%;justify-content:center;">← Retour aux projets</a></div>
     </div>
   </div>

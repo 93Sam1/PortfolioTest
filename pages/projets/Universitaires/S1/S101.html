@@ -24,6 +24,10 @@
 </aside>
 <main class="main">
 <div class="page-wrap">
+  <div class="sae-pagination">
+    <span></span>
+    <a href="S102.html" class="sae-page-btn"><span class="pg-code">SAÉ 1.02</span><span class="pg-arrow">→</span></a>
+  </div>
   <div class="sae-header">
     <div class="sae-breadcrumb"><a href="../../../../pages/projets.html">projets</a> / s1 / <span style='color:var(--text-2);'>s101</span></div>
     <h1>Reporting à partir de données stockées dans un SGBD Relationnel</h1>
@@ -38,6 +42,12 @@
       <div class="sae-section"><h2>Cadre du projet & Objectifs</h2><p style='color:var(--text-2);'>L'objectif était de concevoir un <strong style='color:var(--text);'>tableau de bord complet</strong> à partir d'une base de données StackExchange Martial Arts. En combinant SQL pour l'extraction et Excel pour la mise en forme, nous avons produit un centre de contrôle visuel couvrant les données du 01/02/2012 au 20/02/2021.</p></div>
       <div class="sae-section"><h2>Étapes de réalisation</h2><div class="step-block"><h3>Préparation SQL</h3><p style="color:var(--text-2);">Interrogation de la base : jointures entre tables, agrégations, filtres pour extraire les données pertinentes. Export vers Excel pour exploitation.</p></div><div class="step-block"><h3>Top 20 contributeurs</h3><p style="color:var(--text-2);">Classement des 20 utilisateurs les plus actifs par GROUP BY + ORDER BY + LIMIT sur la jointure posts/users.</p></div><div class="step-block"><h3>Mots-clés et types de messages</h3><p style="color:var(--text-2);">Extraction des 20 mots-clés les plus fréquents et comptage séparé questions vs réponses pour visualiser la répartition de l'activité.</p></div><div class="step-block"><h3>Dashboard Excel</h3><p style="color:var(--text-2);">Mise en forme via tableaux et graphiques croisés dynamiques : courbe temporelle, barres horizontales, graphique circulaire.</p></div></div>
       <div class="sae-section"><h2>Ce que j'en retire</h2><div class='reflect-block'><h3>SQL : d'abord préparer, ensuite visualiser</h3><p>Sans une requête bien construite, Excel n'aurait rien d'utile à afficher. La qualité d'un dashboard se joue en amont, au moment de l'extraction.</p></div><div class='insight-box'><h3>💡 Ce que j'ai retenu</h3><p>La gestion du temps est critique en SAÉ. Construire une requête, l'exporter, créer les TCD et soigner la présentation demande plus de rigueur qu'anticipé.</p></div></div>
+      <div class="sae-section">
+        <h2>Ce que ça m'apporte en entreprise</h2>
+        <div style="background:linear-gradient(135deg,rgba(45,212,191,0.05),rgba(96,165,250,0.05));border:1px solid rgba(45,212,191,0.2);border-radius:var(--radius);padding:1.2rem;">
+          <p style="color:var(--text-2);line-height:1.75;font-size:0.85rem;">En entreprise, savoir interroger une base de données relationnelle et mettre en forme les résultats dans un dashboard Excel est une compétence quotidienne pour un data analyst ou un chargé d'études. Que ce soit pour un service marketing, une direction des opérations ou un contrôle de gestion, la capacité à produire un reporting structuré depuis un SGBD est immédiatement mobilisable.</p>
+        </div>
+      </div>
       <div class="sae-section"><h2>Positionnement par rapport aux ACs</h2><div class="eval-legend">
       <span><span class="eval-dot ev-A">A</span>Acquis</span>
       <span><span class="eval-dot ev-P">P</span>Presque acquis</span>
@@ -65,7 +75,7 @@
           <td style="font-size:0.77rem;color:var(--text-2);">Lecture du schéma StackExchange pour identifier les bonnes tables et jointures sans tâtonnement.</td>
         </tr>
       </tbody></table></div>
-      <div class="wip-notice">📁 Les fichiers sources seront ajoutés prochainement après anonymisation.</div>
+      
     </div>
     <div class="sae-sidebar">
       <div class="sae-sidebar-card"><h4>Compétence ciblée</h4><span class="comp-badge-large cb-1">🗄️ Traiter — Niveau 1</span></div>

@@ -24,10 +24,14 @@
 </aside>
 <main class="main">
 <div class="page-wrap">
+  <div class="sae-pagination">
+    <a href="../S2/S206.html" class="sae-page-btn"><span class="pg-arrow">←</span><span class="pg-code">SAÉ 2.06</span></a>
+    <a href="S302.html" class="sae-page-btn"><span class="pg-code">SAÉ 3.02</span><span class="pg-arrow">→</span></a>
+  </div>
   <div class="sae-header">
     <div class="sae-breadcrumb"><a href="../../../../pages/projets.html">projets</a> / s3 / <span style='color:var(--text-2);'>s301</span></div>
     <h1>Collecte Automatisée de Données Web — Scraping Blue Buffalo</h1>
-    <div class="sae-meta"><span class="meta-chip">📅 Semestre 3 — 2025/2026</span><span class="meta-chip">🎓 SAÉ 3.01</span><span class="meta-chip">⏱️ 40h</span><span class="meta-chip" style="color:var(--teal);">Samuel ROCHEMONT</span></div>
+    <div class="sae-meta"><span class="meta-chip">📅 Semestre 3 — 2025/2026</span><span class="meta-chip">🎓 SAÉ 3.01</span><span class="meta-chip">⏱️ ~25h encadrées + travail personnel</span><span class="meta-chip" style="color:var(--teal);">Samuel ROCHEMONT</span></div>
   </div>
   <div class="sae-body">
     <div class="sae-content-left">
@@ -35,51 +39,54 @@
       <img src="../../../../img/projets/S301.png" alt="Collecte Automatisée de Données Web — Sc" onerror="this.style.opacity='0.2'">
       <span class="zoom-hint">🔍 Agrandir</span>
     </div>
-      <div class="sae-section"><h2>Cadre du projet & Objectifs</h2><p style='color:var(--text-2);'>Développement d'un <strong style='color:var(--text);'>pipeline de scraping complet</strong> sur le site Blue Buffalo (alimentation animale) avec Python et Playwright. Extraire, structurer et exporter automatiquement les données produits.</p></div>
-      <div class="sae-section"><h2>Étapes de réalisation</h2><div class="step-block"><h3>Analyse de la structure du site</h3><p style="color:var(--text-2);">Étude des pages, rendu JavaScript dynamique et sélecteurs CSS/XPath pour adapter la stratégie d'extraction.</p></div><div class="step-block"><h3>Développement du scraper</h3><p style="color:var(--text-2);">Playwright pour naviguer et extraire les données dynamiques. Structuration en DataFrame Pandas.</p></div><div class="step-block"><h3>Export & automatisation</h3><p style="color:var(--text-2);">Export CSV automatique pour intégration dans Excel ou Power BI. Pipeline découpé en modules indépendants testables.</p></div></div>
-      <div class="sae-section"><h2>Ce que j'en retire</h2><div class='reflect-block'><h3>L'automatisation comme investissement</h3><p>Un scraper prend plus de temps à construire qu'une extraction manuelle ponctuelle. Mais une fois en place, il peut être relancé en un clic — c'est la différence entre une tâche récurrente et un processus industrialisé.</p></div><div class='insight-box'><h3>💡 Ce que j'ai retenu</h3><p>Un bon pipeline est modulaire : extraction, transformation, export séparés. Cette structure le rend testable, maintenable et réutilisable.</p></div></div>
+      <div class="sae-section"><h2>Cadre du projet & Objectifs</h2><p style='color:var(--text-2);'>Le web est une mine de données en accès libre. En tant que consultant décisionnel, l'enjeu était de concevoir une solution capable de <strong style='color:var(--text);'>collecter, structurer et qualifier des données produits externes</strong> pour alimenter un entrepôt de données. Ce projet de groupe nous a confié la marque <strong style='color:var(--text);'>Blue Buffalo</strong> (alimentation animale). Objectif : construire un scraper robuste sous Google Colab avec Playwright pour extraire les fiches produits chiens et chats.</p></div>
+      <div class="sae-section"><h2>Étapes de réalisation</h2><div class="step-block"><h3>Analyse de la structure du site & choix technologiques</h3><p>Blue Buffalo présente un contenu dynamique généré en JavaScript — impossible à extraire avec une simple requête HTTP. Nous avons choisi Playwright (simulateur de navigateur) plutôt que BeautifulSoup pour gérer ce rendu dynamique. Étude des balises HTML cibles : nom, prix, ingrédients, poids, image, URL produit.</p></div>
+<div class="step-block"><h3>Développement du scraper</h3><p>Navigation automatisée vers les pages Chiens et Chats. Extraction des balises HTML cibles pour chaque fiche produit. Nettoyage des données brutes : strip() et replace() pour retirer les devises, normaliser les poids, supprimer les caractères parasites. Gestion des cas d'erreur (produit sans prix, page manquante).</p></div>
+<div class="step-block"><h3>Structuration & export CSV</h3><p>Création d'un DataFrame Pandas respectant le schéma imposé au groupe : colonnes brand, species, sku, name, price, rating, weight, ingredients, image_url. Export CSV propre, directement exploitable pour l'alimentation du datawarehouse du projet global.</p></div></div>
+      <div class="sae-section"><h2>Ce que j'en retire</h2><div class="reflect-block"><h3>Le web scraping : entre technique et éthique</h3><p>Au-delà du code, ce projet a soulevé des questions sur les limites du scraping : respect du robots.txt, fréquence des requêtes pour ne pas surcharger le serveur, utilisation des données dans un cadre légal. Ces considérations font partie intégrante du métier.</p></div>
+<div class="insight-box"><h3>💡 Ce que j'ai retenu</h3><p>Playwright est bien plus puissant que les approches statiques pour les sites modernes — mais aussi bien plus exigeant. La vraie difficulté n'était pas d'extraire un produit, mais de rendre le scraper fiable sur 300 produits avec des structures HTML variables. La robustesse, pas la vitesse, est le vrai critère de qualité d'un scraper.</p></div></div>
+      <div class="sae-section">
+        <h2>Ce que ça m'apporte en entreprise</h2>
+        <div style="background:linear-gradient(135deg,rgba(45,212,191,0.05),rgba(96,165,250,0.05));border:1px solid rgba(45,212,191,0.2);border-radius:var(--radius);padding:1.2rem;">
+          <p style="color:var(--text-2);line-height:1.75;font-size:0.85rem;">Un pipeline de scraping robuste est un actif réutilisable pour n'importe quelle entreprise cherchant à monitorer ses concurrents, alimenter un catalogue produits ou automatiser une veille tarifaire. La maîtrise de Playwright + Pandas + Google Colab représente un stack moderne directement employable en data engineering ou consulting.</p>
+        </div>
+      </div>
       <div class="sae-section"><h2>Positionnement par rapport aux ACs</h2><div class="eval-legend">
       <span><span class="eval-dot ev-A">A</span>Acquis</span>
       <span><span class="eval-dot ev-P">P</span>Presque acquis</span>
       <span><span class="eval-dot ev-E">E</span>En cours d'apprentissage</span>
       <span><span class="eval-dot ev-N">N</span>Non acquis</span>
-    </div><table class="eval-grid-table">
-      <thead><tr>
+    </div><table class="eval-grid-table"><thead><tr>
         <th style="width:40%;">Apprentissage Critique</th>
         <th class="center">Statut</th>
         <th>Commentaires</th>
-      </tr></thead><tbody>
-        <tr>
+      </tr></thead><tbody><tr>
+          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC2.1.01</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Comprendre l'organisation des données de l'entreprise</span></td>
+          <td class="center"><span class="eval-dot ev-A">A</span></td>
+          <td style="font-size:0.77rem;color:var(--text-2);">Analyse complète du schéma de données imposé (brand, species, sku...) avant de coder le premier sélecteur.</td>
+        </tr><tr>
+          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC2.1.03</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Identifier et résoudre les problèmes d'intégration de sources hétérogènes</span></td>
+          <td class="center"><span class="eval-dot ev-A">A</span></td>
+          <td style="font-size:0.77rem;color:var(--text-2);">Gestion des structures HTML variables entre pages chiens et chats, et entre produits avec/sans ingrédients listés.</td>
+        </tr><tr>
+          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC2.1.04</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Comprendre la nécessité de tester, corriger et documenter un programme</span></td>
+          <td class="center"><span class="eval-dot ev-P">P</span></td>
+          <td style="font-size:0.77rem;color:var(--text-2);">Tests sur un sous-ensemble de 20 produits avant le scraping complet. Documentation des sélecteurs utilisés. Optimisation du temps d'exécution à approfondir.</td>
+        </tr><tr>
+          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC2.1.05</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Apprécier l'intérêt de briques logicielles existantes et savoir les utiliser</span></td>
+          <td class="center"><span class="eval-dot ev-A">A</span></td>
+          <td style="font-size:0.77rem;color:var(--text-2);">Choix justifié de Playwright (vs BeautifulSoup) pour le contenu dynamique. Utilisation de Pandas pour la structuration sans réinventer la roue.</td>
+        </tr><tr>
           <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC24.01VCOD</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Comprendre le rôle fondamental de l'analyse des besoins et de l'existant dans un projet décisionnel</span></td>
           <td class="center"><span class="eval-dot ev-A">A</span></td>
-          <td style="font-size:0.77rem;color:var(--text-2);">Analyse complète de la structure hétérogène du site pour adapter la méthode et les sélecteurs avant de coder.</td>
-        </tr>
-        <tr>
-          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC24.02VCOD</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Percevoir les enjeux de l'automatisation et de l'interopérabilité d'un ensemble de tâches</span></td>
-          <td class="center"><span class="eval-dot ev-A">A</span></td>
-          <td style="font-size:0.77rem;color:var(--text-2);">Pipeline entièrement automatisé avec export CSV garantissant l'intégration dans Excel ou Power BI.</td>
-        </tr>
-        <tr>
-          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC24.03VCOD</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Prendre conscience des différences entre outils (logiciels, langages) pour choisir le plus adapté</span></td>
-          <td class="center"><span class="eval-dot ev-A">A</span></td>
-          <td style="font-size:0.77rem;color:var(--text-2);">Choix de Google Colab + Playwright comme environnement optimal pour le scraping de contenu dynamique.</td>
-        </tr>
-        <tr>
-          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC24.04VCOD</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Comprendre le cycle de vie d'un projet informatique</span></td>
-          <td class="center"><span class="eval-dot ev-P">P</span></td>
-          <td style="font-size:0.77rem;color:var(--text-2);">Pipeline structuré en modules distincts, documentation des étapes — la phase de tests reste à approfondir.</td>
-        </tr>
-      </tbody></table></div>
-      <div class="wip-notice">📁 Les fichiers sources seront ajoutés prochainement après anonymisation.</div>
+          <td style="font-size:0.77rem;color:var(--text-2);">Étude préalable du site et du schéma cible avant toute ligne de code. Adaptation de l'approche en fonction des contraintes techniques découvertes.</td>
+        </tr></tbody></table></div>
     </div>
     <div class="sae-sidebar">
-      <div class="sae-sidebar-card"><h4>Compétence ciblée</h4><span class="comp-badge-large cb-4">🗄️ Traiter · ⚙️ Développer</span></div>
+      <div class="sae-sidebar-card"><h4>Compétence ciblée</h4><span class="comp-badge-large cb-4">🗄️ Traiter · ⚙️ Développer · 📊 Analyser · 📈 Valoriser</span></div>
       <div class="sae-sidebar-card"><h4>Technologies</h4><div class="tags-cloud"><span class="tag highlight">Python</span><span class="tag highlight">Playwright</span><span class="tag ">Pandas</span><span class="tag ">Google Colab</span><span class="tag ">CSV</span></div></div>
-      <div class="sae-sidebar-card">
-        <h4>Ressources Mobilisées (BUT SD)</h4>
-        <div class="tags-cloud" style="gap:0.35rem;"><span class="tag" style="font-size:0.68rem;">R3.02 — Systèmes d'Info décisionnels</span><span class="tag" style="font-size:0.68rem;">R3.03 — Technologies Web</span><span class="tag" style="font-size:0.68rem;">R3.04 — Prog. Statistique Automatisée</span><span class="tag" style="font-size:0.68rem;">R3.VCOD.10 — Prog. Objet</span></div>
-      </div>
-      <div class="sae-sidebar-card"><h4>Apprentissages critiques</h4><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC24.01VCOD</span>Comprendre le rôle fondamental de l'analyse des besoins et de l'existant dans un projet décisionnel</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC24.02VCOD</span>Percevoir les enjeux de l'automatisation et de l'interopérabilité d'un ensemble de tâches</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC24.03VCOD</span>Prendre conscience des différences entre outils (logiciels, langages) pour choisir le plus adapté</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC24.04VCOD</span>Comprendre le cycle de vie d'un projet informatique</div></div>
+      <div class="sae-sidebar-card"><h4>Ressources Mobilisées (BUT SD)</h4><div class="tags-cloud" style="gap:0.35rem;"><span class="tag" style="font-size:0.68rem;">R3.02 — Systèmes d'Info décisionnels</span><span class="tag" style="font-size:0.68rem;">R3.03 — Technologies Web</span><span class="tag" style="font-size:0.68rem;">R3.04 — Prog. Statistique Automatisée</span><span class="tag" style="font-size:0.68rem;">R3.VCOD.10 — Prog. Objet</span></div></div>
+      <div class="sae-sidebar-card"><h4>Apprentissages critiques</h4><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC2.1.01</span>Comprendre l'organisation des données de l'entreprise</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC2.1.03</span>Identifier et résoudre les problèmes d'intégration de sources hétérogènes</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC2.1.04</span>Comprendre la nécessité de tester, corriger et documenter un programme</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC2.1.05</span>Apprécier l'intérêt de briques logicielles existantes et savoir les utiliser</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC22.05</span>Apprécier les limites de validité et les conditions d'application d'une analyse</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC23.01</span>Saisir l'intérêt de mobiliser de manière proactive des ressources métiers</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC23.02</span>Savoir défendre ses choix d'analyses</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC24.01VCOD</span>Comprendre le rôle fondamental de l'analyse des besoins et de l'existant dans un projet décisionnel</div></div>
       <div style="margin-top:1rem;"><a href="../../../../pages/projets.html" class="btn btn-outline" style="width:100%;justify-content:center;">← Retour aux projets</a></div>
     </div>
   </div>

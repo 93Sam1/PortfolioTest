@@ -24,6 +24,10 @@
 </aside>
 <main class="main">
 <div class="page-wrap">
+  <div class="sae-pagination">
+    <a href="S101.html" class="sae-page-btn"><span class="pg-arrow">←</span><span class="pg-code">SAÉ 1.01</span></a>
+    <a href="S103.html" class="sae-page-btn"><span class="pg-code">SAÉ 1.03</span><span class="pg-arrow">→</span></a>
+  </div>
   <div class="sae-header">
     <div class="sae-breadcrumb"><a href="../../../../pages/projets.html">projets</a> / s1 / <span style='color:var(--text-2);'>s102</span></div>
     <h1>Écriture/Lecture de Fichiers & Algorithmique ELO Football</h1>
@@ -38,6 +42,12 @@
       <div class="sae-section"><h2>Cadre du projet & Objectifs</h2><p style='color:var(--text-2);'>Développement d'un programme de <strong style='color:var(--text);'>lecture de fichiers de matchs football</strong>, d'application de l'algorithme ELO pour calculer les classements, et d'écriture des résultats mis à jour. La formule ELO : R_nouveau = R_ancien + K × (S − E).</p></div>
       <div class="sae-section"><h2>Étapes de réalisation</h2><div class="step-block"><h3>Lecture des données</h3><p style="color:var(--text-2);">Fonctions de lecture de fichiers structurés contenant les résultats de matchs (date, équipes, scores). Gestion des formats et cas d'erreur.</p></div><div class="step-block"><h3>Implémentation ELO</h3><p style="color:var(--text-2);">Codage de la formule de calcul des probabilités de victoire et mise à jour des scores après chaque match.</p></div><div class="step-block"><h3>Écriture des résultats</h3><p style="color:var(--text-2);">Export des classements mis à jour vers fichiers de sortie. Vérification de cohérence entre les données écrites et les calculs.</p></div></div>
       <div class="sae-section"><h2>Ce que j'en retire</h2><div class='reflect-block'><h3>L'importance des tests unitaires</h3><p>Une erreur dans le calcul de la probabilité attendue fausse tous les classements suivants — l'effet cascade m'a appris à tester chaque fonction indépendamment.</p></div><div class='insight-box'><h3>💡 Ce que j'ai retenu</h3><p>La gestion des fichiers (encodage, séparateurs, lignes vides) est souvent plus piégeuse que l'algorithme lui-même.</p></div></div>
+      <div class="sae-section">
+        <h2>Ce que ça m'apporte en entreprise</h2>
+        <div style="background:linear-gradient(135deg,rgba(45,212,191,0.05),rgba(96,165,250,0.05));border:1px solid rgba(45,212,191,0.2);border-radius:var(--radius);padding:1.2rem;">
+          <p style="color:var(--text-2);line-height:1.75;font-size:0.85rem;">L'automatisation de calculs répétitifs avec Python est un réflexe indispensable en entreprise. Le principe de l'algorithme ELO — attribuer un score dynamique à partir d'une historique de résultats — s'applique directement à des problématiques de scoring client, de classement de fournisseurs ou de performance commerciale.</p>
+        </div>
+      </div>
       <div class="sae-section"><h2>Positionnement par rapport aux ACs</h2><div class="eval-legend">
       <span><span class="eval-dot ev-A">A</span>Acquis</span>
       <span><span class="eval-dot ev-P">P</span>Presque acquis</span>
@@ -65,7 +75,7 @@
           <td style="font-size:0.77rem;color:var(--text-2);">Cette SAÉ a concrétisé l'utilité du code : automatiser 500 matchs en quelques secondes vs des heures à la main.</td>
         </tr>
       </tbody></table></div>
-      <div class="wip-notice">📁 Les fichiers sources seront ajoutés prochainement après anonymisation.</div>
+      
     </div>
     <div class="sae-sidebar">
       <div class="sae-sidebar-card"><h4>Compétence ciblée</h4><span class="comp-badge-large cb-1">🗄️ Traiter — Niveau 1</span></div>

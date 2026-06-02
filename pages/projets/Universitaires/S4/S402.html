@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAÉ 4.02 — Reporting d'une Analyse Multivariée · Samuel ROCHEMONT</title>
+<link rel="stylesheet" href="../../../../styles/style.css">
+</head>
+<body>
+<button class="burger-btn" id="burger" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰</button>
+<div class="layout">
+<aside class="sidebar">
+  <div class="sidebar-logo"><span class="name">Samuel Rochemont</span><span class="role">BUT Science des Données · VCOD</span></div>
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">Navigation</div>
+    <a href="../../../../index.html" class="nav-link"><span class="nav-icon">⬡</span> Accueil</a>
+    <a href="../../../../pages/about.html" class="nav-link"><span class="nav-icon">◎</span> Parcours</a>
+    <a href="../../../../pages/competences.html" class="nav-link"><span class="nav-icon">◈</span> Compétences</a>
+    <a href="../../../../pages/projets.html" class="nav-link active"><span class="nav-icon">◫</span> Projets <span class="nav-dot"></span></a>
+    <a href="../../../../pages/stage.html" class="nav-link"><span class="nav-icon">◉</span> Stage</a>
+    <div class="nav-section-label" style="margin-top:0.5rem;">Contact</div>
+    <a href="../../../../pages/contact.html" class="nav-link"><span class="nav-icon">◌</span> Me contacter</a>
+  </nav>
+  <div class="sidebar-footer"><a href="https://www.linkedin.com/in/samuel-rochemont/" target="_blank">↗ LinkedIn</a></div>
+</aside>
+<main class="main">
+<div class="page-wrap">
+  <div class="sae-pagination">
+    <a href="BookAI_BERT.html" class="sae-page-btn"><span class="pg-arrow">←</span><span class="pg-code">SAÉ 4.01</span></a>
+    <a href="../../../../../../pages/projets.html" class="sae-page-btn"><span class="pg-code">Tous les projets</span><span class="pg-arrow">→</span></a>
+  </div>
+  <div class="sae-header">
+    <div class="sae-breadcrumb"><a href="../../../../pages/projets.html">projets</a> / s4 / <span style='color:var(--text-2);'>s402-fouille-boston</span></div>
+    <h1>Reporting d'une Analyse Multivariée — Fouille de Données Immobilières de Boston</h1>
+    <div class="sae-meta"><span class="meta-chip">📅 Semestre 4 — 2025/2026</span><span class="meta-chip">🎓 SAÉ 4.02</span><span class="meta-chip">⏱️ Projet R</span><span class="meta-chip" style="color:var(--teal);">GOURAI Elias · MARCHETTI Oscar · ROCHEMONT Samuel</span></div>
+  </div>
+  <div class="sae-body">
+    <div class="sae-content-left">
+      <div class="sae-img-wrap" onclick="openLB('../../../../img/projets/SAE_Fouille_Boston.png')">
+        <img src="../../../../img/projets/SAE_Fouille_Boston.png" alt="Plan factoriel ACP — Projection des districts de Boston" onerror="this.style.opacity='0.2'">
+        <span class="zoom-hint">🔍 Agrandir</span>
+      </div>
+      <div class="sae-section"><h2>Cadre du projet & Objectifs</h2><p style='color:var(--text-2);'>Cette étude explore la <strong style='color:var(--text);'>structure sous-jacente du jeu de données Boston</strong>, qui décrit 506 quartiers de la ville de Boston à travers 14 variables quantitatives. L'objectif est d'identifier les facteurs clés influençant la valeur médiane des maisons (<code>medv</code>) et de caractériser les différents profils de quartiers, via une approche d'analyse exploratoire multidimensionnelle combinant ACP et AFCM.</p></div>
+      <div class="sae-section"><h2>Étapes de réalisation</h2>
+        <div class="step-block"><h3>Compréhension & préparation des données</h3><p style="color:var(--text-2);">Chargement du dataset Boston (506 observations, 14 variables, aucune valeur manquante), inspection de la structure, calcul des statistiques descriptives. Les variables couvrent des dimensions socio-économiques (criminalité, pauvreté), structurelles (nombre de pièces, ancienneté), environnementales (pollution, distance aux emplois) et fiscales (taxes foncières).</p></div>
+        <div class="step-block"><h3>Analyse univariée & bivariée</h3><p style="color:var(--text-2);">Visualisation des distributions via histogrammes : détection d'asymétries fortes (crim, zn, tax) et d'une distribution bimodale pour tax. Matrice de corrélation révélant des relations clés : <code>medv</code> corrèle fortement avec <code>rm</code> (+0.70) et négativement avec <code>lstat</code> (-0.74). Quasi-colinéarité entre <code>tax</code> et <code>rad</code> (r ≈ 0.91).</p></div>
+        <div class="step-block"><h3>Analyse en Composantes Principales (ACP)</h3><p style="color:var(--text-2);">ACP appliquée aux données centrées-réduites. Les 4 premières composantes expliquent 74,5% de la variance totale. L'Axe 1 (46,8%) définit un gradient de qualité urbaine opposant quartiers défavorisés/pollués aux quartiers résidentiels chers. L'Axe 2 (11,8%) capture l'étalement urbain. La projection des individus montre un gradient de couleur très net de <code>medv</code> le long de l'Axe 1.</p></div>
+        <div class="step-block"><h3>Analyse Factorielle des Correspondances Multiples (AFCM)</h3><p style="color:var(--text-2);">Discrétisation de 7 variables clés (crim, nox, rm, age, lstat, medv, rad) en 3 modalités équilibrées (faible / moyen / élevé) via les terciles. L'AFCM confirme et enrichit les résultats de l'ACP : trois profils de quartiers distincts émergent — aisé, intermédiaire et dégradé — en capturant des relations non-linéaires invisibles à l'ACP.</p></div>
+      </div>
+      <div class="sae-section"><h2>Résultats & Interprétation</h2>
+        <div class="reflect-block"><h3>Un marché immobilier fortement segmenté</h3><p>La valeur médiane des maisons est structurée par un "gradient de qualité urbaine" défini par deux groupes de facteurs opposés. Côté positif : nombre de pièces élevé (<code>rm</code>), faible proportion de population défavorisée (<code>lstat</code>), faible criminalité. Côté négatif : forte pollution (<code>nox</code>), logements anciens (<code>age</code>), présence d'industries. Trois profils de quartiers ressortent clairement : quartiers aisés (grands logements, faible criminalité, prix élevés), quartiers défavorisés (forte criminalité, pollution, prix bas) et quartiers intermédiaires.</p></div>
+        <div class="insight-box"><h3>💡 Ce que j'ai retenu</h3><p>Combiner ACP (analyse quantitative) et AFCM (analyse qualitative) sur les mêmes données apporte une vision bien plus complète. L'ACP a permis de visualiser les corrélations dominantes, l'AFCM de confirmer la structure de façon robuste aux valeurs extrêmes. La redondance entre tax/rad et nox/indus suggère qu'en modélisation prédictive, il faudrait sélectionner un sous-ensemble de variables non colinéaires.</p></div>
+      </div>
+      <div class="sae-section">
+        <h2>Ce que ça m'apporte en entreprise</h2>
+        <div style="background:linear-gradient(135deg,rgba(45,212,191,0.05),rgba(96,165,250,0.05));border:1px solid rgba(45,212,191,0.2);border-radius:var(--radius);padding:1.2rem;">
+          <p style="color:var(--text-2);line-height:1.75;font-size:0.85rem;">Les analyses multivariées (ACP, AFCM) sont au cœur de nombreux projets en entreprise : segmentation client, scoring de risque, analyse de marché, réduction de dimensionnalité avant du machine learning. Savoir conduire, interpréter et restituer ce type d'analyse dans un rapport structuré est une compétence attendue dans les équipes data et conseil. La maîtrise de R et des packages FactoMineR/factoextra est un standard dans les secteurs finance, marketing et santé.</p>
+        </div>
+      </div>
+      <div class="sae-section"><h2>Positionnement par rapport aux ACs</h2><div class="eval-legend">
+      <span><span class="eval-dot ev-A">A</span>Acquis</span>
+      <span><span class="eval-dot ev-P">P</span>Presque acquis</span>
+      <span><span class="eval-dot ev-E">E</span>En cours d'apprentissage</span>
+      <span><span class="eval-dot ev-N">N</span>Non acquis</span>
+    </div><table class="eval-grid-table"><thead><tr>
+        <th style="width:40%;">Apprentissage Critique</th>
+        <th class="center">Statut</th>
+        <th>Commentaires</th>
+      </tr></thead><tbody>
+        <tr>
+          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC22.03</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Comprendre l'intérêt des analyses multivariées pour synthétiser l'information</span></td>
+          <td class="center"><span class="eval-dot ev-A">A</span></td>
+          <td style="font-size:0.77rem;color:var(--text-2);">ACP et AFCM appliquées et interprétées sur 14 variables. Réduction de 14 dimensions à 4 composantes expliquant 74,5% de la variance. Identification claire du gradient de qualité urbaine sur l'Axe 1.</td>
+        </tr>
+        <tr>
+          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC22.01</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Appréhender les différents types de données et leurs caractéristiques</span></td>
+          <td class="center"><span class="eval-dot ev-A">A</span></td>
+          <td style="font-size:0.77rem;color:var(--text-2);">Analyse des distributions (asymétries, bimodalité de tax), détection de colinéarités (tax/rad, nox/indus), choix de discrétisation par terciles pour l'AFCM.</td>
+        </tr>
+        <tr>
+          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC22.02</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Maîtriser les bases de la statistique inférentielle</span></td>
+          <td class="center"><span class="eval-dot ev-P">P</span></td>
+          <td style="font-size:0.77rem;color:var(--text-2);">Utilisation de corrélations et d'indicateurs de variance expliquée. L'étude reste exploratoire — une validation par tests statistiques formels renforcerait les conclusions.</td>
+        </tr>
+        <tr>
+          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC13.05</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Comprendre les intérêts de la data visualisation et de l'infographie</span></td>
+          <td class="center"><span class="eval-dot ev-A">A</span></td>
+          <td style="font-size:0.77rem;color:var(--text-2);">Cercle des corrélations, graphique éboulis, plan factoriel individus coloré par medv, carte des modalités AFCM — chaque visualisation répond à une question analytique précise.</td>
+        </tr>
+      </tbody></table></div>
+    </div>
+    <div class="sae-sidebar">
+      <div class="sae-sidebar-card"><h4>Compétence ciblée</h4><span class="comp-badge-large cb-2">📊 Analyser · 📈 Valoriser</span></div>
+      <div class="sae-sidebar-card"><h4>Technologies</h4><div class="tags-cloud"><span class="tag highlight">R</span><span class="tag highlight">FactoMineR</span><span class="tag ">ggplot2</span><span class="tag ">factoextra</span><span class="tag ">corrplot</span><span class="tag ">dplyr</span></div></div>
+      <div class="sae-sidebar-card"><h4>Méthodes appliquées</h4><div class="tags-cloud"><span class="tag highlight">ACP</span><span class="tag highlight">AFCM</span><span class="tag ">Matrice de corrélation</span><span class="tag ">Analyse univariée</span><span class="tag ">Discrétisation</span></div></div>
+      <div class="sae-sidebar-card"><h4>Ressources Mobilisées (BUT SD)</h4><div class="tags-cloud" style="gap:0.35rem;"><span class="tag" style="font-size:0.68rem;">R4.01 — Analyse multivariée</span><span class="tag" style="font-size:0.68rem;">R3.05 — Méthodes d'analyse avancées</span><span class="tag" style="font-size:0.68rem;">R2.08 — Dataviz avancée</span></div></div>
+      <div class="sae-sidebar-card"><h4>Apprentissages critiques</h4>
+        <div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC22.03</span>Comprendre l'intérêt des analyses multivariées pour synthétiser l'information</div>
+        <div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC22.01</span>Appréhender les différents types de données et leurs caractéristiques</div>
+        <div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC22.02</span>Maîtriser les bases de la statistique inférentielle</div>
+        <div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC13.05</span>Comprendre les intérêts de la data visualisation et de l'infographie</div>
+      </div>
+      <div style="margin-top:1rem;"><a href="../../../../pages/projets.html" class="btn btn-outline" style="width:100%;justify-content:center;">← Retour aux projets</a></div>
+    </div>
+  </div>
+</div>
+</main>
+</div>
+
+<div id="lb-modal" onclick="document.getElementById('lb-modal').classList.remove('open')">
+  <span class="lb-close">&#x2715;</span>
+  <img id="lb-img" src="" alt="">
+</div>
+<script>
+function openLB(src){var m=document.getElementById('lb-modal');document.getElementById('lb-img').src=src;m.classList.add('open');}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')document.getElementById('lb-modal').classList.remove('open');});
+document.addEventListener('click',function(e){const s=document.querySelector('.sidebar'),b=document.getElementById('burger');if(s&&b&&!s.contains(e.target)&&!b.contains(e.target))s.classList.remove('open');});
+</script>
+</body>
+</html>

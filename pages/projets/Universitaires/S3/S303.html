@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prévision de Données Temporelles — Transport Aérien Eur · Samuel ROCHEMONT</title>
+<title>Prévision de Séries Temporelles — Trafic Aérien Danemar · Samuel ROCHEMONT</title>
 <link rel="stylesheet" href="../../../../styles/style.css">
 </head>
 <body>
@@ -24,57 +24,70 @@
 </aside>
 <main class="main">
 <div class="page-wrap">
+  <div class="sae-pagination">
+    <a href="S302.html" class="sae-page-btn"><span class="pg-arrow">←</span><span class="pg-code">SAÉ 3.02</span></a>
+    <a href="S304.html" class="sae-page-btn"><span class="pg-code">SAÉ 3.04</span><span class="pg-arrow">→</span></a>
+  </div>
   <div class="sae-header">
     <div class="sae-breadcrumb"><a href="../../../../pages/projets.html">projets</a> / s3 / <span style='color:var(--text-2);'>s303</span></div>
-    <h1>Prévision de Données Temporelles — Transport Aérien Eurostat</h1>
+    <h1>Prévision de Séries Temporelles — Trafic Aérien Danemark & Suède</h1>
     <div class="sae-meta"><span class="meta-chip">📅 Semestre 3 — 2025/2026</span><span class="meta-chip">🎓 SAÉ 3.03</span><span class="meta-chip">⏱️ 40h</span><span class="meta-chip" style="color:var(--teal);">Samuel ROCHEMONT</span></div>
   </div>
   <div class="sae-body">
     <div class="sae-content-left">
       <div class="sae-img-wrap" onclick="openLB('../../../../img/projets/S303.png')">
-      <img src="../../../../img/projets/S303.png" alt="Prévision de Données Temporelles — Trans" onerror="this.style.opacity='0.2'">
+      <img src="../../../../img/projets/S303.png" alt="Prévision de Séries Temporelles — Trafic" onerror="this.style.opacity='0.2'">
       <span class="zoom-hint">🔍 Agrandir</span>
     </div>
-      <div class="sae-section"><h2>Cadre du projet & Objectifs</h2><p style='color:var(--text-2);'>Modélisation et prévision de <strong style='color:var(--text);'>séries temporelles sur le transport aérien de passagers</strong> avec données Eurostat. Anticiper l'évolution post-COVID du trafic avec des modèles Holt-Winters sous R Studio.</p></div>
-      <div class="sae-section"><h2>Étapes de réalisation</h2><div class="step-block"><h3>Exploration des séries</h3><p style="color:var(--text-2);">Décomposition (tendance, saisonnalité, résidus), analyse visuelle des patterns, identification des ruptures COVID.</p></div><div class="step-block"><h3>Modélisation Holt-Winters</h3><p style="color:var(--text-2);">Ajustement du modèle triple exponential smoothing pour capter tendance et saisonnalité multiplicative.</p></div><div class="step-block"><h3>Évaluation & interprétation</h3><p style="color:var(--text-2);">Comparaison prévisions vs données réelles post-COVID. Analyse des intervalles de confiance pour quantifier l'incertitude.</p></div></div>
-      <div class="sae-section"><h2>Ce que j'en retire</h2><div class='reflect-block'><h3>Le COVID comme cas d'école sur les ruptures structurelles</h3><p>Les modèles temporels présupposent la continuité des tendances passées. Le COVID a mis en échec tous les modèles calibrés avant 2020 — une leçon sur les limites fondamentales de la prévision.</p></div><div class='insight-box'><h3>💡 Ce que j'ai retenu</h3><p>Communiquer l'incertitude associée à une prévision est tout aussi important que la prévision elle-même. Les intervalles de confiance ne sont pas optionnels.</p></div></div>
+      <div class="sae-section"><h2>Cadre du projet & Objectifs</h2><p style='color:var(--text-2);'>L'analyse des séries chronologiques nécessite une approche mathématique distincte des statistiques classiques. Notre binôme s'est vu attribuer le <strong style='color:var(--text);'>Danemark et la Suède</strong> pour analyser l'évolution du trafic aérien sur les données Eurostat — à la fois les <strong style='color:var(--text);'>passagers transportés</strong> et les <strong style='color:var(--text);'>marchandises</strong>, sur trois périodes : avant, pendant et après la crise COVID-19.</p></div>
+      <div class="sae-section"><h2>Étapes de réalisation</h2><div class="step-block"><h3>Décomposition des séries temporelles</h3><p>Sous RStudio, extraction de la tendance globale et de la saisonnalité (pics estivaux liés au tourisme) pour le Danemark et la Suède. Choix entre modèle additif ou multiplicatif selon la nature de la saisonnalité observée sur chaque série (passagers vs marchandises).</p></div>
+<div class="step-block"><h3>Analyse de l'impact COVID-19</h3><p>Le choc de 2020 a révélé des dynamiques de reprise différentes entre les passagers (forte saisonnalité touristique, reprise volatile) et les marchandises (reprise plus régulière car moins dépendante des saisons). Comparaison des trajectoires Danemark/Suède pour identifier les spécificités de chaque marché.</p></div>
+<div class="step-block"><h3>Modélisation Holt-Winters & prévisions</h3><p>Application du lissage exponentiel triple (Holt-Winters) pour modéliser la tendance et la saisonnalité simultanément. Génération de prévisions sur les mois futurs avec intervalles de confiance pour quantifier l'incertitude post-COVID.</p></div>
+<div class="step-block"><h3>Restitution sous RMarkdown</h3><p>L'intégralité de l'analyse a été compilée dans un document HTML via RMarkdown, intégrant le code R, les graphiques générés et les commentaires analytiques — un format propre au reporting scientifique reproductible.</p></div></div>
+      <div class="sae-section"><h2>Ce que j'en retire</h2><div class="reflect-block"><h3>La crise COVID comme cas d'école sur les ruptures structurelles</h3><p>Les modèles de prévision reposent sur la continuité des patterns historiques. Le COVID a créé une rupture sans précédent qui a mis en échec tous les modèles calibrés avant 2020 — une leçon fondamentale sur les limites de la prévision statistique face aux chocs exogènes.</p></div>
+<div class="insight-box"><h3>💡 Ce que j'ai retenu</h3><p>Analyser en parallèle les passagers ET les marchandises sur deux pays a montré que les séries temporelles ne se comportent pas toutes de la même façon. La marchandise est moins saisonnière mais aussi moins résiliente aux chocs logistiques. Cette comparaison croisée est bien plus riche qu'une analyse pays unique.</p></div></div>
+      <div class="sae-section">
+        <h2>Ce que ça m'apporte en entreprise</h2>
+        <div style="background:linear-gradient(135deg,rgba(45,212,191,0.05),rgba(96,165,250,0.05));border:1px solid rgba(45,212,191,0.2);border-radius:var(--radius);padding:1.2rem;">
+          <p style="color:var(--text-2);line-height:1.75;font-size:0.85rem;">La prévision de séries temporelles est utilisée dans pratiquement tous les secteurs : prévision des ventes, gestion des stocks, anticipation de la charge de travail, budgétisation. Savoir modéliser, ajuster et interpréter un modèle Holt-Winters en tenant compte de ruptures structurelles est une compétence immédiatement valorisable en finance, logistique ou consulting.</p>
+        </div>
+      </div>
       <div class="sae-section"><h2>Positionnement par rapport aux ACs</h2><div class="eval-legend">
       <span><span class="eval-dot ev-A">A</span>Acquis</span>
       <span><span class="eval-dot ev-P">P</span>Presque acquis</span>
       <span><span class="eval-dot ev-E">E</span>En cours d'apprentissage</span>
       <span><span class="eval-dot ev-N">N</span>Non acquis</span>
-    </div><table class="eval-grid-table">
-      <thead><tr>
+    </div><table class="eval-grid-table"><thead><tr>
         <th style="width:40%;">Apprentissage Critique</th>
         <th class="center">Statut</th>
         <th>Commentaires</th>
-      </tr></thead><tbody>
-        <tr>
-          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC22.02</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Saisir la spécificité de l'analyse des données temporelles</span></td>
+      </tr></thead><tbody><tr>
+          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC22.01</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Différence modélisation statistique / analyse exploratoire</span></td>
           <td class="center"><span class="eval-dot ev-A">A</span></td>
-          <td style="font-size:0.77rem;color:var(--text-2);">Modèles Holt-Winters utilisés pour isoler correctement tendance et saisonnalité dans les séries de passagers.</td>
-        </tr>
-        <tr>
-          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC22.04</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Appréhender l'idée de confronter une hypothèse avec la réalité pour prendre une décision</span></td>
+          <td style="font-size:0.77rem;color:var(--text-2);">Distinction appliquée concrètement : exploration des tendances passées (descriptif) vs prévision Holt-Winters (modélisation prédictive).</td>
+        </tr><tr>
+          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC22.02</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Spécificité de l'analyse des données temporelles</span></td>
           <td class="center"><span class="eval-dot ev-A">A</span></td>
-          <td style="font-size:0.77rem;color:var(--text-2);">Comparaison systématique prévisions/données réelles post-COVID pour valider ou invalider les résultats.</td>
-        </tr>
-        <tr>
-          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC22.05</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Apprécier les limites de validité et les conditions d'application d'une analyse</span></td>
+          <td style="font-size:0.77rem;color:var(--text-2);">Décomposition tendance/saisonnalité maîtrisée, choix additif/multiplicatif justifié selon la série analysée.</td>
+        </tr><tr>
+          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC22.03</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Intérêt des analyses multivariées pour synthétiser l'information</span></td>
+          <td class="center"><span class="eval-dot ev-A">A</span></td>
+          <td style="font-size:0.77rem;color:var(--text-2);">Comparaison des 4 séries (passagers + marchandises × Danemark + Suède) pour synthétiser les dynamiques de reprise spécifiques à chaque contexte.</td>
+        </tr><tr>
+          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC22.04</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Confronter une hypothèse avec la réalité pour prendre une décision</span></td>
+          <td class="center"><span class="eval-dot ev-A">A</span></td>
+          <td style="font-size:0.77rem;color:var(--text-2);">Comparaison systématique prévisions/données réelles post-COVID pour valider ou invalider les prévisions du modèle.</td>
+        </tr><tr>
+          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC22.05</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Limites de validité et conditions d'application d'une analyse</span></td>
           <td class="center"><span class="eval-dot ev-P">P</span></td>
-          <td style="font-size:0.77rem;color:var(--text-2);">Application correcte des modèles ; interprétation des intervalles de confiance et communication des limites à approfondir.</td>
-        </tr>
-      </tbody></table></div>
-      <div class="wip-notice">📁 Les fichiers sources seront ajoutés prochainement après anonymisation.</div>
+          <td style="font-size:0.77rem;color:var(--text-2);">Intervalles de confiance produits et commentés ; l'interprétation de leurs implications pour la prise de décision reste à approfondir.</td>
+        </tr></tbody></table></div>
     </div>
     <div class="sae-sidebar">
       <div class="sae-sidebar-card"><h4>Compétence ciblée</h4><span class="comp-badge-large cb-2">📊 Analyser · 📈 Valoriser</span></div>
-      <div class="sae-sidebar-card"><h4>Technologies</h4><div class="tags-cloud"><span class="tag highlight">R / RStudio</span><span class="tag highlight">Holt-Winters</span><span class="tag ">Séries temporelles</span><span class="tag ">Eurostat</span><span class="tag ">ggplot2</span></div></div>
-      <div class="sae-sidebar-card">
-        <h4>Ressources Mobilisées (BUT SD)</h4>
-        <div class="tags-cloud" style="gap:0.35rem;"><span class="tag" style="font-size:0.68rem;">R3.04 — Prog. Statistique Automatisée</span><span class="tag" style="font-size:0.68rem;">R3.05 — Méthodes d'analyse avancées</span></div>
-      </div>
-      <div class="sae-sidebar-card"><h4>Apprentissages critiques</h4><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC22.02</span>Saisir la spécificité de l'analyse des données temporelles</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC22.04</span>Appréhender l'idée de confronter une hypothèse avec la réalité pour prendre une décision</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC22.05</span>Apprécier les limites de validité et les conditions d'application d'une analyse</div></div>
+      <div class="sae-sidebar-card"><h4>Technologies</h4><div class="tags-cloud"><span class="tag highlight">R / RStudio</span><span class="tag highlight">Holt-Winters</span><span class="tag ">Séries temporelles</span><span class="tag ">Eurostat</span><span class="tag ">RMarkdown</span></div></div>
+      <div class="sae-sidebar-card"><h4>Ressources Mobilisées (BUT SD)</h4><div class="tags-cloud" style="gap:0.35rem;"><span class="tag" style="font-size:0.68rem;">R3.04 — Prog. Statistique Automatisée</span><span class="tag" style="font-size:0.68rem;">R3.05 — Méthodes d'analyse avancées</span></div></div>
+      <div class="sae-sidebar-card"><h4>Apprentissages critiques</h4><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC22.01</span>Prendre conscience de la différence entre modélisation statistique et analyse exploratoire</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC22.02</span>Saisir la spécificité de l'analyse des données temporelles</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC22.03</span>Comprendre l'intérêt des analyses multivariées pour synthétiser l'information</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC22.04</span>Appréhender l'idée de confronter une hypothèse avec la réalité pour prendre une décision</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC22.05</span>Apprécier les limites de validité et les conditions d'application d'une analyse</div></div>
       <div style="margin-top:1rem;"><a href="../../../../pages/projets.html" class="btn btn-outline" style="width:100%;justify-content:center;">← Retour aux projets</a></div>
     </div>
   </div>

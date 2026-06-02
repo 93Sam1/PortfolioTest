@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Analyse, Reporting & Datavisualisation — Scraping Inter · Samuel ROCHEMONT</title>
+<title>SAÉ 2.06 — Analyse, Reporting & Datavisualisation · Samuel ROCHEMONT</title>
 <link rel="stylesheet" href="../../../../styles/style.css">
 </head>
 <body>
@@ -24,20 +24,38 @@
 </aside>
 <main class="main">
 <div class="page-wrap">
+  <div class="sae-pagination">
+    <a href="S205.html" class="sae-page-btn"><span class="pg-arrow">←</span><span class="pg-code">SAÉ 2.05</span></a>
+    <a href="../S3/S301.html" class="sae-page-btn"><span class="pg-code">SAÉ 3.01</span><span class="pg-arrow">→</span></a>
+  </div>
   <div class="sae-header">
     <div class="sae-breadcrumb"><a href="../../../../pages/projets.html">projets</a> / s2 / <span style='color:var(--text-2);'>s206</span></div>
-    <h1>Analyse, Reporting & Datavisualisation — Scraping Intermarché</h1>
+    <h1>Analyse, Reporting & Datavisualisation — Stratégies Commerciales Carrefour</h1>
     <div class="sae-meta"><span class="meta-chip">📅 Semestre 2 — 2025</span><span class="meta-chip">🎓 SAÉ 2.06</span><span class="meta-chip">⏱️ 40h</span><span class="meta-chip" style="color:var(--teal);">Samuel ROCHEMONT</span></div>
   </div>
   <div class="sae-body">
     <div class="sae-content-left">
       <div class="sae-img-wrap" onclick="openLB('../../../../img/projets/S206.png')">
-      <img src="../../../../img/projets/S206.png" alt="Analyse, Reporting & Datavisualisation —" onerror="this.style.opacity='0.2'">
+      <img src="../../../../img/projets/S206.png" alt="SAÉ 206 — Analyse Reporting Datavisualisation" onerror="this.style.opacity='0.2'">
       <span class="zoom-hint">🔍 Agrandir</span>
     </div>
-      <div class="sae-section"><h2>Cadre du projet & Objectifs</h2><p style='color:var(--text-2);'>SAÉ transversale : scraping du catalogue Intermarché, nettoyage intensif des données (doublons, formats, valeurs manquantes), puis production d'un <strong style='color:var(--text);'>dashboard décisionnel</strong>.</p></div>
-      <div class="sae-section"><h2>Étapes de réalisation</h2><div class="step-block"><h3>Scraping du catalogue</h3><p style="color:var(--text-2);">Extraction massive des données produits : noms, prix, catégories, promotions. Gestion des structures HTML variables.</p></div><div class="step-block"><h3>Nettoyage & structuration</h3><p style="color:var(--text-2);">Doublons, normalisation des prix, valeurs manquantes, enrichissement par catégories produits.</p></div><div class="step-block"><h3>Dashboard décisionnel</h3><p style="color:var(--text-2);">Répartition des prix par catégorie, promotions actives, produits les plus représentés — avec filtres interactifs.</p></div></div>
-      <div class="sae-section"><h2>Ce que j'en retire</h2><div class='reflect-block'><h3>La réalité des données web</h3><p>Les données scrapées ne sont jamais propres. Le nettoyage a représenté plus de 60% du temps total — la réalité du terrain en Data Engineering.</p></div><div class='insight-box'><h3>💡 Ce que j'ai retenu</h3><p>Construire le pipeline de nettoyage en parallèle de la collecte est bien plus efficace que de tout nettoyer à la fin.</p></div></div>
+      <div class="sae-section"><h2>Cadre du projet & Objectifs</h2><p style='color:var(--text-2);'>L'objectif est d'analyser l'assortiment de boissons dans <strong style='color:var(--text);'>trois magasins Carrefour situés autour de Bordeaux en Gironde</strong> : Carrefour Bègles, Carrefour Lormont et Carrefour Mérignac. La problématique centrale est la suivante : <em>Est-ce que les différences dans les données des produits révèlent des stratégies commerciales différentes chez Carrefour ?</em></p></div>
+      <div class="sae-section"><h2>Étapes de réalisation</h2>
+        <div class="step-block"><h3>Collecte des données par scraping</h3><p style="color:var(--text-2);">Extraction automatisée des catalogues produits directement depuis les sites Carrefour des trois magasins avec Python et BeautifulSoup. Le scraping récupère pour chaque produit : le nom, le prix, la catégorie et le magasin d'appartenance. Le principal défi a été de gérer les structures de pages différentes selon les magasins et les changements dynamiques du DOM. Les données collectées ont ensuite été consolidées dans un fichier Excel pour validation avant analyse.</p></div>
+        <div class="step-block"><h3>Nettoyage & structuration</h3><p style="color:var(--text-2);">Nettoyage intensif des fichiers scrapés : gestion des doublons, normalisation des formats de prix, traitement des valeurs manquantes. Sur 7 643 produits combinés, chaque magasin a été traité séparément pour préserver la cohérence des analyses.</p></div>
+        <div class="step-block"><h3>Analyse statistique comparative</h3><p style="color:var(--text-2);">Calcul des indicateurs clés par magasin : moyenne, médiane et écart-type des prix. Les résultats montrent des profils très distincts — Mérignac (prix médian 11,49 €) se distingue nettement de Lormont (44,81 €) et Bègles (44,65 €), qui affichent des gammes similaires mais plus larges.</p></div>
+        <div class="step-block"><h3>Dashboard décisionnel Power BI</h3><p style="color:var(--text-2);">Création d'un tableau de bord interactif sur Power BI permettant de visualiser la distribution des prix, les écarts entre magasins et la structure de l'assortiment. Filtres par magasin et catégorie de produit.</p></div>
+      </div>
+      <div class="sae-section"><h2>Interprétation des données</h2>
+        <div class="reflect-block"><h3>Trois stratégies commerciales distinctes</h3><p>Les écarts statistiques entre magasins révèlent des positionnements différents adaptés au public local. Mérignac adopte une <strong>stratégie économique</strong> avec des prix très accessibles (médiane 11,49 €, écart-type 68,72 €). Bègles se positionne sur un <strong>profil premium</strong> avec une large gamme incluant des produits chers (écart-type 103,74 €). Lormont adopte une <strong>stratégie intermédiaire</strong>, similaire à Bègles mais un peu moins variée.</p></div>
+        <div class="insight-box"><h3>💡 Ce que j'ai retenu</h3><p>Des indicateurs simples comme le prix moyen, la médiane et l'écart-type peuvent suffire à comprendre la stratégie d'une entreprise. La médiane est bien plus parlante que la moyenne pour les données de prix, qui sont souvent asymétriques à droite à cause de quelques produits très chers.</p></div>
+      </div>
+      <div class="sae-section">
+        <h2>Ce que ça m'apporte en entreprise</h2>
+        <div style="background:linear-gradient(135deg,rgba(45,212,191,0.05),rgba(96,165,250,0.05));border:1px solid rgba(45,212,191,0.2);border-radius:var(--radius);padding:1.2rem;">
+          <p style="color:var(--text-2);line-height:1.75;font-size:0.85rem;">La collecte automatisée et l'analyse comparative de données produits sont des compétences centrales en business intelligence et en veille concurrentielle. Un data analyst capable de scraper, nettoyer et visualiser des données catalogue donne à son entreprise un avantage en temps réel sur la stratégie de prix de ses concurrents. La maîtrise de Power BI est un standard attendu dans de nombreuses équipes data.</p>
+        </div>
+      </div>
       <div class="sae-section"><h2>Positionnement par rapport aux ACs</h2><div class="eval-legend">
       <span><span class="eval-dot ev-A">A</span>Acquis</span>
       <span><span class="eval-dot ev-P">P</span>Presque acquis</span>
@@ -52,29 +70,39 @@
         <tr>
           <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC2.1.03</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Identifier et résoudre les problèmes d'intégration de sources hétérogènes</span></td>
           <td class="center"><span class="eval-dot ev-P">P</span></td>
-          <td style="font-size:0.77rem;color:var(--text-2);">Gestion des structures HTML variables — résolution progressive des cas particuliers mais quelques produits restaient mal structurés.</td>
+          <td style="font-size:0.77rem;color:var(--text-2);">Gestion des structures HTML variables entre les trois sites Carrefour — certaines données de promotions restaient mal extraites en raison du volume important de données.</td>
         </tr>
         <tr>
           <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC13.05</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Comprendre les intérêts de la data visualisation et de l'infographie</span></td>
           <td class="center"><span class="eval-dot ev-A">A</span></td>
-          <td style="font-size:0.77rem;color:var(--text-2);">Dashboard lisible et pertinent, chaque visuel répond à une question concrète sur la structure du catalogue.</td>
+          <td style="font-size:0.77rem;color:var(--text-2);">Dashboard Power BI lisible et pertinent, chaque visuel répond à une question concrète sur les stratégies commerciales des magasins. Filtres interactifs par magasin.</td>
         </tr>
         <tr>
           <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC2.1.04</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Comprendre la nécessité de tester, corriger et documenter un programme</span></td>
           <td class="center"><span class="eval-dot ev-P">P</span></td>
-          <td style="font-size:0.77rem;color:var(--text-2);">Code organisé en fonctions, mais documentation et tests auraient pu être plus systématiques.</td>
+          <td style="font-size:0.77rem;color:var(--text-2);">Pipeline de nettoyage organisé, mais le traitement de 7 643 produits a montré que certains cas particuliers (ex : formats de prix inhabituels) auraient nécessité une documentation plus rigoureuse.</td>
+        </tr>
+        <tr>
+          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC22.01</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Appréhender les différents types de données et leurs caractéristiques</span></td>
+          <td class="center"><span class="eval-dot ev-A">A</span></td>
+          <td style="font-size:0.77rem;color:var(--text-2);">Comparaison des prix entre magasins via moyenne, médiane et écart-type. Choix de la médiane plutôt que la moyenne pour mieux représenter les prix habituels, car quelques produits très chers faussent la moyenne.</td>
         </tr>
       </tbody></table></div>
-      <div class="wip-notice">📁 Les fichiers sources seront ajoutés prochainement après anonymisation.</div>
+      
     </div>
     <div class="sae-sidebar">
       <div class="sae-sidebar-card"><h4>Compétence ciblée</h4><span class="comp-badge-large cb-1">🗄️ Traiter · 📈 Valoriser</span></div>
-      <div class="sae-sidebar-card"><h4>Technologies</h4><div class="tags-cloud"><span class="tag highlight">Python</span><span class="tag highlight">BeautifulSoup</span><span class="tag ">Pandas</span><span class="tag ">Power BI</span></div></div>
+      <div class="sae-sidebar-card"><h4>Technologies</h4><div class="tags-cloud"><span class="tag highlight">Python</span><span class="tag highlight">Power BI</span><span class="tag ">BeautifulSoup</span><span class="tag ">Pandas</span><span class="tag ">Excel</span></div></div>
       <div class="sae-sidebar-card">
         <h4>Ressources Mobilisées (BUT SD)</h4>
         <div class="tags-cloud" style="gap:0.35rem;"><span class="tag" style="font-size:0.68rem;">R2.02 — Data Engineering</span><span class="tag" style="font-size:0.68rem;">R2.07 — Systèmes d'info décisionnels</span><span class="tag" style="font-size:0.68rem;">R2.08 — Dataviz avancée</span></div>
       </div>
-      <div class="sae-sidebar-card"><h4>Apprentissages critiques</h4><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC2.1.03</span>Identifier et résoudre les problèmes d'intégration de sources hétérogènes</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC13.05</span>Comprendre les intérêts de la data visualisation et de l'infographie</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC2.1.04</span>Comprendre la nécessité de tester, corriger et documenter un programme</div></div>
+      <div class="sae-sidebar-card"><h4>Apprentissages critiques</h4>
+        <div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC2.1.03</span>Identifier et résoudre les problèmes d'intégration de sources hétérogènes</div>
+        <div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC13.05</span>Comprendre les intérêts de la data visualisation et de l'infographie</div>
+        <div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC2.1.04</span>Comprendre la nécessité de tester, corriger et documenter un programme</div>
+        <div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC22.01</span>Appréhender les différents types de données et leurs caractéristiques</div>
+      </div>
       <div style="margin-top:1rem;"><a href="../../../../pages/projets.html" class="btn btn-outline" style="width:100%;justify-content:center;">← Retour aux projets</a></div>
     </div>
   </div>

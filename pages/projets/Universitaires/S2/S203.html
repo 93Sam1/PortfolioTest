@@ -24,6 +24,10 @@
 </aside>
 <main class="main">
 <div class="page-wrap">
+  <div class="sae-pagination">
+    <a href="S202.html" class="sae-page-btn"><span class="pg-arrow">←</span><span class="pg-code">SAÉ 2.02</span></a>
+    <a href="S204.html" class="sae-page-btn"><span class="pg-code">SAÉ 2.04</span><span class="pg-arrow">→</span></a>
+  </div>
   <div class="sae-header">
     <div class="sae-breadcrumb"><a href="../../../../pages/projets.html">projets</a> / s2 / <span style='color:var(--text-2);'>s203</span></div>
     <h1>Régression Linéaire sur Données Réelles — Pingouins de Palmer</h1>
@@ -38,6 +42,12 @@
       <div class="sae-section"><h2>Cadre du projet & Objectifs</h2><p style='color:var(--text-2);'>Modélisation d'une régression linéaire sous R Studio sur le dataset <strong style='color:var(--text);'>pingouins de Palmer</strong>. Objectif : modéliser la relation entre longueur des nageoires et masse corporelle chez les femelles de l'île Dream.</p></div>
       <div class="sae-section"><h2>Étapes de réalisation</h2><div class="step-block"><h3>Exploration et visualisation</h3><p style="color:var(--text-2);">Nuages de points ggplot2, matrices de corrélation pour identifier visuellement les liaisons pertinentes.</p></div><div class="step-block"><h3>Filtrage de la sous-population</h3><p style="color:var(--text-2);">subset() pour isoler les pingouins femelles de l'île Dream avant l'ajustement du modèle.</p></div><div class="step-block"><h3>Ajustement lm() & résidus</h3><p style="color:var(--text-2);">Calcul de la droite, extraction R² et p-valeurs via summary(). Analyse des résidus pour valider l'ajustement.</p></div></div>
       <div class="sae-section"><h2>Ce que j'en retire</h2><div class='reflect-block'><h3>Choisir la bonne sous-population</h3><p>En appliquant la régression sans filtrer, le modèle global était moins pertinent. Le prétraitement conditionne la qualité du modèle.</p></div><div class='insight-box'><h3>💡 Ce que j'ai retenu</h3><p>Un R² élevé ne garantit pas un bon modèle. L'analyse des résidus est indispensable — la sauter, c'est se tromper de confort.</p></div></div>
+      <div class="sae-section">
+        <h2>Ce que ça m'apporte en entreprise</h2>
+        <div style="background:linear-gradient(135deg,rgba(45,212,191,0.05),rgba(96,165,250,0.05));border:1px solid rgba(45,212,191,0.2);border-radius:var(--radius);padding:1.2rem;">
+          <p style="color:var(--text-2);line-height:1.75;font-size:0.85rem;">La régression linéaire est l'un des outils les plus utilisés en entreprise : prévision des ventes, estimation de prix, modélisation de la relation entre variables. Savoir coder, interpréter et communiquer une régression sous R est une compétence directement exploitable dès les premiers mois en poste.</p>
+        </div>
+      </div>
       <div class="sae-section"><h2>Positionnement par rapport aux ACs</h2><div class="eval-legend">
       <span><span class="eval-dot ev-A">A</span>Acquis</span>
       <span><span class="eval-dot ev-P">P</span>Presque acquis</span>
@@ -60,7 +70,7 @@
           <td style="font-size:0.77rem;color:var(--text-2);">Liaison identifiée pertinente, mais la gestion des valeurs atypiques a faussé partiellement l'équation de régression.</td>
         </tr>
       </tbody></table></div>
-      <div class="wip-notice">📁 Les fichiers sources seront ajoutés prochainement après anonymisation.</div>
+      
     </div>
     <div class="sae-sidebar">
       <div class="sae-sidebar-card"><h4>Compétence ciblée</h4><span class="comp-badge-large cb-2">📊 Analyser — Niveau 1</span></div>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BookAI — Analyse Sémantique d'Avis de Livres par Intell · Samuel ROCHEMONT</title>
+<link rel="stylesheet" href="../../../../styles/style.css">
+</head>
+<body>
+<button class="burger-btn" id="burger" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰</button>
+<div class="layout">
+<aside class="sidebar">
+  <div class="sidebar-logo"><span class="name">Samuel Rochemont</span><span class="role">BUT Science des Données · VCOD</span></div>
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">Navigation</div>
+    <a href="../../../../index.html" class="nav-link"><span class="nav-icon">⬡</span> Accueil</a>
+    <a href="../../../../pages/about.html" class="nav-link"><span class="nav-icon">◎</span> Parcours</a>
+    <a href="../../../../pages/competences.html" class="nav-link"><span class="nav-icon">◈</span> Compétences</a>
+    <a href="../../../../pages/projets.html" class="nav-link active"><span class="nav-icon">◫</span> Projets <span class="nav-dot"></span></a>
+    <a href="../../../../pages/stage.html" class="nav-link"><span class="nav-icon">◉</span> Stage</a>
+    <div class="nav-section-label" style="margin-top:0.5rem;">Contact</div>
+    <a href="../../../../pages/contact.html" class="nav-link"><span class="nav-icon">◌</span> Me contacter</a>
+  </nav>
+  <div class="sidebar-footer"><a href="https://www.linkedin.com/in/samuel-rochemont/" target="_blank">↗ LinkedIn</a></div>
+</aside>
+<main class="main">
+<div class="page-wrap">
+  <div class="sae-pagination">
+    <a href="../S3/S304.html" class="sae-page-btn"><span class="pg-arrow">←</span><span class="pg-code">SAÉ 3.04</span></a>
+    <a href="S402.html" class="sae-page-btn"><span class="pg-code">SAÉ 4.02</span><span class="pg-arrow">→</span></a>
+  </div>
+  <div class="sae-header">
+    <div class="sae-breadcrumb"><a href="../../../../pages/projets.html">projets</a> / s4 / <span style='color:var(--text-2);'>bert-bookai</span></div>
+    <h1>BookAI — Analyse Sémantique d'Avis de Livres par Intelligence Artificielle</h1>
+    <div class="sae-meta"><span class="meta-chip">📅 Semestre 4 — 2025/2026</span><span class="meta-chip">🎓 SAÉ 4.01</span><span class="meta-chip">⏱️ Projet Python</span><span class="meta-chip" style="color:var(--teal);">Samuel ROCHEMONT</span></div>
+  </div>
+  <div class="sae-body">
+    <div class="sae-content-left">
+      <div class="sae-img-wrap" onclick="openLB('../../../../img/projets/BERT_S4.png')">
+      <img src="../../../../img/projets/BERT_S4.png" alt="BookAI — Analyse Sémantique d'Avis de Li" onerror="this.style.opacity='0.2'">
+      <span class="zoom-hint">🔍 Agrandir</span>
+    </div>
+      <div class="sae-section"><h2>Cadre du projet & Objectifs</h2><p style='color:var(--text-2);'>Application web complète qui <strong style='color:var(--text);'>prédit la note (1 à 5 étoiles) d'un avis de livre en anglais</strong> grâce à l'intelligence artificielle. Pipeline complet : BERT pour l'encodage sémantique → MLP pour la prédiction → Dash pour l'interface interactive. Données : 50 000 avis Amazon équilibrés (10 000 par note) issus de Kaggle.</p></div>
+      <div class="sae-section"><h2>Étapes de réalisation</h2><div class="step-block"><h3>Extraction & encodage BERT</h3><p>Téléchargement du dataset Kaggle (Books_rating.csv), sélection équilibrée de 50 000 avis (10 000 par note pour éviter le biais vers les 5 étoiles). Encodage de chaque avis en 384 dimensions via sentence-transformers (BERT). Génération des embeddings.npy, y.npy et de la projection ACP 2D (X_pca.npy).</p></div>
+<div class="step-block"><h3>Entraînement du modèle MLP</h3><p>Entraînement d'un réseau de neurones MLP (Multi-Layer Perceptron) sur les embeddings BERT. Normalisation via StandardScaler, sauvegarde du modèle (mlp_model.pkl). Résultats : MAE = 1.12, RMSE = 1.44, R² = -0.04 en régression ; F1-Score = 0.76 en classification binaire (seuil 2.5 étoiles).</p></div>
+<div class="step-block"><h3>Interface Dash multi-onglets</h3><p>Application Dash avec 4 onglets : Prediction (saisie d'un avis → note prédite + sentiment), Projection ACP (visualisation 2D des embeddings colorés par note), Performances (matrice de confusion, métriques), Graphiques (distribution des notes). Déploiement local sur http://127.0.0.1:8050.</p></div></div>
+      <div class="sae-section"><h2>Ce que j'en retire</h2><div class="reflect-block"><h3>BERT : la puissance de l'encodage sémantique</h3><p>Le R² négatif en régression ne signifie pas que le modèle est mauvais — il montre que la prédiction d'une note précise (1 à 5) est une tâche intrinsèquement difficile car les avis de notes différentes se ressemblent sémantiquement en 2D. En classification binaire (positif/négatif), le F1 de 0.76 montre que le modèle distingue efficacement les avis positifs des négatifs dans 76% des cas.</p></div>
+<div class="insight-box"><h3>💡 Ce que j'ai retenu</h3><p>Ce projet m'a exposé à un pipeline ML complet en production : prétraitement → encodage → entraînement → déploiement. La partie la plus complexe n'était pas le modèle lui-même, mais l'équilibrage du dataset et la visualisation des résultats de manière compréhensible pour un utilisateur non-technique.</p></div></div>
+      <div class="sae-section">
+        <h2>Ce que ça m'apporte en entreprise</h2>
+        <div style="background:linear-gradient(135deg,rgba(45,212,191,0.05),rgba(96,165,250,0.05));border:1px solid rgba(45,212,191,0.2);border-radius:var(--radius);padding:1.2rem;">
+          <p style="color:var(--text-2);line-height:1.75;font-size:0.85rem;">Les modèles de NLP comme BERT sont de plus en plus déployés en entreprise pour l'analyse automatique d'avis clients, la classification de tickets support, la veille réputationnelle ou le scoring de textes. Savoir construire un pipeline BERT → MLP → interface Dash est une compétence de haut niveau dans les équipes Data Science.</p>
+        </div>
+      </div>
+      <div class="sae-section"><h2>Positionnement par rapport aux ACs</h2><div class="eval-legend">
+      <span><span class="eval-dot ev-A">A</span>Acquis</span>
+      <span><span class="eval-dot ev-P">P</span>Presque acquis</span>
+      <span><span class="eval-dot ev-E">E</span>En cours d'apprentissage</span>
+      <span><span class="eval-dot ev-N">N</span>Non acquis</span>
+    </div><table class="eval-grid-table"><thead><tr>
+        <th style="width:40%;">Apprentissage Critique</th>
+        <th class="center">Statut</th>
+        <th>Commentaires</th>
+      </tr></thead><tbody><tr>
+          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC24.01VCOD</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Comprendre le rôle fondamental de l'analyse des besoins et de l'existant dans un projet décisionnel</span></td>
+          <td class="center"><span class="eval-dot ev-A">A</span></td>
+          <td style="font-size:0.77rem;color:var(--text-2);">Architecture du pipeline définie avant le code : identification des besoins (prédiction sémantique), des données disponibles (Kaggle) et des outils adaptés (BERT + MLP + Dash).</td>
+        </tr><tr>
+          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC24.02VCOD</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Percevoir les enjeux de l'automatisation et de l'interopérabilité d'un ensemble de tâches</span></td>
+          <td class="center"><span class="eval-dot ev-A">A</span></td>
+          <td style="font-size:0.77rem;color:var(--text-2);">Pipeline entièrement automatisé en 3 scripts indépendants : extraction.py → train_mlp.py → app.py. Interopérabilité garantie via les fichiers .npy et .pkl.</td>
+        </tr><tr>
+          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC24.03VCOD</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Prendre conscience des différences entre outils pour choisir le plus adapté</span></td>
+          <td class="center"><span class="eval-dot ev-A">A</span></td>
+          <td style="font-size:0.77rem;color:var(--text-2);">Choix justifié : BERT pour l'encodage sémantique (vs TF-IDF), MLP pour la prédiction non-linéaire, Dash pour la visualisation interactive (vs Streamlit ou Flask seul).</td>
+        </tr><tr>
+          <td><strong style="font-family:var(--font-mono);font-size:0.7rem;">AC22.03</strong><br><span style="color:var(--text-2);font-size:0.76rem;">Comprendre l'intérêt des analyses multivariées pour synthétiser l'information</span></td>
+          <td class="center"><span class="eval-dot ev-A">A</span></td>
+          <td style="font-size:0.77rem;color:var(--text-2);">Projection ACP 2D des embeddings BERT (384 dimensions → 2) pour visualiser la séparabilité des notes et expliquer les limites du modèle de régression.</td>
+        </tr></tbody></table></div>
+      
+    </div>
+    <div class="sae-sidebar">
+      <div class="sae-sidebar-card"><h4>Compétence ciblée</h4><span class="comp-badge-large cb-4">⚙️ Développer · 📊 Analyser</span></div>
+      <div class="sae-sidebar-card"><h4>Technologies</h4><div class="tags-cloud"><span class="tag highlight">Python</span><span class="tag highlight">BERT</span><span class="tag ">MLP</span><span class="tag ">Dash / Plotly</span><span class="tag ">scikit-learn</span><span class="tag ">Kaggle</span></div></div>
+      <div class="sae-sidebar-card"><h4>Ressources Mobilisées (BUT SD)</h4><div class="tags-cloud" style="gap:0.35rem;"><span class="tag" style="font-size:0.68rem;">R3.04 — Prog. Statistique Automatisée</span><span class="tag" style="font-size:0.68rem;">R3.VCOD.10 — Programmation Objet</span><span class="tag" style="font-size:0.68rem;">R3.05 — Méthodes d'analyse avancées</span></div></div>
+      <div class="sae-sidebar-card"><h4>Apprentissages critiques</h4><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC24.01VCOD</span>Comprendre le rôle fondamental de l'analyse des besoins et de l'existant dans un projet décisionnel</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC24.02VCOD</span>Percevoir les enjeux de l'automatisation et de l'interopérabilité d'un ensemble de tâches</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);border-bottom:1px solid var(--border);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC24.03VCOD</span>Prendre conscience des différences entre outils pour choisir le plus adapté</div><div style="display:flex;gap:0.4rem;padding:0.35rem 0;font-size:0.75rem;color:var(--text-2);line-height:1.4;"><span style="font-family:var(--font-mono);font-size:0.63rem;color:var(--text-3);min-width:72px;flex-shrink:0;padding-top:2px;">AC22.03</span>Comprendre l'intérêt des analyses multivariées pour synthétiser l'information</div></div>
+      <div style="margin-top:1rem;"><a href="../../../../pages/projets.html" class="btn btn-outline" style="width:100%;justify-content:center;">← Retour aux projets</a></div>
+    </div>
+  </div>
+</div>
+</main>
+</div>
+
+<div id="lb-modal" onclick="document.getElementById('lb-modal').classList.remove('open')">
+  <span class="lb-close">&#x2715;</span>
+  <img id="lb-img" src="" alt="">
+</div>
+<script>
+function openLB(src){var m=document.getElementById('lb-modal');document.getElementById('lb-img').src=src;m.classList.add('open');}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')document.getElementById('lb-modal').classList.remove('open');});
+document.addEventListener('click',function(e){const s=document.querySelector('.sidebar'),b=document.getElementById('burger');if(s&&b&&!s.contains(e.target)&&!b.contains(e.target))s.classList.remove('open');});
+</script>
+</body>
+</html>
